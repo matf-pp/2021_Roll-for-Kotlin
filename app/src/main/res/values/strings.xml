@@ -4,16 +4,17 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="todo">TODO</string>
     <string name="textview">TextView</string>
-    <string name="tab2">Tab2</string>
-    <string name="tab3">Tab3</string>
-    <string name="tab4">Tab4</string>
-    <string name="tab5">Tab5</string>
-    <string name="tab6">Tab6</string>
-    <string name="tab7">Tab7</string>
+    <string name="tab2"></string>
+    <string name="tab3"></string>
+    <string name="tab4"></string>
+    <string name="tab5"></string>
+    <string name="tab6"></string>
+    <string name="tab7"></string>
     <string name="button">Button</string>
     <string name="female">Female</string>
     <string name="male">Male</string>
-    <string name="name">Name</string>
+    <string name="name">Name :</string>
     <string name="gender">Gender :</string>
     <string name="level">Level :</string>
+
 </resources>

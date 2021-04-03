@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/percy_goth" />
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/bogart" />
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/dum1" />
+
+
+
+</font-family>
