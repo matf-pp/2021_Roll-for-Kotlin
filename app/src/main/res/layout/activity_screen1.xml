@@ -23,7 +23,7 @@
         android:layout_width="200dp"
         android:layout_height="33dp"
         android:fontFamily="@font/percy_goth"
-        android:text="@string/textview"
+        android:text="@string/name"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,8 +31,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.26"
-        tools:text="Name :" />
+        app:layout_constraintVertical_bias="0.26" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -84,7 +83,7 @@
         android:fontFamily="@font/bogart"
         android:hint="Lasillya"
         android:inputType="textPersonName"
-        android:text="@string/name"
+        android:text="@string/empty"
         android:textColor="#FFFFFF"
         android:textColorHint="#C3C0C0"
         android:textSize="20sp"
