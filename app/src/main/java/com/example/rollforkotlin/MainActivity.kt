@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.core.view.get
@@ -19,7 +18,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_screen1.*
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(){
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
 
         val tabs: TabLayout = findViewById(R.id.tabs)
-        
     }
 }
 
