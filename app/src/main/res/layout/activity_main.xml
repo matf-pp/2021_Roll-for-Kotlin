@@ -7,10 +7,12 @@
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#960E0E"
@@ -41,17 +43,17 @@
                 app:tabIndicatorColor="#650A0A">
 
                 <com.google.android.material.tabs.TabItem
-                    android:id="@+id/tabAbility"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:icon="@drawable/stats2"
-                    android:text="@string/empty" />
-
-                <com.google.android.material.tabs.TabItem
                     android:id="@+id/tabRace"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:icon="@drawable/sword3"
+                    android:text="@string/empty" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tabAbility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/stats2"
                     android:text="@string/empty" />
 
                 <com.google.android.material.tabs.TabItem
@@ -85,6 +87,17 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="614dp"
+            android:layout_below="@id/appBarLayout"
+            android:layout_marginTop="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
         <Button
             android:id="@+id/prevButton"
             android:layout_width="55dp"
@@ -109,6 +122,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.95"
             app:layout_constraintStart_toEndOf="@+id/prevButton" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
