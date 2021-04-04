@@ -11,10 +11,10 @@
         android:id="@+id/logo_img"
         android:layout_width="274dp"
         android:layout_height="335dp"
+        android:contentDescription="@string/empty"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/roll_for_kotlin"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/roll_for_kotlin" />
 </androidx.constraintlayout.widget.ConstraintLayout>

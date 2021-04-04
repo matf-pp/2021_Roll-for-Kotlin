@@ -41,46 +41,46 @@
                 app:tabIndicatorColor="#650A0A">
 
                 <com.google.android.material.tabs.TabItem
-                    android:id="@+id/tabRace"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:icon="@drawable/sword3"
-                    android:text="@string/tab2" />
-
-                <com.google.android.material.tabs.TabItem
                     android:id="@+id/tabAbility"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:icon="@drawable/stats2"
-                    android:text="@string/tab3" />
+                    android:text="@string/empty" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tabRace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/sword3"
+                    android:text="@string/empty" />
 
                 <com.google.android.material.tabs.TabItem
                     android:id="@+id/tabTools"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:icon="@drawable/tools"
-                    android:text="@string/tab4" />
+                    android:text="@string/empty" />
 
                 <com.google.android.material.tabs.TabItem
                     android:id="@+id/tabSpells"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:icon="@drawable/book"
-                    android:text="@string/tab5" />
+                    android:text="@string/empty" />
 
                 <com.google.android.material.tabs.TabItem
                     android:id="@+id/tabEquipment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:icon="@drawable/bag2"
-                    android:text="@string/tab6" />
+                    android:text="@string/empty" />
 
                 <com.google.android.material.tabs.TabItem
                     android:id="@+id/tabDetails"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:icon="@drawable/more"
-                    android:text="@string/tab7" />
+                    android:text="@string/empty" />
             </com.google.android.material.tabs.TabLayout>
 
         </com.google.android.material.appbar.AppBarLayout>

@@ -1,15 +1,5 @@
 <resources>
     <string name="app_name">Roll for Kotlin</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
-    <string name="todo">TODO</string>
-    <string name="textview"></string>
-    <string name="tab2"></string>
-    <string name="tab3"></string>
-    <string name="tab4"></string>
-    <string name="tab5"></string>
-    <string name="tab6"></string>
-    <string name="tab7"></string>
     <string name="button">Button</string>
     <string name="female">Female</string>
     <string name="male">Male</string>
@@ -17,5 +7,16 @@
     <string name="gender">Gender :</string>
     <string name="level">Level :</string>
     <string name="empty"></string>
+    <string name="Lasillya">Lasillya</string>
+    <string name="next">Continue</string>
+    <string-array name="levels">
+        <item>1 lvl</item><item>2 lvl</item><item>3 lvl</item>
+        <item>4 lvl</item><item>5 lvl</item><item>6 lvl</item>
+        <item>7 lvl</item><item>8 lvl</item><item>9 lvl</item>
+        <item>10 lvl</item><item>11 lvl</item><item>12 lvl</item>
+        <item>13 lvl</item><item>14 lvl</item><item>15 lvl</item>
+        <item>16 lvl</item><item>17 lvl</item><item>18 lvl</item>
+        <item>19 lvl</item><item>20 lvl</item>
+    </string-array>
 
 </resources>
