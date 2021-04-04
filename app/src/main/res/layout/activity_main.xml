@@ -11,6 +11,7 @@
         android:layout_height="match_parent">
 
         <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#960E0E"
@@ -41,17 +42,17 @@
                 app:tabIndicatorColor="#650A0A">
 
                 <com.google.android.material.tabs.TabItem
-                    android:id="@+id/tabAbility"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:icon="@drawable/stats2"
-                    android:text="@string/empty" />
-
-                <com.google.android.material.tabs.TabItem
                     android:id="@+id/tabRace"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:icon="@drawable/sword3"
+                    android:text="@string/empty" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tabAbility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/stats2"
                     android:text="@string/empty" />
 
                 <com.google.android.material.tabs.TabItem
@@ -65,7 +66,7 @@
                     android:id="@+id/tabSpells"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:icon="@drawable/book"
+                    android:icon="@drawable/book1"
                     android:text="@string/empty" />
 
                 <com.google.android.material.tabs.TabItem
@@ -101,7 +102,7 @@
             android:id="@+id/nextButton"
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="25dp"
             android:rotation="-180"
             app:backgroundTint="#960E0E"
             app:icon="@drawable/abc_vector_test"
@@ -109,6 +110,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.95"
             app:layout_constraintStart_toEndOf="@+id/prevButton" />
+
+        <TextView
+            android:id="@+id/txtPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Lasillya"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/nextButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/prevButton"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+            app:layout_constraintVertical_bias="0.93" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

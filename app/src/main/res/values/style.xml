@@ -2,7 +2,9 @@
 <resources>
     <style name = "SpinnerTheme">
         <item name = "android:textColor">#FFFFFF</item>
-        <item name = "android:fontFamily">@font/bogart</item>
+        <item name = "android:fontFamily">@font/dum1</item>
+        <item name = "android:textSize">25sp</item>
+        <item name = "android:colorBackground">#808080</item>
     </style>
 
 </resources>
