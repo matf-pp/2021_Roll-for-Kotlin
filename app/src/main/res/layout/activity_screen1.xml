@@ -11,12 +11,12 @@
         android:id="@+id/imgPattern"
         android:layout_width="363dp"
         android:layout_height="712dp"
+        android:contentDescription="@string/background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pattern3"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/background" />
 
     <TextView
         android:id="@+id/lbName"
@@ -149,13 +149,13 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/logoimage"
         app:layout_constraintBottom_toTopOf="@+id/lbName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/roll_for_kotlin"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/roll_for_kotlin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

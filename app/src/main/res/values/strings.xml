@@ -9,6 +9,8 @@
     <string name="empty"></string>
     <string name="Lasillya">Lasillya</string>
     <string name="next">Continue</string>
+    <string name="logoimage">LogoImage</string>
+    <string name="background">Background</string>
     <string-array name="levels">
         <item>1 lvl</item>
         <item>2 lvl</item>
