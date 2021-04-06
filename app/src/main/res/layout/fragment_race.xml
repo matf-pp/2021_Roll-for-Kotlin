@@ -69,5 +69,12 @@
         android:spinnerMode="dialog"
         android:theme="@style/SpinnerTheme2" />
 
+    <TextView
+        android:id="@+id/lbDescription"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="240dp"
+        android:text="@string/description" />
+
 
 </FrameLayout>

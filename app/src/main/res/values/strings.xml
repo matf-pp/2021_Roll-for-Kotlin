@@ -11,6 +11,7 @@
     <string name="next">Continue</string>
     <string name="logoimage">LogoImage</string>
     <string name="background">Background</string>
+    <string name="description"></string>
     <string name="klasa">Class</string>
     <string name="race">Race</string>
     <string-array name="levels">
