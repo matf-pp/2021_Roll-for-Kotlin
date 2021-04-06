@@ -3,12 +3,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:paddingLeft="10dp"
+    android:paddingTop="20dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
     tools:context=".ui.main.fragments.RaceFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:id="@+id/lbRace"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/percy_goth"
+        android:text="@string/race"
+        android:textColor="#535353"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spRace"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Race" />
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:entries="@array/races"
+        android:spinnerMode="dialog"
+        android:theme="@style/SpinnerTheme2" />
+
+    <TextView
+        android:id="@+id/lbClass"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/percy_goth"
+        android:text="@string/klasa"
+        android:textColor="#535353"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spClass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="110dp"
+        android:entries="@array/classes"
+        android:spinnerMode="dialog"
+        android:theme="@style/SpinnerTheme2" />
+
+    <TextView
+        android:id="@+id/lbBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/percy_goth"
+        android:text="@string/background"
+        android:textColor="#535353"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spBackground"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="190dp"
+        android:entries="@array/backgrounds"
+        android:spinnerMode="dialog"
+        android:theme="@style/SpinnerTheme2" />
+
 
 </FrameLayout>

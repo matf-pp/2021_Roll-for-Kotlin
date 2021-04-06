@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#960E0E"
-    tools:context=".MainActivity3">
+    tools:context=".ActivityScreen1">
 
     <ImageView
         android:id="@+id/imgPattern"
@@ -68,15 +68,14 @@
         android:layout_width="200dp"
         android:layout_height="33dp"
         android:entries="@array/levels"
-        android:spinnerMode="dropdown"
+        android:spinnerMode="dialog"
+        android:theme="@style/SpinnerTheme"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.368"
-        android:theme = "@style/SpinnerTheme"
-        />
+        app:layout_constraintVertical_bias="0.368" />
 
     <EditText
         android:id="@+id/txtName"
@@ -99,7 +98,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/lbGender"
         android:layout_width="200dp"
         android:layout_height="33dp"
         android:fontFamily="@font/percy_goth"
@@ -114,7 +113,7 @@
         app:layout_constraintVertical_bias="0.583" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/lbLevelw4"
         android:layout_width="200dp"
         android:layout_height="33dp"
         android:fontFamily="@font/percy_goth"

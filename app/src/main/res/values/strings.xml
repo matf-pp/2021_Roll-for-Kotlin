@@ -11,6 +11,8 @@
     <string name="next">Continue</string>
     <string name="logoimage">LogoImage</string>
     <string name="background">Background</string>
+    <string name="klasa">Class</string>
+    <string name="race">Race</string>
     <string-array name="levels">
         <item>1 lvl</item>
         <item>2 lvl</item>
@@ -32,6 +34,37 @@
         <item>18 lvl</item>
         <item>19 lvl</item>
         <item>20 lvl</item>
+    </string-array>
+
+    <string-array name="races">
+        <item>Human</item>
+        <item>Elf</item>
+        <item>Dwarf</item>
+        <item>Gnome</item>
+        <item>Halfling</item>
+        <item>Tiefling</item>
+    </string-array>
+
+    <string-array name="classes">
+        <item>Barbarian</item>
+        <item>Bard</item>
+        <item>Wizard</item>
+        <item>Ranger</item>
+        <item>Cleric</item>
+        <item>Rogue</item>
+        <item>Fighter</item>
+    </string-array>
+
+    <string-array name="backgrounds">
+        <item>Athlete</item>
+        <item>Charlatan</item>
+        <item>Criminal</item>
+        <item>Entertainer</item>
+        <item>Folk Hero</item>
+        <item>Knight</item>
+        <item>Noble</item>
+        <item>Sailor</item>
+        <item>Soldier</item>
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
