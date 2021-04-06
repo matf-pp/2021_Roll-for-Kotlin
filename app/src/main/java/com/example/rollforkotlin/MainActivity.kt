@@ -28,11 +28,25 @@ class MainActivity : AppCompatActivity(){
 
 
         //Adding all tab fragments
-        adapter.addFragment(RaceFragment(), "Race")
-        adapter.addFragment(AbilityFragment(), "Ability")
+        adapter.addFragment(RaceFragment(), "")
+        adapter.addFragment(AbilityFragment(), "")
+        adapter.addFragment(RaceFragment(), "")
+        adapter.addFragment(AbilityFragment(), "")
+        adapter.addFragment(RaceFragment(), "")
+        adapter.addFragment(AbilityFragment(), "")
 
         viewPager.adapter = adapter
         tabs.setupWithViewPager(viewPager)
+
+        //setting icons for tabs
+        tabs.getTabAt(0)!!.setIcon(R.drawable.sword3)
+        tabs.getTabAt(1)!!.setIcon(R.drawable.stats2)
+        tabs.getTabAt(2)!!.setIcon(R.drawable.tools)
+        tabs.getTabAt(3)!!.setIcon(R.drawable.book)
+        tabs.getTabAt(4)!!.setIcon(R.drawable.bag2)
+        tabs.getTabAt(5)!!.setIcon(R.drawable.more)
+
+
     }
 }
 
