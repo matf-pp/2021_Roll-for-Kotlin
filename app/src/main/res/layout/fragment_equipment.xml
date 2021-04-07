@@ -5,10 +5,287 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.fragments.EquipmentFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/Armor"
+                android:textColor="#535353"
+                android:textSize="20sp" />
+            <Spinner
+                android:id="@+id/spArmor"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="0dp"
+                android:entries="@array/armor"
+                android:spinnerMode="dialog"
+                android:theme="@style/SpinnerTheme2" />
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/Weapon"
+                android:textColor="#535353"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/wpDagger"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Dagger"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/wpJavelin"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Javelin"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/wpQuarterstaff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Quarterstaff"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/wpCrossbowL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/CrossbowL"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/wpShortbow"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Shortbow"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/wpBattleaxe"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Battleaxe"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/wpGreataxe"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Greataxe"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/wpGreatsword"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Greatsword"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/wpLongsword"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Longsword"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/wpRapier"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Rapier"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/wpLongbow"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Longbow"
+                android:theme="@style/SpinnerTheme2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/Potions"
+                android:textColor="#535353"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/ptHealing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Healing"
+                android:theme="@style/SpinnerTheme2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/Money"
+                android:textColor="#535353"
+                android:textSize="20sp" />
+
+            <Button
+            android:id="@+id/btnCoppper"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/percy_goth"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:backgroundTint="#960E0E" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/Copper"
+                android:layout_marginLeft="25dp"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnSilver"
+                android:layout_width="100dp"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="-130dp"
+                android:layout_height="100dp"
+                android:fontFamily="@font/percy_goth"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:backgroundTint="#960E0E" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/Silver"
+                android:layout_marginLeft="175dp"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnGold"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/percy_goth"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:backgroundTint="#960E0E" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/Gold"
+                android:layout_marginLeft="40dp"
+                android:textSize="20sp" />
+            <Button
+                android:id="@+id/btnPlatinum"
+                android:layout_width="100dp"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="-130dp"
+                android:layout_height="100dp"
+                android:fontFamily="@font/percy_goth"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:backgroundTint="#960E0E" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/Platinum"
+                android:layout_marginLeft="175dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/Instrument"
+                android:textColor="#535353"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/inDrum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Drum"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/inFlute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Flute"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/inLyre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Lyre"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/inHorn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Horn"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/inPanFlute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/PanFlute"
+                android:theme="@style/SpinnerTheme2" />
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

@@ -8,6 +8,7 @@ import com.example.rollforkotlin.ui.main.adapters.ViewPagerAdapter
 import com.example.rollforkotlin.ui.main.fragments.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_screen1.*
+import kotlinx.android.synthetic.main.fragment_tools.*
 
 
 class MainActivity : AppCompatActivity(){
@@ -44,7 +45,6 @@ class MainActivity : AppCompatActivity(){
         tabs.getTabAt(3)!!.setIcon(R.drawable.book1)
         tabs.getTabAt(4)!!.setIcon(R.drawable.bag2)
         tabs.getTabAt(5)!!.setIcon(R.drawable.more)
-
 
     }
 }

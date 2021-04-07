@@ -5,10 +5,356 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.fragments.ToolsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="637dp"
+        android:layout_marginTop="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/language"
+                android:textColor="#535353"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="-25dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/select"
+                android:textColor="#535353"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/lgCount"
+                android:layout_width="69dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="230dp"
+                android:layout_marginTop="-35dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/empty"
+                android:textColor="#535353"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/lgCommon"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/common"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/lgDwarvish"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/drarvish"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/lgElvish"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/elvish"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/lgGnomish"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Gnomish"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/lgGoblin"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/goblin"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/lgHalfling"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Halfling"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/lgInfernal"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/infernal"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/lgSylvan"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/sylavn"
+                android:theme="@style/SpinnerTheme2" />
+
+            <TextView
+                android:id="@+id/Prof"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/Proficiency"
+                android:textColor="#535353"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="-27dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/select"
+                android:textColor="#535353"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/pfAcrobatics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Acrobatics"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/pfAnimalH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/AnimalH"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/pfArcana"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Arcana"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/pfAthletics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Athletics"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/pfDeception"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Deception"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/pfHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/History"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/pfInsight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Insight"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/pfIntimidation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Intimidation"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/pfInvestigation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Investigation"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/pfMedicine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Medicine"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/pfNature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Nature"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/pfPerception"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Perception"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/pfPerformance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Performance"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/pfPersuasion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Persuasion"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/pfReligion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Religion"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/pfSleightOfHand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/SleightOfHand"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/pfStealth."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Stealth"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/pfSurvival"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Survival"
+                android:theme="@style/SpinnerTheme2" />
+
+            <TextView
+                android:id="@+id/Tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/Tools"
+                android:textColor="#535353"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="-27dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/select"
+                android:textColor="#535353"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/tlAlchemistS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/AlchemistS"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/tlCartographerT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/CartographerT"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/tlCookU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/CookU"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/tlJewelerT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/JewelerT"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/tlThievesT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/ThievesT"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/tlTinkerT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/TinkerT"
+                android:theme="@style/SpinnerTheme2" />
+
+            <CheckBox
+                android:id="@+id/tlWoodcarverT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/WoodcarverT"
+                android:theme="@style/SpinnerTheme2" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
 
 </FrameLayout>
