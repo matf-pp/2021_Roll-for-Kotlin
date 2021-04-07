@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
     android:paddingLeft="30dp"
     android:paddingTop="30dp"
     android:paddingRight="30dp"
@@ -15,41 +14,116 @@
         android:id="@+id/btnStrength"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:fontFamily="@font/percy_goth"
         android:textColor="#FFFFFF"
-        app:backgroundTint="#650A0A" />
+        android:textSize="20sp"
+        app:backgroundTint="#960E0E" />
+
+    <TextView
+        android:id="@+id/lbStrenght"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/percy_goth"
+        android:text="@string/strenght"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btnDexterity"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_gravity="right"
-        app:backgroundTint="#650A0A" />
+        android:layout_gravity="end"
+        android:fontFamily="@font/percy_goth"
+        android:textSize="20sp"
+        app:backgroundTint="#960E0E" />
+
+    <TextView
+        android:id="@+id/lbDexterity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/percy_goth"
+        android:text="@string/dexterity"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btnConstitution"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_gravity="center|left"
-        app:backgroundTint="#650A0A" />
+        android:layout_gravity="center|start"
+        android:fontFamily="@font/percy_goth"
+        android:layout_marginBottom="20dp"
+        android:textSize="20sp"
+        app:backgroundTint="#960E0E" />
+
+    <TextView
+        android:id="@+id/lbConstitution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|start"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/percy_goth"
+        android:text="@string/constitution"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btnIntelligence"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_gravity="center|right"
-        app:backgroundTint="#650A0A" />
+        android:layout_gravity="center|end"
+        android:fontFamily="@font/percy_goth"
+        android:layout_marginBottom="20dp"
+        android:textSize="20sp"
+        app:backgroundTint="#960E0E" />
+
+    <TextView
+        android:id="@+id/lbInteligence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|end"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/percy_goth"
+        android:text="@string/inteligence"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btnWisdom"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_gravity="bottom|left"
-        app:backgroundTint="#650A0A" />
+        android:layout_gravity="bottom|start"
+        android:fontFamily="@font/percy_goth"
+        android:textSize="20sp"
+        android:layout_marginBottom="40dp"
+        app:backgroundTint="#960E0E" />
+
+    <TextView
+        android:id="@+id/lbWisdom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/percy_goth"
+        android:text="@string/wisdom"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btnCharisma"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_gravity="bottom|right"
-        app:backgroundTint="#650A0A" />
+        android:layout_gravity="bottom|end"
+        android:fontFamily="@font/percy_goth"
+        android:textSize="20sp"
+        android:layout_marginBottom="40dp"
+        app:backgroundTint="#960E0E" />
+
+    <TextView
+        android:id="@+id/lbCharisma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/percy_goth"
+        android:text="@string/charisma"
+        android:textSize="20sp" />
 </FrameLayout>
