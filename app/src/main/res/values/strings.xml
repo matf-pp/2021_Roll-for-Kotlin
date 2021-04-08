@@ -92,6 +92,18 @@
         <item>Plate</item>
     </string-array>
 
+    <string-array name="aligment">
+        <item>Lawful good</item>
+        <item>Neutral good</item>
+        <item>Chaotic good</item>
+        <item>Lawful neutral</item>
+        <item>True neutral</item>
+        <item>Chaotic neutral</item>
+        <item>Lawful evil</item>
+        <item>Neutral evil</item>
+        <item>Chaotic evil</item>
+    </string-array>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -155,5 +167,14 @@
     <string name="Silver">Silver</string>
     <string name="Gold">Gold</string>
     <string name="Platinum">Platinum</string>
+    <string name="alignment">Alignment</string>
+    <string name="deity">Diety</string>
+    <string name="theMother">The Mother</string>
+    <string name="backstory">Backstory</string>
+    <string name="backstoryHint">My name is Lasillya. I am 20 years old and I was born in a noble family ... </string>
+    <string name="looks">Red hair, fair skin, black robe ... </string>
+    <string name="appearance">Appearance</string>
+    <string name="additional">Additional Features</string>
+    <string name="additionalHint">Anything that doesn\'t have a place ... </string>
 
 </resources>

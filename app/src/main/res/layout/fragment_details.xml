@@ -3,12 +3,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.main.fragments.DetailsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
 
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/percy_goth"
+        android:text="@string/alignment"
+        android:textColor="#535353"
+        android:textSize="20sp" />
+    <Spinner
+        android:id="@+id/spAlignment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
+        android:entries="@array/aligment"
+        android:spinnerMode="dialog"
+        android:theme="@style/SpinnerTheme2"/>
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/percy_goth"
+        android:text="@string/deity"
+        android:textColor="#535353"
+        android:textSize="20sp" />
+        <EditText
+            android:id="@+id/chDiety"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/percy_goth"
+            android:hint="@string/theMother"
+            android:textColor="#535353"
+            android:textSize="20sp" />
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/percy_goth"
+            android:text="@string/backstory"
+            android:textColor="#535353"
+            android:textSize="20sp" />
+        <EditText
+            android:id="@+id/chBackstory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/percy_goth"
+            android:hint="@string/backstoryHint"
+            android:textColor="#535353"
+            android:textSize="20sp" />
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/percy_goth"
+            android:text="@string/appearance"
+            android:textColor="#535353"
+            android:textSize="20sp" />
+        <EditText
+            android:id="@+id/chLooks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/percy_goth"
+            android:hint="@string/looks"
+            android:textColor="#535353"
+            android:textSize="20sp" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/percy_goth"
+        android:text="@string/additional"
+        android:textColor="#535353"
+        android:textSize="20sp" />
+        <EditText
+            android:id="@+id/chAdditional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/percy_goth"
+            android:hint="@string/additionalHint"
+            android:textColor="#535353"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+    </ScrollView>
 </FrameLayout>
