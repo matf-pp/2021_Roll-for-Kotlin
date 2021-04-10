@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name = "SpinnerTheme">
-        <item name = "android:textColor">#C3C0C0</item>
+        <item name = "android:textColor">#383838</item>
         <item name = "android:fontFamily">@font/dum1</item>
         <item name = "android:textSize">25sp</item>
     </style>

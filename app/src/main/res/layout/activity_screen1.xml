@@ -9,14 +9,17 @@
 
     <ImageView
         android:id="@+id/imgPattern"
-        android:layout_width="363dp"
-        android:layout_height="712dp"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        app:layout_constraintHeight_percent="0.8"
+        app:layout_constraintWidth_percent="0.8"
         android:contentDescription="@string/background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/background" />
+        app:srcCompat="@drawable/background"
+         />
 
     <TextView
         android:id="@+id/lbName"
@@ -77,6 +80,7 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
         app:layout_constraintVertical_bias="0.368" />
 
+
     <EditText
         android:id="@+id/txtName"
         android:layout_width="200dp"
@@ -113,7 +117,7 @@
         app:layout_constraintVertical_bias="0.583" />
 
     <TextView
-        android:id="@+id/lbLevelw4"
+        android:id="@+id/lbLevel"
         android:layout_width="200dp"
         android:layout_height="33dp"
         android:fontFamily="@font/percy_goth"
