@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".ui.main.fragments.ToolsFragment">
 
     <ScrollView
@@ -16,6 +17,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/lbLanguage"
                 android:layout_width="140dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="10dp"
@@ -23,9 +25,11 @@
                 android:fontFamily="@font/percy_goth"
                 android:text="@string/language"
                 android:textColor="#535353"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_marginStart="10dp" />
 
             <TextView
+                android:id="@+id/lbSelect1"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_marginLeft="170dp"
@@ -33,10 +37,11 @@
                 android:fontFamily="@font/percy_goth"
                 android:text="@string/select"
                 android:textColor="#535353"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:layout_marginStart="170dp" />
 
             <TextView
-                android:id="@+id/lgCount"
+                android:id="@+id/txtCount"
                 android:layout_width="69dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="230dp"
@@ -44,10 +49,11 @@
                 android:fontFamily="@font/percy_goth"
                 android:text="@string/empty"
                 android:textColor="#535353"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:layout_marginStart="230dp" />
 
             <CheckBox
-                android:id="@+id/lgCommon"
+                android:id="@+id/cbCommon"
                 android:layout_width="128dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -55,7 +61,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/lgDwarvish"
+                android:id="@+id/cbDwarvish"
                 android:layout_width="128dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -63,7 +69,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/lgElvish"
+                android:id="@+id/cbElvish"
                 android:layout_width="128dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -71,7 +77,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/lgGnomish"
+                android:id="@+id/cbGnomish"
                 android:layout_width="128dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -79,7 +85,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/lgGoblin"
+                android:id="@+id/cbGoblin"
                 android:layout_width="128dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -87,7 +93,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/lgHalfling"
+                android:id="@+id/cbHalfling"
                 android:layout_width="128dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -95,7 +101,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/lgInfernal"
+                android:id="@+id/cbInfernal"
                 android:layout_width="128dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -103,7 +109,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/lgSylvan"
+                android:id="@+id/cbSylvan"
                 android:layout_width="128dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -111,7 +117,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <TextView
-                android:id="@+id/Prof"
+                android:id="@+id/lbProficiency"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -119,11 +125,14 @@
                 android:fontFamily="@font/percy_goth"
                 android:text="@string/Proficiency"
                 android:textColor="#535353"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_marginStart="10dp" />
 
             <TextView
+                android:id="@+id/lbSelect2"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
+                android:layout_marginStart="170dp"
                 android:layout_marginLeft="170dp"
                 android:layout_marginTop="-27dp"
                 android:fontFamily="@font/percy_goth"
@@ -132,7 +141,7 @@
                 android:textSize="15sp" />
 
             <CheckBox
-                android:id="@+id/pfAcrobatics"
+                android:id="@+id/cbAcrobatics"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -140,7 +149,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/pfAnimalH"
+                android:id="@+id/cbAnimalH"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -148,7 +157,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/pfArcana"
+                android:id="@+id/cbArcana"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -156,7 +165,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/pfAthletics"
+                android:id="@+id/cbAthletics"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -164,7 +173,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/pfDeception"
+                android:id="@+id/cbDeception"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -172,7 +181,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/pfHistory"
+                android:id="@+id/cbHistory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -180,7 +189,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/pfInsight"
+                android:id="@+id/cbInsight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -188,7 +197,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/pfIntimidation"
+                android:id="@+id/cbIntimidation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -196,7 +205,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/pfInvestigation"
+                android:id="@+id/cbInvestigation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -204,7 +213,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/pfMedicine"
+                android:id="@+id/cbMedicine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -212,7 +221,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/pfNature"
+                android:id="@+id/cbNature"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -220,7 +229,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/pfPerception"
+                android:id="@+id/cbPerception"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -228,7 +237,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/pfPerformance"
+                android:id="@+id/cbPerformance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -236,7 +245,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/pfPersuasion"
+                android:id="@+id/cbPersuasion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -244,7 +253,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/pfReligion"
+                android:id="@+id/cbReligion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -252,7 +261,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/pfSleightOfHand"
+                android:id="@+id/cbSleightOfHand"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -260,7 +269,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/pfStealth."
+                android:id="@+id/cbStealth."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -268,7 +277,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/pfSurvival"
+                android:id="@+id/cbSurvival"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -276,7 +285,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <TextView
-                android:id="@+id/Tools"
+                android:id="@+id/lbTools"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -284,11 +293,14 @@
                 android:fontFamily="@font/percy_goth"
                 android:text="@string/Tools"
                 android:textColor="#535353"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_marginStart="10dp" />
 
             <TextView
+                android:id="@+id/lbSelect3"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
+                android:layout_marginStart="170dp"
                 android:layout_marginLeft="170dp"
                 android:layout_marginTop="-27dp"
                 android:fontFamily="@font/percy_goth"
@@ -297,7 +309,7 @@
                 android:textSize="15sp" />
 
             <CheckBox
-                android:id="@+id/tlAlchemistS"
+                android:id="@+id/cbAlchemistS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -305,7 +317,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/tlCartographerT"
+                android:id="@+id/cbCartographerT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -313,7 +325,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/tlCookU"
+                android:id="@+id/cbCookU"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -321,7 +333,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/tlJewelerT"
+                android:id="@+id/cbJewelerT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -329,7 +341,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/tlThievesT"
+                android:id="@+id/cbThievesT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -337,7 +349,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/tlTinkerT"
+                android:id="@+id/cbTinkerT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -345,7 +357,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/tlWoodcarverT"
+                android:id="@+id/cbWoodcarverT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"

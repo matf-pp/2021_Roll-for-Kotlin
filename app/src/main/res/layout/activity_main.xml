@@ -95,46 +95,20 @@
             android:layout_marginTop="115dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginBottom="76dp"
+            android:layout_marginBottom="45dp"
 
            />
 
-        <Button
-            android:id="@+id/prevButton"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginBottom="25dp"
-            app:backgroundTint="#960E0E"
-            app:icon="@drawable/abc_vector_test"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.05"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/nextButton"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginBottom="25dp"
-            android:rotation="-180"
-            app:backgroundTint="#960E0E"
-            app:icon="@drawable/abc_vector_test"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.95"
-            app:layout_constraintStart_toEndOf="@+id/prevButton" />
-        
         <TextView
             android:id="@+id/txtPage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Lasillya"
+            android:text="@string/swipe"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/nextButton"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/prevButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
-            app:layout_constraintVertical_bias="0.93" />
+            app:layout_constraintVertical_bias="0.98" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

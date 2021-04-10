@@ -17,6 +17,7 @@
         android:fontFamily="@font/percy_goth"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        android:layout_marginLeft="20dp"
         app:backgroundTint="#960E0E" />
 
     <TextView
@@ -25,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:fontFamily="@font/percy_goth"
+        android:layout_marginLeft="20dp"
         android:text="@string/strenght"
         android:textSize="20sp" />
 
@@ -34,6 +36,7 @@
         android:layout_height="100dp"
         android:layout_gravity="end"
         android:fontFamily="@font/percy_goth"
+        android:layout_marginRight="20dp"
         android:textSize="20sp"
         app:backgroundTint="#960E0E" />
 
@@ -44,6 +47,7 @@
         android:layout_gravity="end"
         android:layout_marginTop="100dp"
         android:fontFamily="@font/percy_goth"
+        android:layout_marginRight="20dp"
         android:text="@string/dexterity"
         android:textSize="20sp" />
 
@@ -54,6 +58,7 @@
         android:layout_gravity="center|start"
         android:fontFamily="@font/percy_goth"
         android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
         android:textSize="20sp"
         app:backgroundTint="#960E0E" />
 
@@ -64,6 +69,7 @@
         android:layout_gravity="center|start"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/percy_goth"
+        android:layout_marginLeft="20dp"
         android:text="@string/constitution"
         android:textSize="20sp" />
 
@@ -74,6 +80,7 @@
         android:layout_gravity="center|end"
         android:fontFamily="@font/percy_goth"
         android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
         android:textSize="20sp"
         app:backgroundTint="#960E0E" />
 
@@ -84,6 +91,7 @@
         android:layout_gravity="center|end"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/percy_goth"
+        android:layout_marginRight="20dp"
         android:text="@string/inteligence"
         android:textSize="20sp" />
 
@@ -93,6 +101,7 @@
         android:layout_height="100dp"
         android:layout_gravity="bottom|start"
         android:fontFamily="@font/percy_goth"
+        android:layout_marginLeft="20dp"
         android:textSize="20sp"
         android:layout_marginBottom="40dp"
         app:backgroundTint="#960E0E" />
@@ -104,6 +113,7 @@
         android:layout_gravity="bottom|start"
         android:layout_marginTop="80dp"
         android:fontFamily="@font/percy_goth"
+        android:layout_marginLeft="20dp"
         android:text="@string/wisdom"
         android:textSize="20sp" />
 
@@ -115,6 +125,7 @@
         android:fontFamily="@font/percy_goth"
         android:textSize="20sp"
         android:layout_marginBottom="40dp"
+        android:layout_marginRight="20dp"
         app:backgroundTint="#960E0E" />
 
     <TextView
@@ -124,6 +135,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginTop="80dp"
         android:fontFamily="@font/percy_goth"
+        android:layout_marginRight="20dp"
         android:text="@string/charisma"
         android:textSize="20sp" />
 </FrameLayout>
