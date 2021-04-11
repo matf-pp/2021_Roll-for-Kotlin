@@ -37,28 +37,22 @@ class AbilityFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         btnStrength.setOnClickListener{
-            val rand = rollStats()
-            btnStrength.text = rand.toString()
+            btnStrength.text = rollStats().toString()
         }
         btnCharisma.setOnClickListener{
-            val rand = rollStats()
-            btnCharisma.text = rand.toString()
+            btnCharisma.text = rollStats().toString()
         }
         btnConstitution.setOnClickListener{
-            val rand = rollStats()
-            btnConstitution.text = rand.toString()
+            btnConstitution.text = rollStats().toString()
         }
         btnDexterity.setOnClickListener{
-            val rand = rollStats()
-            btnDexterity.text = rand.toString()
+            btnDexterity.text = rollStats().toString()
         }
         btnIntelligence.setOnClickListener{
-            val rand = rollStats()
-            btnIntelligence.text = rand.toString()
+            btnIntelligence.text = rollStats().toString()
         }
         btnWisdom.setOnClickListener{
-            val rand = rollStats()
-            btnWisdom.text = rand.toString()
+            btnWisdom.text = rollStats().toString()
         }
     }
 

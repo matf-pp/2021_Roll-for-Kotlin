@@ -10,7 +10,6 @@ import android.widget.CheckBox
 import com.example.rollforkotlin.R
 import kotlinx.android.synthetic.main.fragment_tools.*
 import kotlinx.android.synthetic.main.fragment_tools.view.*
-import java.lang.Exception
 
 
 class ToolsFragment : Fragment(), View.OnClickListener {
@@ -23,7 +22,10 @@ class ToolsFragment : Fragment(), View.OnClickListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        val view: View = inflater.inflate(R.layout.fragment_tools, container, false)
+        return inflater.inflate(R.layout.fragment_tools, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?){
         //Languages
         view.cbLgDwarvish.setOnClickListener(this)
         view.cbLgElvish.setOnClickListener(this)
@@ -65,8 +67,6 @@ class ToolsFragment : Fragment(), View.OnClickListener {
         view.txtLgCount.text = languageCounter.toString()
         view.txtPrCount.text = profCounter.toString()
         view.txtTlCount.text = toolsCounter.toString()
-
-        return view
     }
 
     //Podesavanje limita za proficiency-e

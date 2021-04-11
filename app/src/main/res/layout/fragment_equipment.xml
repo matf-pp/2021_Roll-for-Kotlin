@@ -37,7 +37,7 @@
 
             <TextView
                 android:id="@+id/lbWeapon"
-                android:layout_width="140dp"
+                android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
@@ -49,7 +49,7 @@
 
             <CheckBox
                 android:id="@+id/cbDagger"
-                android:layout_width="128dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/dagger"
@@ -57,7 +57,7 @@
 
             <CheckBox
                 android:id="@+id/cbJavelin"
-                android:layout_width="128dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/javelin"
@@ -81,7 +81,7 @@
 
             <CheckBox
                 android:id="@+id/cbShortbow"
-                android:layout_width="128dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/shortbow"
@@ -89,7 +89,7 @@
 
             <CheckBox
                 android:id="@+id/cbBattleaxe"
-                android:layout_width="128dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/battleaxe"
@@ -97,7 +97,7 @@
 
             <CheckBox
                 android:id="@+id/cbGreataxe"
-                android:layout_width="128dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/greataxe"
@@ -168,7 +168,7 @@
                 android:textSize="20sp" />
 
             <Button
-            android:id="@+id/btnCoppper"
+            android:id="@+id/btnCopper"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginLeft="20dp"
