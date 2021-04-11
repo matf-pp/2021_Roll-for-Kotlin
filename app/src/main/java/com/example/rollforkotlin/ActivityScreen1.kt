@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.RadioButton
 import androidx.appcompat.app.AlertDialog
@@ -14,7 +15,7 @@ class ActivityScreen1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_screen1)
         continueButton.setOnClickListener{
-            getValues()
+            getValues( )
             val i = Intent(this, MainActivity::class.java)
             startActivity(i)
         }
@@ -29,10 +30,12 @@ class ActivityScreen1 : AppCompatActivity() {
         spLevel.adapter = adapter
 
 
+
     }
 
 
-    fun getValues() {
+
+      fun getValues( ) {
         val level = spLevel.selectedItem.toString().substring(0,1)
         var gender : String = ""
         val selectedRadioButtonId: Int = radioGroup.checkedRadioButtonId
@@ -42,7 +45,7 @@ class ActivityScreen1 : AppCompatActivity() {
         }
         val name = txtName.text
 
-       /* val builder = AlertDialog.Builder(this)
+        /*val builder = AlertDialog.Builder(this)
         builder.setTitle("Androidly Alert")
         builder.setMessage(level)
         builder.show()*/

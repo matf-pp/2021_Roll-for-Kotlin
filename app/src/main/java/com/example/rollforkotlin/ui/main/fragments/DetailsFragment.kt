@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import com.example.rollforkotlin.R
 import kotlinx.android.synthetic.main.fragment_details.*
-import kotlinx.android.synthetic.main.fragment_race.*
 
 
 class DetailsFragment : Fragment() {
@@ -29,7 +28,7 @@ class DetailsFragment : Fragment() {
 
         // Create an ArrayAdapter
         val adapter = ArrayAdapter.createFromResource( requireActivity(),
-                R.array.races, R.layout.spinner_item2)
+                R.array.aligment, R.layout.spinner_item2)
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         // Apply the adapter to the spinner
