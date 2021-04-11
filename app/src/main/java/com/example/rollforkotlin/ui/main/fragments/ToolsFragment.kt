@@ -1,17 +1,19 @@
 package com.example.rollforkotlin.ui.main.fragments
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
-import androidx.lifecycle.Transformations.map
 import com.example.rollforkotlin.R
 import kotlinx.android.synthetic.main.fragment_tools.*
+import kotlinx.android.synthetic.main.fragment_tools.view.*
+import java.lang.Exception
 
 
-class ToolsFragment : Fragment() {
+class ToolsFragment : Fragment(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -21,113 +23,226 @@ class ToolsFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tools, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_tools, container, false)
+        //Languages
+        view.cbLgDwarvish.setOnClickListener(this)
+        view.cbLgElvish.setOnClickListener(this)
+        view.cbLgGnomish.setOnClickListener(this)
+        view.cbLgGoblin.setOnClickListener(this)
+        view.cbLgHalfling.setOnClickListener(this)
+        view.cbLgInfernal.setOnClickListener(this)
+        view.cbLgSylvan.setOnClickListener(this)
+        view.cbLgUndercommon.setOnClickListener(this)
+
+        //Proficiencies
+        view.cbPrAcrobatics.setOnClickListener(this)
+        view.cbPrAnimalH.setOnClickListener(this)
+        view.cbPrArcana.setOnClickListener(this)
+        view.cbPrAthletics.setOnClickListener(this)
+        view.cbPrDeception.setOnClickListener(this)
+        view.cbPrHistory.setOnClickListener(this)
+        view.cbPrInsight.setOnClickListener(this)
+        view.cbPrIntimidation.setOnClickListener(this)
+        view.cbPrInvestigation.setOnClickListener(this)
+        view.cbPrMedicine.setOnClickListener(this)
+        view.cbPrNature.setOnClickListener(this)
+        view.cbPrPerception.setOnClickListener(this)
+        view.cbPrPerformance.setOnClickListener(this)
+        view.cbPrPersuasion.setOnClickListener(this)
+        view.cbPrReligion.setOnClickListener(this)
+        view.cbPrSleightOfHand.setOnClickListener(this)
+        view.cbPrStealth.setOnClickListener(this)
+        view.cbPrSurvival.setOnClickListener(this)
+
+        //Tools
+        view.cbTlAlchemistS.setOnClickListener(this)
+        view.cbTlCartographerT.setOnClickListener(this)
+        view.cbTlCookU.setOnClickListener(this)
+        view.cbTlJewelerT.setOnClickListener(this)
+        view.cbTlThievesT.setOnClickListener(this)
+        view.cbTlTinkerT.setOnClickListener(this)
+        view.cbTlWoodcarverT.setOnClickListener(this)
+        view.txtLgCount.text = languageCounter.toString()
+        view.txtPrCount.text = profCounter.toString()
+        view.txtTlCount.text = toolsCounter.toString()
+
+        return view
     }
+
+    //Podesavanje limita za proficiency-e
+    private var languageCounter = 2;
+    private var profCounter = 3;
+    private var toolsCounter = 2;
+
+    override fun onClick(v: View?) {
+        v as CheckBox
+        val name = v.resources.getResourceName(v.id)
+        val builder = AlertDialog.Builder(activity)
+        builder.setTitle("Androidly Alert")
+        builder.setMessage("Too many items selected")
+        when(checkCBGroup(name)){
+            'l' -> {
+                if (languageCounter == 0 && v.isChecked){
+                //builder.show()
+                    v.isChecked = false
+                }
+                else if (v.isChecked){
+                    --languageCounter
+                }
+                else {
+                    ++languageCounter
+                }
+                txtLgCount.text = languageCounter.toString()
+                }
+
+            'p' -> {
+                if (profCounter == 0 && v.isChecked){
+                    //builder.show()
+                    v.isChecked = false
+                }
+                else if (v.isChecked){
+                    --profCounter
+                }
+                else {
+                    ++profCounter
+                }
+                txtPrCount.text = profCounter.toString()
+            }
+
+            't' -> {
+                if (toolsCounter == 0 && v.isChecked){
+                    builder.show()
+                    v.isChecked = false
+                }
+                else if (v.isChecked){
+                    --toolsCounter
+                }
+                else {
+                    ++toolsCounter
+                }
+                txtTlCount.text = toolsCounter.toString()
+            }
+
+        }
+    }
+    private fun checkCBGroup(id: String): Char? {
+        if(id.startsWith("com.example.rollforkotlin:id/cbLg")) {
+            return 'l'
+        }
+        if(id.startsWith("com.example.rollforkotlin:id/cbPr")) {
+            return 'p'
+        }
+        if(id.startsWith("com.example.rollforkotlin:id/cbTl")) {
+            return 't'
+        }
+        return null
+    }
+
+
 
     fun getValues() {
         val list = arrayListOf<String>()
-        if(cbAcrobatics.isChecked){
-            list.add(cbAcrobatics.text.toString())
+        if(cbPrAcrobatics.isChecked){
+            list.add(cbPrAcrobatics.text.toString())
         }
-        if(cbAlchemistS.isChecked){
-            list.add(cbAlchemistS.text.toString())
+        if(cbTlAlchemistS.isChecked){
+            list.add(cbTlAlchemistS.text.toString())
         }
-        if(cbAnimalH.isChecked){
-            list.add(cbAnimalH.text.toString())
+        if(cbPrAnimalH.isChecked){
+            list.add(cbPrAnimalH.text.toString())
         }
-        if(cbArcana.isChecked){
-            list.add(cbArcana.text.toString())
+        if(cbPrArcana.isChecked){
+            list.add(cbPrArcana.text.toString())
         }
-        if(cbAthletics.isChecked){
-            list.add(cbAthletics.text.toString())
+        if(cbPrAthletics.isChecked){
+            list.add(cbPrAthletics.text.toString())
         }
-        if(cbCartographerT.isChecked){
-            list.add(cbCartographerT.text.toString())
+        if(cbTlCartographerT.isChecked){
+            list.add(cbTlCartographerT.text.toString())
         }
-        if(cbCommon.isChecked){
-            list.add(cbCommon.text.toString())
+        if(cbLgUndercommon.isChecked){
+            list.add(cbLgUndercommon.text.toString())
         }
-        if(cbCookU.isChecked){
-            list.add(cbCookU.text.toString())
+        if(cbTlCookU.isChecked){
+            list.add(cbTlCookU.text.toString())
         }
-        if(cbDeception.isChecked){
-            list.add(cbDeception.text.toString())
+        if(cbPrDeception.isChecked){
+            list.add(cbPrDeception.text.toString())
         }
-        if(cbDwarvish.isChecked){
-            list.add(cbDwarvish.text.toString())
+        if(cbLgDwarvish.isChecked){
+            list.add(cbLgDwarvish.text.toString())
         }
-        if(cbElvish.isChecked){
-            list.add(cbElvish.text.toString())
+        if(cbLgElvish.isChecked){
+            list.add(cbLgElvish.text.toString())
         }
-        if(cbGnomish.isChecked){
-            list.add(cbGnomish.text.toString())
+        if(cbLgGnomish.isChecked){
+            list.add(cbLgGnomish.text.toString())
         }
-        if(cbGoblin.isChecked){
-            list.add(cbGoblin.text.toString())
+        if(cbLgGoblin.isChecked){
+            list.add(cbLgGoblin.text.toString())
         }
-        if(cbHalfling.isChecked){
-            list.add(cbHalfling.text.toString())
+        if(cbLgHalfling.isChecked){
+            list.add(cbLgHalfling.text.toString())
         }
-        if(cbHistory.isChecked){
-            list.add(cbHistory.text.toString())
+        if(cbPrHistory.isChecked){
+            list.add(cbPrHistory.text.toString())
         }
-        if(cbInfernal.isChecked){
-            list.add(cbInfernal.text.toString())
+        if(cbLgInfernal.isChecked){
+            list.add(cbLgInfernal.text.toString())
         }
-        if(cbInsight.isChecked){
-            list.add(cbInsight.text.toString())
+        if(cbPrInsight.isChecked){
+            list.add(cbPrInsight.text.toString())
         }
-        if(cbIntimidation.isChecked){
-            list.add(cbIntimidation.text.toString())
+        if(cbPrIntimidation.isChecked){
+            list.add(cbPrIntimidation.text.toString())
         }
-        if(cbInvestigation.isChecked){
-            list.add(cbInvestigation.text.toString())
+        if(cbPrInvestigation.isChecked){
+            list.add(cbPrInvestigation.text.toString())
         }
-        if(cbJewelerT.isChecked){
-            list.add(cbJewelerT.text.toString())
+        if(cbTlJewelerT.isChecked){
+            list.add(cbTlJewelerT.text.toString())
         }
-        if(cbMedicine.isChecked){
-            list.add(cbMedicine.text.toString())
+        if(cbPrMedicine.isChecked){
+            list.add(cbPrMedicine.text.toString())
         }
-        if(cbNature.isChecked){
-            list.add(cbNature.text.toString())
+        if(cbPrNature.isChecked){
+            list.add(cbPrNature.text.toString())
         }
-        if(cbPerception.isChecked){
-            list.add(cbPerception.text.toString())
+        if(cbPrPerception.isChecked){
+            list.add(cbPrPerception.text.toString())
         }
-        if(cbPerformance.isChecked){
-            list.add(cbPerformance.text.toString())
+        if(cbPrPerformance.isChecked){
+            list.add(cbPrPerformance.text.toString())
         }
-        if(cbPersuasion.isChecked){
-            list.add(cbPersuasion.text.toString())
+        if(cbPrPersuasion.isChecked){
+            list.add(cbPrPersuasion.text.toString())
         }
-        if(cbReligion.isChecked){
-            list.add(cbReligion.text.toString())
+        if(cbPrReligion.isChecked){
+            list.add(cbPrReligion.text.toString())
         }
-        if(cbSleightOfHand.isChecked){
-            list.add(cbSleightOfHand.text.toString())
+        if(cbPrSleightOfHand.isChecked){
+            list.add(cbPrSleightOfHand.text.toString())
         }
-        if(cbStealth_.isChecked){
-            list.add(cbStealth_.text.toString())
+        if(cbPrStealth.isChecked){
+            list.add(cbPrStealth.text.toString())
         }
-        if(cbSurvival.isChecked){
-            list.add(cbSurvival.text.toString())
+        if(cbPrSurvival.isChecked){
+            list.add(cbPrSurvival.text.toString())
         }
-        if(cbSylvan.isChecked){
-            list.add(cbSylvan.text.toString())
+        if(cbLgSylvan.isChecked){
+            list.add(cbLgSylvan.text.toString())
         }
-        if(cbThievesT.isChecked){
-            list.add(cbThievesT.text.toString())
+        if(cbTlThievesT.isChecked){
+            list.add(cbTlThievesT.text.toString())
         }
-        if(cbTinkerT.isChecked){
-            list.add(cbTinkerT.text.toString())
+        if(cbTlTinkerT.isChecked){
+            list.add(cbTlTinkerT.text.toString())
         }
-        if(cbWoodcarverT.isChecked){
-            list.add(cbWoodcarverT.text.toString())
+        if(cbTlWoodcarverT.isChecked){
+            list.add(cbTlWoodcarverT.text.toString())
         }
 
     }
 
 
-
-    }
+}
