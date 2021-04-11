@@ -18,7 +18,8 @@
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:layout_marginLeft="20dp"
-        app:backgroundTint="#960E0E" />
+        app:backgroundTint="#960E0E"
+        android:layout_marginStart="20dp" />
 
     <TextView
         android:id="@+id/lbStrenght"
@@ -28,7 +29,8 @@
         android:fontFamily="@font/percy_goth"
         android:layout_marginLeft="20dp"
         android:text="@string/strenght"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_marginStart="20dp" />
 
     <Button
         android:id="@+id/btnDexterity"
@@ -38,7 +40,8 @@
         android:fontFamily="@font/percy_goth"
         android:layout_marginRight="20dp"
         android:textSize="20sp"
-        app:backgroundTint="#960E0E" />
+        app:backgroundTint="#960E0E"
+        android:layout_marginEnd="20dp" />
 
     <TextView
         android:id="@+id/lbDexterity"
@@ -49,7 +52,8 @@
         android:fontFamily="@font/percy_goth"
         android:layout_marginRight="20dp"
         android:text="@string/dexterity"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_marginEnd="20dp" />
 
     <Button
         android:id="@+id/btnConstitution"
@@ -60,7 +64,8 @@
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="20dp"
         android:textSize="20sp"
-        app:backgroundTint="#960E0E" />
+        app:backgroundTint="#960E0E"
+        android:layout_marginStart="20dp" />
 
     <TextView
         android:id="@+id/lbConstitution"
@@ -71,7 +76,8 @@
         android:fontFamily="@font/percy_goth"
         android:layout_marginLeft="20dp"
         android:text="@string/constitution"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_marginStart="20dp" />
 
     <Button
         android:id="@+id/btnIntelligence"
@@ -82,7 +88,8 @@
         android:layout_marginBottom="20dp"
         android:layout_marginRight="20dp"
         android:textSize="20sp"
-        app:backgroundTint="#960E0E" />
+        app:backgroundTint="#960E0E"
+        android:layout_marginEnd="20dp" />
 
     <TextView
         android:id="@+id/lbInteligence"
@@ -93,7 +100,8 @@
         android:fontFamily="@font/percy_goth"
         android:layout_marginRight="20dp"
         android:text="@string/inteligence"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_marginEnd="20dp" />
 
     <Button
         android:id="@+id/btnWisdom"
@@ -104,7 +112,8 @@
         android:layout_marginLeft="20dp"
         android:textSize="20sp"
         android:layout_marginBottom="40dp"
-        app:backgroundTint="#960E0E" />
+        app:backgroundTint="#960E0E"
+        android:layout_marginStart="20dp" />
 
     <TextView
         android:id="@+id/lbWisdom"
@@ -115,7 +124,8 @@
         android:fontFamily="@font/percy_goth"
         android:layout_marginLeft="20dp"
         android:text="@string/wisdom"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_marginStart="20dp" />
 
     <Button
         android:id="@+id/btnCharisma"
@@ -126,7 +136,8 @@
         android:textSize="20sp"
         android:layout_marginBottom="40dp"
         android:layout_marginRight="20dp"
-        app:backgroundTint="#960E0E" />
+        app:backgroundTint="#960E0E"
+        android:layout_marginEnd="20dp" />
 
     <TextView
         android:id="@+id/lbCharisma"
@@ -137,5 +148,6 @@
         android:fontFamily="@font/percy_goth"
         android:layout_marginRight="20dp"
         android:text="@string/charisma"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_marginEnd="20dp" />
 </FrameLayout>
