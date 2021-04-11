@@ -19,13 +19,13 @@
                 android:id="@+id/lbArmor"
                 android:layout_width="140dp"
                 android:layout_height="30dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/percy_goth"
-                android:text="@string/Armor"
+                android:text="@string/armor"
                 android:textColor="#535353"
-                android:textSize="20sp"
-                android:layout_marginStart="10dp" />
+                android:textSize="20sp" />
             <Spinner
                 android:id="@+id/spArmor"
                 android:layout_width="match_parent"
@@ -37,30 +37,30 @@
 
             <TextView
                 android:id="@+id/lbWeapon"
-                android:layout_width="140dp"
+                android:layout_width="wrap_content"
                 android:layout_height="30dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/percy_goth"
-                android:text="@string/Weapon"
+                android:text="@string/weapon"
                 android:textColor="#535353"
-                android:textSize="20sp"
-                android:layout_marginStart="10dp" />
+                android:textSize="20sp" />
 
             <CheckBox
                 android:id="@+id/cbDagger"
-                android:layout_width="128dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="@string/Dagger"
+                android:text="@string/dagger"
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
                 android:id="@+id/cbJavelin"
-                android:layout_width="128dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="@string/Javelin"
+                android:text="@string/javelin"
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
@@ -68,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="@string/Quarterstaff"
+                android:text="@string/quarterstaff"
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
@@ -76,31 +76,31 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="@string/CrossbowL"
+                android:text="@string/crossbowL"
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
                 android:id="@+id/cbShortbow"
-                android:layout_width="128dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="@string/Shortbow"
+                android:text="@string/shortbow"
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
                 android:id="@+id/cbBattleaxe"
-                android:layout_width="128dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="@string/Battleaxe"
+                android:text="@string/battleaxe"
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
                 android:id="@+id/cbGreataxe"
-                android:layout_width="128dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="@string/Greataxe"
+                android:text="@string/greataxe"
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
@@ -108,7 +108,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="@string/Greatsword"
+                android:text="@string/greatsword"
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
@@ -116,7 +116,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="@string/Longsword"
+                android:text="@string/longsword"
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
@@ -124,7 +124,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="@string/Rapier"
+                android:text="@string/rapier"
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
@@ -132,43 +132,43 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="@string/Longbow"
+                android:text="@string/longbow"
                 android:theme="@style/SpinnerTheme2" />
 
             <TextView
                 android:id="@+id/lbPotions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="0dp"
                 android:fontFamily="@font/percy_goth"
-                android:text="@string/Potions"
+                android:text="@string/potions"
                 android:textColor="#535353"
-                android:textSize="20sp"
-                android:layout_marginStart="10dp" />
+                android:textSize="20sp" />
 
             <CheckBox
                 android:id="@+id/cbHealingPotion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="@string/Healing"
+                android:text="@string/healing"
                 android:theme="@style/SpinnerTheme2" />
 
             <TextView
                 android:id="@+id/lbMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="0dp"
                 android:fontFamily="@font/percy_goth"
-                android:text="@string/Money"
+                android:text="@string/money"
                 android:textColor="#535353"
-                android:textSize="20sp"
-                android:layout_marginStart="10dp" />
+                android:textSize="20sp" />
 
             <Button
-            android:id="@+id/btnCoppper"
+            android:id="@+id/btnCopper"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginLeft="20dp"
@@ -182,12 +182,12 @@
                 android:id="@+id/lbCopper"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="0dp"
                 android:fontFamily="@font/percy_goth"
-                android:text="@string/Copper"
-                android:textSize="20sp"
-                android:layout_marginStart="25dp" />
+                android:text="@string/copper"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/btnSilver"
@@ -205,12 +205,12 @@
                 android:id="@+id/lbSilver"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="175dp"
                 android:layout_marginLeft="175dp"
                 android:layout_marginTop="0dp"
                 android:fontFamily="@font/percy_goth"
-                android:text="@string/Silver"
-                android:textSize="20sp"
-                android:layout_marginStart="175dp" />
+                android:text="@string/silver"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/btnGold"
@@ -227,12 +227,12 @@
                 android:id="@+id/lbGold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="0dp"
                 android:fontFamily="@font/percy_goth"
-                android:text="@string/Gold"
-                android:textSize="20sp"
-                android:layout_marginStart="40dp" />
+                android:text="@string/gold"
+                android:textSize="20sp" />
             <Button
                 android:id="@+id/btnPlatinum"
                 android:layout_width="100dp"
@@ -249,31 +249,31 @@
                 android:id="@+id/lbPlatinum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="175dp"
                 android:layout_marginLeft="175dp"
                 android:layout_marginTop="0dp"
                 android:fontFamily="@font/percy_goth"
-                android:text="@string/Platinum"
-                android:textSize="20sp"
-                android:layout_marginStart="175dp" />
+                android:text="@string/platinum"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/lbInstruments"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="0dp"
                 android:fontFamily="@font/percy_goth"
-                android:text="@string/Instrument"
+                android:text="@string/instrument"
                 android:textColor="#535353"
-                android:textSize="20sp"
-                android:layout_marginStart="10dp" />
+                android:textSize="20sp" />
 
             <CheckBox
                 android:id="@+id/cbDrum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="@string/Drum"
+                android:text="@string/drum"
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
@@ -281,7 +281,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="@string/Flute"
+                android:text="@string/flute"
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
@@ -289,7 +289,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="@string/Lyre"
+                android:text="@string/lyre"
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
@@ -297,7 +297,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="@string/Horn"
+                android:text="@string/horn"
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
@@ -305,7 +305,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="@string/PanFlute"
+                android:text="@string/panFlute"
                 android:theme="@style/SpinnerTheme2" />
 
         </LinearLayout>
