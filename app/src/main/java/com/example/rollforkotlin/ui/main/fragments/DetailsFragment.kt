@@ -32,6 +32,7 @@ class DetailsFragment : Fragment() {
         // Create an ArrayAdapter
         val adapter = ArrayAdapter.createFromResource( requireActivity(),
                 R.array.alignment, R.layout.spinner_item2)
+
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         // Apply the adapter to the spinner
@@ -57,9 +58,6 @@ class DetailsFragment : Fragment() {
         ActivityScreen1.newCharacter.chBackstory = backstory
         ActivityScreen1.newCharacter.chAppearance = appearance
         ActivityScreen1.newCharacter.chAdditionalInfo = additional
-
-
-
 
     }
 }

@@ -3,6 +3,7 @@ package com.example.rollforkotlin
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.RadioButton
 import androidx.appcompat.app.AlertDialog
@@ -18,7 +19,7 @@ class ActivityScreen1 : AppCompatActivity() {
         //newCharacter = Character()
 
         continueButton.setOnClickListener{
-            getValues()
+            getValues( )
             val i = Intent(this, MainActivity::class.java)
             startActivity(i)
         }
@@ -32,9 +33,7 @@ class ActivityScreen1 : AppCompatActivity() {
         // Apply the adapter to the spinner
         spLevel.adapter = adapter
 
-
     }
-
 
     fun getValues() {
         val level = spLevel.selectedItem.toString().substring(0,1).toInt()
@@ -57,6 +56,7 @@ class ActivityScreen1 : AppCompatActivity() {
             in 3..16 -> newCharacter.chPoficiencyBonus = 5
             else -> newCharacter.chPoficiencyBonus = 6
         }
+
         /*val builder = AlertDialog.Builder(this)
         builder.setTitle("Androidly Alert")
         builder.setMessage(newCharacter.chLevel)
