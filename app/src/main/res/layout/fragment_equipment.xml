@@ -102,7 +102,7 @@
 
             <CheckBox
                 android:id="@+id/wpGreatsword"
-                android:layout_width="128dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/Greatsword"
@@ -110,7 +110,7 @@
 
             <CheckBox
                 android:id="@+id/wpLongsword"
-                android:layout_width="128dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/Longsword"

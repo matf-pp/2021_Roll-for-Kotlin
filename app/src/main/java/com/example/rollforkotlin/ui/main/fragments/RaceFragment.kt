@@ -1,6 +1,8 @@
 package com.example.rollforkotlin.ui.main.fragments
 
+import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +10,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.RadioButton
+import androidx.annotation.MainThread
+import com.example.rollforkotlin.ActivityScreen1
 import com.example.rollforkotlin.MainActivity
 import com.example.rollforkotlin.R
 import kotlinx.android.synthetic.main.activity_screen1.*
@@ -54,15 +58,36 @@ class RaceFragment : Fragment() {
         adapterB.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         // Apply the adapter to the spinner
         spBackground.adapter = adapterB
+
+
+    }
+
+
+   /* override fun onResume() {
+        super.onResume()
+        getValues()
+    }*/
+
+    override fun onStop() {
+        super.onStop()
+        getValues()
     }
 
     fun getValues() {
+
         val race = spRace.selectedItem.toString()
         val klasa = spClass.selectedItem.toString()
         val background = spBackground.selectedItem.toString()
-
+        ActivityScreen1.newCharacter.chRace = race
+        ActivityScreen1.newCharacter.chClass = klasa
+        ActivityScreen1.newCharacter.chBackgroud = background
+        /*val builder = AlertDialog.Builder(requireActivity())
+        builder.setTitle("Androidly Alert")
+        builder.setMessage(ActivityScreen1.newCharacter.chRace)
+        builder.show()*/
 
     }
 
 
 }
+

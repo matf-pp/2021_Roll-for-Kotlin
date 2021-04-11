@@ -1,7 +1,6 @@
 package com.example.rollforkotlin
 
 import android.content.Intent
-import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -9,10 +8,15 @@ import android.widget.RadioButton
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_screen1.*
 
+
 class ActivityScreen1 : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_screen1)
+
+        //newCharacter = Character()
+
         continueButton.setOnClickListener{
             getValues()
             val i = Intent(this, MainActivity::class.java)
@@ -33,22 +37,39 @@ class ActivityScreen1 : AppCompatActivity() {
 
 
     fun getValues() {
-        val level = spLevel.selectedItem.toString().substring(0,1)
+        val level = spLevel.selectedItem.toString().substring(0,1).toInt()
         var gender : String = ""
         val selectedRadioButtonId: Int = radioGroup.checkedRadioButtonId
         if (selectedRadioButtonId != -1) {
             val  selectedRadioButton : RadioButton  = findViewById(selectedRadioButtonId)
             gender = selectedRadioButton.text.toString()
         }
-        val name = txtName.text
+        val name = txtName.text.toString()
 
-       /* val builder = AlertDialog.Builder(this)
+        newCharacter.chName = name
+        newCharacter.chGender = gender
+        newCharacter.chLevel = level
+
+        when (level) {
+            in 1..4 -> newCharacter.chPoficiencyBonus = 2
+            in 5..8 -> newCharacter.chPoficiencyBonus = 3
+            in 9..12 -> newCharacter.chPoficiencyBonus = 4
+            in 3..16 -> newCharacter.chPoficiencyBonus = 5
+            else -> newCharacter.chPoficiencyBonus = 6
+        }
+        /*val builder = AlertDialog.Builder(this)
         builder.setTitle("Androidly Alert")
-        builder.setMessage(level)
+        builder.setMessage(newCharacter.chLevel)
         builder.show()*/
-
+    }
+    companion object {
+        @JvmField
+        var newCharacter: Character =  Character()
     }
 
 }
+
+
+
 
 

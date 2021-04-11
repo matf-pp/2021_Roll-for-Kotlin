@@ -24,6 +24,11 @@ class ToolsFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_tools, container, false)
     }
 
+    override fun onStop() {
+        super.onStop()
+        getValues()
+    }
+
     fun getValues() {
         val list = arrayListOf<String>()
         if(cbAcrobatics.isChecked){

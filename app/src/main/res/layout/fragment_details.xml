@@ -27,14 +27,15 @@
             android:textColor="#535353"
             android:textSize="20sp"
             android:layout_marginStart="10dp" />
-    <Spinner
-        android:id="@+id/spAlignment"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="0dp"
-        android:entries="@array/aligment"
-        android:spinnerMode="dialog"
-        android:theme="@style/SpinnerTheme2"/>
+
+        <Spinner
+            android:id="@+id/spAlignment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:entries="@array/alignment"
+            android:spinnerMode="dialog"
+            android:theme="@style/SpinnerTheme2" />
 
         <TextView
             android:id="@+id/lbDeity"

@@ -1,21 +1,12 @@
 package com.example.rollforkotlin
 
-import android.content.Context
 import android.os.Bundle
-import android.util.AttributeSet
-import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.TextView
-import com.google.android.material.tabs.TabLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.rollforkotlin.ui.main.SectionsPagerAdapter
 import com.example.rollforkotlin.ui.main.adapters.ViewPagerAdapter
 import com.example.rollforkotlin.ui.main.fragments.*
+import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_screen1.*
-import kotlinx.android.synthetic.main.fragment_tools.*
 
 
 class MainActivity : AppCompatActivity(){
@@ -55,6 +46,9 @@ class MainActivity : AppCompatActivity(){
         tabs.getTabAt(5)!!.setIcon(R.drawable.more)
 
     }
+
+
 }
+
 
 

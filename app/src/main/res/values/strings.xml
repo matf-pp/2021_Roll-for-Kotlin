@@ -93,7 +93,7 @@
         <item>Plate</item>
     </string-array>
 
-    <string-array name="aligment">
+    <string-array name="alignment">
         <item>Lawful good</item>
         <item>Neutral good</item>
         <item>Chaotic good</item>
@@ -169,7 +169,7 @@
     <string name="Gold">Gold</string>
     <string name="Platinum">Platinum</string>
     <string name="alignment">Alignment</string>
-    <string name="deity">Diety</string>
+    <string name="deity">Deity</string>
     <string name="theMother">The Mother</string>
     <string name="backstory">Backstory</string>
     <string name="backstoryHint">My name is Lasillya. I am 20 years old and I was born in a noble family ... </string>

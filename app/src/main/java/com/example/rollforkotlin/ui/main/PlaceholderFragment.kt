@@ -37,17 +37,6 @@ class PlaceholderFragment : Fragment() {
             textView.text = it
         })
 
-        //spinner za Alignment
-        spAl = root.findViewById<Spinner>(R.id.spAlignment)
-        spAl.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-            }
-            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                var selec = spAl.get(p2)
-                Log.d("success",spAl.get(p2).toString())
-            }
-        }
-        //kraj spinner-a za Alignment
 
         return root
     }
