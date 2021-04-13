@@ -46,17 +46,17 @@ class AbilityFragment : Fragment() {
             btnStrength.text = rollStats().toString()
         }
         btnStrengthPlus.setOnClickListener{
-            var newStrength = btnStrength.text.toString()
+            val newStrength = btnStrength.text.toString()
             if (newStrength != "") {
-                var newStr = btnStrength.text.toString().toInt() + 1
+                val newStr = btnStrength.text.toString().toInt() + 1
                 if (newStr < 21)
                     btnStrength.text = newStr.toString()
             }
         }
         btnStrengthMinus.setOnClickListener{
-            var newStrength = btnStrength.text.toString()
+            val newStrength = btnStrength.text.toString()
             if (newStrength != "") {
-                var newStr = btnStrength.text.toString().toInt() - 1
+                val newStr = btnStrength.text.toString().toInt() - 1
                 if (newStr > -1)
                     btnStrength.text = newStr.toString()
             }
@@ -66,17 +66,17 @@ class AbilityFragment : Fragment() {
             btnCharisma.text = rollStats().toString()
         }
         btnCharismaPlus.setOnClickListener{
-            var newCharisma = btnCharisma.text.toString()
+            val newCharisma = btnCharisma.text.toString()
             if (newCharisma != "") {
-                var newCha = btnCharisma.text.toString().toInt() + 1
+                val newCha = btnCharisma.text.toString().toInt() + 1
                 if (newCha < 21)
                     btnCharisma.text = newCha.toString()
             }
         }
         btnCharismaMinus.setOnClickListener{
-            var newCharisma = btnCharisma.text.toString()
+            val newCharisma = btnCharisma.text.toString()
             if (newCharisma != "") {
-                var newCha = btnCharisma.text.toString().toInt() - 1
+                val newCha = btnCharisma.text.toString().toInt() - 1
                 if (newCha > -1)
                     btnCharisma.text = newCha.toString()
             }
@@ -86,17 +86,17 @@ class AbilityFragment : Fragment() {
             btnConstitution.text = rollStats().toString()
         }
         btnConstitutionPlus.setOnClickListener{
-            var newConstitution = btnConstitution.text.toString()
+            val newConstitution = btnConstitution.text.toString()
             if (newConstitution != "") {
-                var newCon = btnConstitution.text.toString().toInt() + 1
+                val newCon = btnConstitution.text.toString().toInt() + 1
                 if (newCon < 21)
                     btnConstitution.text = newCon.toString()
             }
         }
         btnConstitutionMinus.setOnClickListener{
-            var newConstitution = btnConstitution.text.toString()
+            val newConstitution = btnConstitution.text.toString()
             if (newConstitution != "") {
-                var newCon = btnConstitution.text.toString().toInt() - 1
+                val newCon = btnConstitution.text.toString().toInt() - 1
                 if (newCon > -1)
                     btnConstitution.text = newCon.toString()
             }
@@ -106,17 +106,17 @@ class AbilityFragment : Fragment() {
             btnDexterity.text = rollStats().toString()
         }
         btnDexterityPlus.setOnClickListener{
-            var newDexterity = btnDexterity.text.toString()
+            val newDexterity = btnDexterity.text.toString()
             if (newDexterity != "") {
-                var newDex = btnDexterity.text.toString().toInt() + 1
+                val newDex = btnDexterity.text.toString().toInt() + 1
                 if (newDex < 21)
                     btnDexterity.text = newDex.toString()
             }
         }
         btnDexterityMinus.setOnClickListener{
-            var newDexterity = btnDexterity.text.toString()
+            val newDexterity = btnDexterity.text.toString()
             if (newDexterity != "") {
-                var newDex = btnDexterity.text.toString().toInt() - 1
+                val newDex = btnDexterity.text.toString().toInt() - 1
                 if (newDex > -1)
                     btnDexterity.text = newDex.toString()
             }
@@ -126,17 +126,17 @@ class AbilityFragment : Fragment() {
             btnIntelligence.text = rollStats().toString()
         }
         btnIntelligencePlus.setOnClickListener{
-            var newIntelligence = btnIntelligence.text.toString()
+            val newIntelligence = btnIntelligence.text.toString()
             if (newIntelligence != "") {
-                var newInt = btnIntelligence.text.toString().toInt() + 1
+                val newInt = btnIntelligence.text.toString().toInt() + 1
                 if (newInt < 21)
                     btnIntelligence.text = newInt.toString()
             }
         }
         btnIntelligenceMinus.setOnClickListener{
-            var newIntelligence = btnIntelligence.text.toString()
+            val newIntelligence = btnIntelligence.text.toString()
             if (newIntelligence != "") {
-                var newInt = btnIntelligence.text.toString().toInt() - 1
+                val newInt = btnIntelligence.text.toString().toInt() - 1
                 if (newInt > -1)
                     btnIntelligence.text = newInt.toString()
             }
@@ -146,31 +146,34 @@ class AbilityFragment : Fragment() {
             btnWisdom.text = rollStats().toString()
         }
         btnWisdomPlus.setOnClickListener{
-            var newWisdom = btnWisdom.text.toString()
+            val newWisdom = btnWisdom.text.toString()
             if (newWisdom != "") {
-                var newWis = btnWisdom.text.toString().toInt() + 1
+                val newWis = btnWisdom.text.toString().toInt() + 1
                 if (newWis < 21)
                     btnWisdom.text = newWis.toString()
             }
         }
         btnWisdomMinus.setOnClickListener{
-            var newWisdom = btnWisdom.text.toString()
+            val newWisdom = btnWisdom.text.toString()
             if (newWisdom != "") {
-                var newWis = btnWisdom.text.toString().toInt() - 1
+                val newWis = btnWisdom.text.toString().toInt() - 1
                 if (newWis > -1)
                     btnWisdom.text = newWis.toString()
             }
         }
-
     }
 
     fun getValues() {
-        ActivityScreen1.newCharacter.chStr = btnStrength.text.toString().toInt()
-        ActivityScreen1.newCharacter.chDex = btnDexterity.text.toString().toInt()
-        ActivityScreen1.newCharacter.chCon = btnConstitution.text.toString().toInt()
-        ActivityScreen1.newCharacter.chInt = btnIntelligence.text.toString().toInt()
-        ActivityScreen1.newCharacter.chWis = btnWisdom.text.toString().toInt()
-        ActivityScreen1.newCharacter.chCha = btnCharisma.text.toString().toInt()
+        if(btnStrength.text.toString() != "" && btnDexterity.text.toString() != ""
+            && btnConstitution.text.toString() != "" && btnIntelligence.text.toString() != ""
+            && btnWisdom.text.toString() != "" && btnCharisma.text.toString() != "") {
+            ActivityScreen1.newCharacter.chStr = btnStrength.text.toString().toInt()
+            ActivityScreen1.newCharacter.chDex = btnDexterity.text.toString().toInt()
+            ActivityScreen1.newCharacter.chCon = btnConstitution.text.toString().toInt()
+            ActivityScreen1.newCharacter.chInt = btnIntelligence.text.toString().toInt()
+            ActivityScreen1.newCharacter.chWis = btnWisdom.text.toString().toInt()
+            ActivityScreen1.newCharacter.chCha = btnCharisma.text.toString().toInt()
+        }
     }
 
 

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
+import androidx.core.view.isVisible
 import com.example.rollforkotlin.ActivityScreen1
 import com.example.rollforkotlin.R
 import kotlinx.android.synthetic.main.fragment_tools.*

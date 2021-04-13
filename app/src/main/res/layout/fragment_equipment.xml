@@ -36,7 +36,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <TextView
-                android:id="@+id/lbWeapon"
+                android:id="@+id/lbCantrip"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_marginStart="10dp"
@@ -48,7 +48,7 @@
                 android:textSize="20sp" />
 
             <CheckBox
-                android:id="@+id/cbDagger"
+                android:id="@+id/cbBruh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -56,7 +56,7 @@
                 android:theme="@style/SpinnerTheme2" />
 
             <CheckBox
-                android:id="@+id/cbJavelin"
+                android:id="@+id/cbFirebolt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
