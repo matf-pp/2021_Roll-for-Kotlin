@@ -181,6 +181,8 @@
     <string name="additionalHint">  Anything that doesn\'t have a place ... </string>
 
     //Spells
+    <string name="noSpell">         Your class has no spells</string>
+
     <string name="cantrip">         Cantrips</string>
     <string name="controlFlame">    Control Flame</string>
     <string name="firebolt">        Firebolt</string>
@@ -193,6 +195,8 @@
     <string name="sacredFlame">     Sacred Flame</string>
     <string name="spareTheDying">   Spare the dying</string>
     <string name="viciousMockery">  Vicious mockery</string>
+
+    <string name="prepare">         Prepare:</string>
 
     <string name="spellLevel1">     Spell Level 1</string>
     <string name="absorbElements">  Absorb Elements</string>

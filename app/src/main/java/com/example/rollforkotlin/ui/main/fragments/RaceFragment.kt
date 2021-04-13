@@ -8,17 +8,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.RadioButton
+import android.widget.Spinner
 import androidx.annotation.MainThread
 import com.example.rollforkotlin.ActivityScreen1
 import com.example.rollforkotlin.MainActivity
 import com.example.rollforkotlin.R
 import kotlinx.android.synthetic.main.activity_screen1.*
 import kotlinx.android.synthetic.main.fragment_race.*
+import kotlinx.android.synthetic.main.fragment_race.view.*
 
 
-class RaceFragment : Fragment() {
+class RaceFragment : Fragment(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -58,19 +61,16 @@ class RaceFragment : Fragment() {
         adapterB.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         // Apply the adapter to the spinner
         spBackground.adapter = adapterB
-
-
-    }
-
-
-   /* override fun onResume() {
-        super.onResume()
-        getValues()
-    }*/
-
-    override fun onStop() {
-        super.onStop()
-        getValues()
+        val listener = object :AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                getValues()
+            }
+        }
+        spClass?.onItemSelectedListener = listener
+        spRace?.onItemSelectedListener = listener
+        spBackground?.onItemSelectedListener = listener
     }
 
     fun getValues() {
@@ -87,6 +87,7 @@ class RaceFragment : Fragment() {
         builder.show()*/
 
     }
+
 
 
 }
