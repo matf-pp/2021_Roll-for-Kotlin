@@ -24,8 +24,6 @@ class MainActivity : AppCompatActivity(){
 
     private fun setUpTabs() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
-
-
         //Adding all tab fragments
         adapter.addFragment(RaceFragment(), "")
         adapter.addFragment(AbilityFragment(), "")
@@ -36,7 +34,6 @@ class MainActivity : AppCompatActivity(){
 
         viewPager.adapter = adapter
         tabs.setupWithViewPager(viewPager)
-
         //setting icons for tabs
         tabs.getTabAt(0)!!.setIcon(R.drawable.sword3)
         tabs.getTabAt(1)!!.setIcon(R.drawable.stats2)

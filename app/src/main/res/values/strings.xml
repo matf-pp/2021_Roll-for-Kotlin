@@ -180,4 +180,72 @@
     <string name="additional">      Additional Features</string>
     <string name="additionalHint">  Anything that doesn\'t have a place ... </string>
 
+    //Spells
+    <string name="cantrip">         Cantrips</string>
+    <string name="controlFlame">    Control Flame</string>
+    <string name="firebolt">        Firebolt</string>
+    <string name="friends">         Friends</string>
+    <string name="guidance">        Guidance</string>
+    <string name="light">           Light</string>
+    <string name="mageHand">        Mage Hand</string>
+    <string name="mending">         Mending</string>
+    <string name="minorIlusion">    Minor Ilusion</string>
+    <string name="sacredFlame">     Sacred Flame</string>
+    <string name="spareTheDying">   Spare the dying</string>
+    <string name="viciousMockery">  Vicious mockery</string>
+
+    <string name="spellLevel1">     Spell Level 1</string>
+    <string name="absorbElements">  Absorb Elements</string>
+    <string name="alarm">           Alarm</string>
+    <string name="bless">           Bless</string>
+    <string name="burningHands">    Burning Hands</string>
+    <string name="causeFear">       Cause Fear</string>
+    <string name="charmPerson">     Charm Person</string>
+    <string name="colorSpray">      Color Spray</string>
+    <string name="cureWounds">      Cure Wounds</string>
+    <string name="detectMagic">     Detect Magic</string>
+    <string name="entangle">        Entangle</string>
+    <string name="featherFall">     Feather Fall</string>
+    <string name="healingWord">     Healing Word</string>
+    <string name="inflictWounds">   Inflict Wounds</string>
+    <string name="silentImage">     Silent Image</string>
+
+    <string name="spellLevel2">     Spell Level 2</string>
+    <string name="animalMessenger"> Animal Messenger</string>
+    <string name="blindDeaf">       Blindness/Deafness</string>
+    <string name="calmEmotion">     Calm Emotion</string>
+    <string name="darkness">        Darkness</string>
+    <string name="darkVision">      Dark Vision</string>
+    <string name="detectThoughts">  Detect Thoughts</string>
+    <string name="enhanceAbility">  Enhance Ability</string>
+    <string name="findTraps">       Find Traps</string>
+    <string name="gustOfWind">      Gust of Wind</string>
+    <string name="invisibility">    Invisibility</string>
+    <string name="minorImage">      Minor Image</string>
+    <string name="prayerOfHealing"> Prayer of Healing</string>
+    <string name="silence">         Silence</string>
+    <string name="spiritualWeapon"> Spiritual Weapon</string>
+    <string name="web">             Web</string>
+
+    <string name="spellLevel3">     Spell Level 3</string>
+    <string name="animateDead">     Animate Dead</string>
+    <string name="blink">           Blink</string>
+    <string name="conjureAnimals">  Conjure Animals</string>
+    <string name="counterSpell">    Counterspell</string>
+    <string name="dispelMagic">     Dispel Magic</string>
+    <string name="fear">            Fear</string>
+    <string name="fly">             Fly</string>
+    <string name="intellectfort">   Intellect Fortress</string>
+    <string name="lifeTransference">Life Transference</string>
+    <string name="lightingArrow">   Lightning Arrow</string>
+    <string name="majorImage">      Major Image</string>
+    <string name="massHealingWord"> Mass Healing Word</string>
+    <string name="sending">         Sending</string>
+    <string name="slow">            Slow</string>
+    <string name="summonFey">       Summon Fey</string>
+    <string name="tongues">         Tongues</string>
+    <string name="waterWalk">       Water Walk</string>
+
+
+<!--    <string name=""></string>-->
 </resources>
