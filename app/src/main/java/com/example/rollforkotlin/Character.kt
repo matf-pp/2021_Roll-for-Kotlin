@@ -18,6 +18,10 @@ public class Character {
     var chBackstory : String = ""
     var chAdditionalInfo : String = ""
     var chNotes : String = ""
+    //Counters
+    var chLanguageCounter : Int = 1
+    var chProfCounter : Int = 1
+    var chToolsCounter : Int = 1
     //HP
     var chCurrentHP : Int = 0
     var chMaxHP : Int = 0
@@ -49,6 +53,25 @@ public class Character {
     var chSleightOfHand : Int = 0
     var chStealth : Int = 0
     var chSurvival : Int = 0
+    //Stat Prof
+    var chArcanaProf : Boolean = false
+    var chAcrobaticsProf : Boolean = false
+    var chAnimalHProf : Boolean = false
+    var chAthleticsProf : Boolean = false
+    var chDeceptionProf : Boolean = false
+    var chHistoryProf : Boolean = false
+    var chInsightProf : Boolean = false
+    var chIntimidationProf : Boolean = false
+    var chInvestigationProf : Boolean = false
+    var chMedicineProf : Boolean = false
+    var chNatureProf : Boolean = false
+    var chPerceptionProf : Boolean = false
+    var chPerformanceProf : Boolean = false
+    var chPersuasionProf : Boolean = false
+    var chReligionProf : Boolean = false
+    var chSleightOfHandProf : Boolean = false
+    var chStealthProf : Boolean = false
+    var chSurvivalProf : Boolean = false
     //Saving Throws
     var chStrSave : Int = 0
     var chDexSave : Int = 0
@@ -56,6 +79,13 @@ public class Character {
     var chIntSave : Int = 0
     var chWisSave : Int = 0
     var chChaSave : Int = 0
+    //Saving Throws Prof
+    var chStrSaveProf : Boolean = false
+    var chDexSaveProf : Boolean = false
+    var chConSaveProf : Boolean = false
+    var chIntSaveProf : Boolean = false
+    var chWisSaveProf : Boolean = false
+    var chChaSaveProf : Boolean = false
     //Traits
     var chSpeedWalk : Int = 0
     var chSpeedFly : Int = 0
@@ -77,6 +107,108 @@ public class Character {
     var chArmor : String = ""
     var chShield : String = ""
     var chWeapons : String = ""
+
+    fun setAbilityScores(){
+        chArcana = if (chArcanaProf) {
+            chInt + chPoficiencyBonus
+        } else chInt
+
+        chAcrobatics = if (chAcrobaticsProf) {
+            chDex + chPoficiencyBonus
+        } else chDex
+
+        chAnimalH = if (chAnimalHProf){
+            chWis + chPoficiencyBonus
+        }else chWis
+
+        chAthletics = if (chAthleticsProf){
+            chStr + chPoficiencyBonus
+        } else chStr
+
+        chDeception = if (chDeceptionProf){
+            chCha + chPoficiencyBonus
+        } else chCha
+
+        chHistory = if (chHistoryProf){
+            chInt + chPoficiencyBonus
+        } else chInt
+
+        chInsight = if (chInsightProf){
+            chWis + chPoficiencyBonus
+        } else chWis
+
+        chIntimidation = if (chIntimidationProf){
+            chCha + chPoficiencyBonus
+        } else chCha
+
+        chInvestigation = if (chInvestigationProf){
+            chInt + chPoficiencyBonus
+        } else chInt
+
+        chMedicine = if (chMedicineProf){
+            chWis + chPoficiencyBonus
+        } else chWis
+
+        chNature = if (chNatureProf){
+            chInt + chPoficiencyBonus
+        } else chInt
+
+        chPerception = if (chPerceptionProf){
+            chWis + chPoficiencyBonus
+        } else chWis
+
+        chPerformance = if (chPerformanceProf){
+            chCha + chPoficiencyBonus
+        } else chCha
+
+        chPersuasion = if (chPersuasionProf){
+            chCha + chPoficiencyBonus
+        } else chCha
+
+        chReligion = if (chReligionProf){
+            chInt + chPoficiencyBonus
+        } else chInt
+
+        chSleightOfHand = if (chSleightOfHandProf){
+            chDex + chPoficiencyBonus
+        } else chDex
+
+        chStealth = if (chStealthProf){
+            chDex + chPoficiencyBonus
+        } else chDex
+
+        chSurvival = if (chSurvivalProf){
+            chWis + chPoficiencyBonus
+        } else chWis
+    }
+
+    fun setSavingThrows(){
+        chStrSave = if (chStrSaveProf) {
+            chStr + chPoficiencyBonus
+        } else chStr
+
+        chDexSave = if (chDexSaveProf) {
+            chDex + chPoficiencyBonus
+        } else chDex
+
+        chConSave = if (chConSaveProf){
+            chCon + chPoficiencyBonus
+        }else chCon
+
+        chIntSave = if (chIntSaveProf){
+            chInt + chPoficiencyBonus
+        } else chInt
+
+        chWisSave = if (chWisSaveProf){
+            chWis + chPoficiencyBonus
+        } else chWis
+
+        chChaSave = if (chChaSaveProf){
+            chCha + chPoficiencyBonus
+        } else chCha
+
+
+    }
 
 }
 
