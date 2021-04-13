@@ -14,13 +14,18 @@
 
     <TextView
         android:id="@+id/lbRace"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_marginTop="0dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="0dp"
+        android:background="#960E0E"
         android:fontFamily="@font/percy_goth"
         android:text="@string/race"
-        android:textColor="#535353"
-        android:textSize="20sp" />
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp" />
 
     <Spinner
         android:id="@+id/spRace"
@@ -33,13 +38,18 @@
 
     <TextView
         android:id="@+id/lbClass"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_marginTop="80dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="0dp"
+        android:background="#960E0E"
         android:fontFamily="@font/percy_goth"
         android:text="@string/klasa"
-        android:textColor="#535353"
-        android:textSize="20sp" />
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp" />
 
     <Spinner
         android:id="@+id/spClass"
@@ -52,13 +62,18 @@
 
     <TextView
         android:id="@+id/lbBackground"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_marginTop="160dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="0dp"
+        android:background="#960E0E"
         android:fontFamily="@font/percy_goth"
         android:text="@string/background"
-        android:textColor="#535353"
-        android:textSize="20sp" />
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp" />
 
     <Spinner
         android:id="@+id/spBackground"

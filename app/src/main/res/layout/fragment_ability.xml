@@ -19,14 +19,15 @@
         android:textSize="20sp"
         android:layout_marginLeft="20dp"
         app:backgroundTint="#960E0E"
-        android:layout_marginStart="20dp" />
+        android:layout_marginStart="20dp"
+ />
 
     <Button
         android:id="@+id/btnStrengthPlus"
-        android:layout_width="50dp"
+        android:layout_width="45dp"
         android:layout_height="50dp"
-        android:layout_marginStart="122dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginLeft="130dp"
         android:fontFamily="@font/percy_goth"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -35,10 +36,10 @@
 
     <Button
         android:id="@+id/btnStrengthMinus"
-        android:layout_width="50dp"
+        android:layout_width="45dp"
         android:layout_height="50dp"
-        android:layout_marginStart="122dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginLeft="130dp"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/percy_goth"
         android:textColor="#FFFFFF"
@@ -63,35 +64,37 @@
         android:layout_height="100dp"
         android:layout_gravity="end"
         android:fontFamily="@font/percy_goth"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="65dp"
         android:textSize="20sp"
         app:backgroundTint="#960E0E"
-        android:layout_marginEnd="20dp" />
+        android:layout_marginEnd="65dp" />
 
     <Button
         android:id="@+id/btnDexterityPlus"
-        android:layout_width="50dp"
+        android:layout_width="45dp"
         android:layout_height="50dp"
-        android:layout_marginStart="178dp"
-        android:layout_marginLeft="20dp"
+        android:layout_gravity="end"
+        android:layout_marginRight="10dp"
         android:fontFamily="@font/percy_goth"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:backgroundTint="#960E0E"
-        app:icon="@android:drawable/arrow_up_float" />
+        app:icon="@android:drawable/arrow_up_float"
+        android:layout_marginEnd="10dp" />
 
     <Button
         android:id="@+id/btnDexterityMinus"
-        android:layout_width="50dp"
+        android:layout_width="45dp"
         android:layout_height="50dp"
-        android:layout_marginStart="178dp"
-        android:layout_marginLeft="20dp"
+        android:layout_gravity="end"
         android:layout_marginTop="50dp"
+        android:layout_marginRight="10dp"
         android:fontFamily="@font/percy_goth"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:backgroundTint="#960E0E"
-        app:icon="@android:drawable/arrow_down_float" />
+        app:icon="@android:drawable/arrow_down_float"
+        android:layout_marginEnd="10dp" />
 
     <TextView
         android:id="@+id/lbDexterity"
@@ -100,10 +103,10 @@
         android:layout_gravity="end"
         android:layout_marginTop="100dp"
         android:fontFamily="@font/percy_goth"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="53dp"
         android:text="@string/dexterity"
         android:textSize="20sp"
-        android:layout_marginEnd="20dp" />
+        android:layout_marginEnd="53dp" />
 
     <Button
         android:id="@+id/btnConstitution"
@@ -119,12 +122,12 @@
 
     <Button
         android:id="@+id/btnConstitutionPlus"
-        android:layout_width="50dp"
+        android:layout_width="45dp"
         android:layout_height="50dp"
-        android:layout_marginStart="122dp"
-        android:layout_marginTop="-45dp"
         android:layout_gravity="center|start"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="-45dp"
         android:fontFamily="@font/percy_goth"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -133,11 +136,11 @@
 
     <Button
         android:id="@+id/btnConstitutionMinus"
-        android:layout_width="50dp"
+        android:layout_width="45dp"
         android:layout_height="50dp"
         android:layout_gravity="center|start"
-        android:layout_marginStart="122dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginLeft="130dp"
         android:layout_marginTop="3dp"
         android:fontFamily="@font/percy_goth"
         android:textColor="#FFFFFF"
@@ -164,19 +167,19 @@
         android:layout_gravity="center|end"
         android:fontFamily="@font/percy_goth"
         android:layout_marginBottom="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="65dp"
         android:textSize="20sp"
         app:backgroundTint="#960E0E"
-        android:layout_marginEnd="20dp" />
+        android:layout_marginEnd="65dp" />
 
     <Button
         android:id="@+id/btnIntelligencePlus"
-        android:layout_width="50dp"
+        android:layout_width="45dp"
         android:layout_height="50dp"
-        android:layout_marginStart="178dp"
+        android:layout_gravity="center|end"
         android:layout_marginTop="-45dp"
-        android:layout_gravity="center|start"
-        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
         android:fontFamily="@font/percy_goth"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -185,12 +188,12 @@
 
     <Button
         android:id="@+id/btnIntelligenceMinus"
-        android:layout_width="50dp"
+        android:layout_width="45dp"
         android:layout_height="50dp"
-        android:layout_gravity="center|start"
-        android:layout_marginStart="178dp"
-        android:layout_marginLeft="20dp"
+        android:layout_gravity="center|end"
         android:layout_marginTop="3dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
         android:fontFamily="@font/percy_goth"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -204,10 +207,10 @@
         android:layout_gravity="center|end"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/percy_goth"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="32dp"
         android:text="@string/inteligence"
         android:textSize="20sp"
-        android:layout_marginEnd="20dp" />
+        android:layout_marginEnd="32dp" />
 
     <Button
         android:id="@+id/btnWisdom"
@@ -223,11 +226,11 @@
 
     <Button
         android:id="@+id/btnWisdomPlus"
-        android:layout_width="50dp"
+        android:layout_width="45dp"
         android:layout_height="50dp"
         android:layout_gravity="bottom|start"
-        android:layout_marginStart="122dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginLeft="130dp"
         android:layout_marginBottom="90dp"
         android:fontFamily="@font/percy_goth"
         android:textColor="#FFFFFF"
@@ -237,11 +240,11 @@
 
     <Button
         android:id="@+id/btnWisdomMinus"
-        android:layout_width="50dp"
+        android:layout_width="45dp"
         android:layout_height="50dp"
         android:layout_gravity="bottom|start"
-        android:layout_marginStart="122dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginLeft="130dp"
         android:layout_marginBottom="40dp"
         android:fontFamily="@font/percy_goth"
         android:textColor="#FFFFFF"
@@ -269,17 +272,17 @@
         android:fontFamily="@font/percy_goth"
         android:textSize="20sp"
         android:layout_marginBottom="40dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="65dp"
         app:backgroundTint="#960E0E"
-        android:layout_marginEnd="20dp" />
+        android:layout_marginEnd="65dp" />
 
     <Button
         android:id="@+id/btnCharismaPlus"
-        android:layout_width="50dp"
+        android:layout_width="45dp"
         android:layout_height="50dp"
-        android:layout_gravity="bottom|start"
-        android:layout_marginStart="178dp"
-        android:layout_marginLeft="20dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
         android:layout_marginBottom="90dp"
         android:fontFamily="@font/percy_goth"
         android:textColor="#FFFFFF"
@@ -289,11 +292,11 @@
 
     <Button
         android:id="@+id/btnCharismaMinus"
-        android:layout_width="50dp"
+        android:layout_width="45dp"
         android:layout_height="50dp"
-        android:layout_gravity="bottom|start"
-        android:layout_marginStart="178dp"
-        android:layout_marginLeft="20dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
         android:layout_marginBottom="40dp"
         android:fontFamily="@font/percy_goth"
         android:textColor="#FFFFFF"
@@ -308,8 +311,8 @@
         android:layout_gravity="bottom|end"
         android:layout_marginTop="80dp"
         android:fontFamily="@font/percy_goth"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="48dp"
         android:text="@string/charisma"
         android:textSize="20sp"
-        android:layout_marginEnd="20dp" />
+        android:layout_marginEnd="48dp" />
 </FrameLayout>

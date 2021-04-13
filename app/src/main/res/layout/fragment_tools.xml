@@ -16,15 +16,18 @@
 
             <TextView
                 android:id="@+id/lbLanguage"
-                android:layout_width="140dp"
+                android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="0dp"
                 android:layout_marginTop="5dp"
+                android:background="#960E0E"
                 android:fontFamily="@font/percy_goth"
                 android:text="@string/language"
-                android:textColor="#535353"
-                android:textSize="20sp" />
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp" />
 
             <TextView
                 android:id="@+id/lbSelect1"
@@ -35,7 +38,7 @@
                 android:layout_marginTop="-25dp"
                 android:fontFamily="@font/percy_goth"
                 android:text="@string/select"
-                android:textColor="#535353"
+                android:textColor="#FFFFFF"
                 android:textSize="15sp" />
 
             <TextView
@@ -48,7 +51,7 @@
                 android:fontFamily="@font/percy_goth"
                 android:gravity="clip_vertical"
                 android:text="@string/empty"
-                android:textColor="#535353"
+                android:textColor="#FFFFFF"
                 android:textSize="15sp" />
 
             <CheckBox
@@ -117,15 +120,18 @@
 
             <TextView
                 android:id="@+id/lbProficiency"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="0dp"
                 android:layout_marginTop="0dp"
+                android:background="#960E0E"
                 android:fontFamily="@font/percy_goth"
                 android:text="@string/proficiency"
-                android:textColor="#535353"
-                android:textSize="20sp" />
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp" />
 
             <TextView
                 android:id="@+id/lbSelect2"
@@ -136,7 +142,7 @@
                 android:layout_marginTop="-27dp"
                 android:fontFamily="@font/percy_goth"
                 android:text="@string/select"
-                android:textColor="#535353"
+                android:textColor="#FFFFFF"
                 android:textSize="15sp" />
 
             <TextView
@@ -149,7 +155,7 @@
                 android:fontFamily="@font/percy_goth"
                 android:gravity="center_horizontal"
                 android:text="@string/empty"
-                android:textColor="#535353"
+                android:textColor="#FFFFFF"
                 android:textSize="15sp" />
 
             <CheckBox
@@ -298,15 +304,18 @@
 
             <TextView
                 android:id="@+id/lbTools"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="0dp"
                 android:layout_marginTop="0dp"
+                android:background="#960E0E"
                 android:fontFamily="@font/percy_goth"
                 android:text="@string/tools"
-                android:textColor="#535353"
-                android:textSize="20sp" />
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp" />
 
             <TextView
                 android:id="@+id/lbSelect3"
@@ -317,7 +326,7 @@
                 android:layout_marginTop="-27dp"
                 android:fontFamily="@font/percy_goth"
                 android:text="@string/select"
-                android:textColor="#535353"
+                android:textColor="#FFFFFF"
                 android:textSize="15sp" />
 
             <TextView
@@ -330,7 +339,7 @@
                 android:fontFamily="@font/percy_goth"
                 android:gravity="center_horizontal"
                 android:text="@string/empty"
-                android:textColor="#535353"
+                android:textColor="#FFFFFF"
                 android:textSize="15sp" />
 
             <CheckBox

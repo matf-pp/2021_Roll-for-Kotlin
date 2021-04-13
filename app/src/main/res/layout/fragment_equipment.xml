@@ -17,15 +17,18 @@
 
             <TextView
                 android:id="@+id/lbArmor"
-                android:layout_width="140dp"
+                android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="0dp"
+                android:background="#960E0E"
                 android:fontFamily="@font/percy_goth"
                 android:text="@string/armor"
-                android:textColor="#535353"
-                android:textSize="20sp" />
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp" />
             <Spinner
                 android:id="@+id/spArmor"
                 android:layout_width="match_parent"
@@ -37,15 +40,18 @@
 
             <TextView
                 android:id="@+id/lbWeapon"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="0dp"
                 android:layout_marginTop="5dp"
+                android:background="#960E0E"
                 android:fontFamily="@font/percy_goth"
                 android:text="@string/weapon"
-                android:textColor="#535353"
-                android:textSize="20sp" />
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp" />
 
             <CheckBox
                 android:id="@+id/cbDagger"
@@ -137,15 +143,18 @@
 
             <TextView
                 android:id="@+id/lbPotions"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="0dp"
                 android:layout_marginTop="0dp"
+                android:background="#960E0E"
                 android:fontFamily="@font/percy_goth"
                 android:text="@string/potions"
-                android:textColor="#535353"
-                android:textSize="20sp" />
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp" />
 
             <CheckBox
                 android:id="@+id/cbHealingPotion"
@@ -157,33 +166,37 @@
 
             <TextView
                 android:id="@+id/lbMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="0dp"
                 android:layout_marginTop="0dp"
+                android:background="#960E0E"
                 android:fontFamily="@font/percy_goth"
                 android:text="@string/money"
-                android:textColor="#535353"
-                android:textSize="20sp" />
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp" />
 
             <Button
-            android:id="@+id/btnCopper"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="20dp"
-            android:fontFamily="@font/percy_goth"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            app:backgroundTint="#960E0E"
+                android:id="@+id/btnCopper"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/percy_goth"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:backgroundTint="#960E0E"
                 android:layout_marginStart="20dp" />
 
             <TextView
                 android:id="@+id/lbCopper"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginLeft="25dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="0dp"
                 android:fontFamily="@font/percy_goth"
                 android:text="@string/copper"
@@ -205,8 +218,8 @@
                 android:id="@+id/lbSilver"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="175dp"
-                android:layout_marginLeft="175dp"
+                android:layout_marginStart="185dp"
+                android:layout_marginLeft="185dp"
                 android:layout_marginTop="0dp"
                 android:fontFamily="@font/percy_goth"
                 android:text="@string/silver"
@@ -249,8 +262,8 @@
                 android:id="@+id/lbPlatinum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="175dp"
-                android:layout_marginLeft="175dp"
+                android:layout_marginStart="162dp"
+                android:layout_marginLeft="162dp"
                 android:layout_marginTop="0dp"
                 android:fontFamily="@font/percy_goth"
                 android:text="@string/platinum"
@@ -258,15 +271,18 @@
 
             <TextView
                 android:id="@+id/lbInstruments"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="0dp"
+                android:layout_marginTop="10dp"
+                android:background="#960E0E"
                 android:fontFamily="@font/percy_goth"
                 android:text="@string/instrument"
-                android:textColor="#535353"
-                android:textSize="20sp" />
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp" />
 
             <CheckBox
                 android:id="@+id/cbDrum"

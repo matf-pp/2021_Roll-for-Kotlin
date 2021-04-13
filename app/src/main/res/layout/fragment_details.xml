@@ -18,15 +18,20 @@
 
         <TextView
             android:id="@+id/lbAlignment"
-            android:layout_width="140dp"
+            android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="0dp"
             android:layout_marginTop="5dp"
+            android:background="#960E0E"
             android:fontFamily="@font/percy_goth"
             android:text="@string/alignment"
-            android:textColor="#535353"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:layout_marginStart="10dp" />
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp" />
 
         <Spinner
             android:id="@+id/spAlignment"
@@ -39,15 +44,20 @@
 
         <TextView
             android:id="@+id/lbDeity"
-            android:layout_width="140dp"
+            android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="0dp"
             android:layout_marginTop="5dp"
+            android:background="#960E0E"
             android:fontFamily="@font/percy_goth"
             android:text="@string/deity"
-            android:textColor="#535353"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:layout_marginStart="10dp" />
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp" />
 
         <EditText
             android:id="@+id/txtDiety"
@@ -65,15 +75,20 @@
 
         <TextView
             android:id="@+id/lbBackstory"
-            android:layout_width="140dp"
+            android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="0dp"
             android:layout_marginTop="5dp"
+            android:background="#960E0E"
             android:fontFamily="@font/percy_goth"
             android:text="@string/backstory"
-            android:textColor="#535353"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:layout_marginStart="10dp" />
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp" />
 
         <EditText
             android:id="@+id/txtBackstory"
@@ -84,22 +99,27 @@
             android:layout_marginTop="0dp"
             android:fontFamily="@font/percy_goth"
             android:hint="@string/backstoryHint"
-            android:inputType="text"
+            android:inputType="textMultiLine"
             android:textColor="#535353"
             android:textSize="18sp"
             android:autofillHints="" />
 
         <TextView
             android:id="@+id/lbAppearance"
-            android:layout_width="140dp"
+            android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="0dp"
             android:layout_marginTop="5dp"
+            android:background="#960E0E"
             android:fontFamily="@font/percy_goth"
             android:text="@string/appearance"
-            android:textColor="#535353"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:layout_marginStart="10dp" />
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp" />
 
         <EditText
             android:id="@+id/txtAppearance"
@@ -110,22 +130,27 @@
             android:layout_marginTop="0dp"
             android:fontFamily="@font/percy_goth"
             android:hint="@string/looks"
-            android:inputType="text"
+            android:inputType="textMultiLine"
             android:textColor="#535353"
             android:textSize="18sp"
             android:autofillHints="" />
 
         <TextView
             android:id="@+id/lbAdditional"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="0dp"
             android:layout_marginTop="5dp"
+            android:background="#960E0E"
             android:fontFamily="@font/percy_goth"
             android:text="@string/additional"
-            android:textColor="#535353"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:layout_marginStart="10dp" />
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp" />
 
         <EditText
             android:id="@+id/txtAdditional"
@@ -136,10 +161,12 @@
             android:layout_marginTop="0dp"
             android:fontFamily="@font/percy_goth"
             android:hint="@string/additionalHint"
-            android:inputType="text"
+            android:inputType="textMultiLine"
             android:textColor="#535353"
             android:textSize="18sp"
             android:autofillHints="" />
+
+
 
     </LinearLayout>
     </ScrollView>
