@@ -10,7 +10,7 @@ public class Character {
     var chBackgroud : String = ""
     var chDeity : String = ""
     var chAlignment : String = ""
-    var chPoficiencyBonus : Int = 2
+    var chProficiencyBonus : Int = 2
     var chArmorClass : Int = 0
     var chPassivePerception : Int = 0
     var chInitiative : Int = 0
@@ -28,64 +28,33 @@ public class Character {
     var chTemporaryHP : Int = 0
     var chHitDice : String = ""
     //Ability Score
-    var chStr : Int = 0
-    var chDex : Int = 0
-    var chCon : Int = 0
-    var chInt : Int = 0
-    var chWis : Int = 0
-    var chCha : Int = 0
+    var chAbilities = mutableMapOf<String,Int>("str" to 0, "dex" to 0,"con" to 0,
+                                                "int" to 0,"wis" to 0,"cha" to 0)
+
     //Stats
-    var chArcana : Int = 0
-    var chAcrobatics : Int = 0
-    var chAnimalH : Int = 0
-    var chAthletics : Int = 0
-    var chDeception : Int = 0
-    var chHistory : Int = 0
-    var chInsight : Int = 0
-    var chIntimidation : Int = 0
-    var chInvestigation : Int = 0
-    var chMedicine : Int = 0
-    var chNature : Int = 0
-    var chPerception : Int = 0
-    var chPerformance : Int = 0
-    var chPersuasion : Int = 0
-    var chReligion : Int = 0
-    var chSleightOfHand : Int = 0
-    var chStealth : Int = 0
-    var chSurvival : Int = 0
+    var chSkills = mutableMapOf<String,Int>("dexAcrobatics" to 0,"wisAnimalHandling" to 0,"intArcana" to 0,
+                                    "strAthletics" to 0, "chaDeception" to 0,"intHistory" to 0,
+                                    "wisInsight" to 0, "chaIntimidation" to 0,"intInvestigation" to 0,
+                                    "wisMedicine" to 0, "intNature" to 0,"wisPerception" to 0,
+                                    "chaPerformance" to 0, "chaPersuasion" to 0,"intReligion" to 0,
+                                    "dexSleightOfHand" to 0, "dexStealth" to 0,"wisSurvival" to 0)
+
     //Stat Prof
-    var chArcanaProf : Boolean = false
-    var chAcrobaticsProf : Boolean = false
-    var chAnimalHProf : Boolean = false
-    var chAthleticsProf : Boolean = false
-    var chDeceptionProf : Boolean = false
-    var chHistoryProf : Boolean = false
-    var chInsightProf : Boolean = false
-    var chIntimidationProf : Boolean = false
-    var chInvestigationProf : Boolean = false
-    var chMedicineProf : Boolean = false
-    var chNatureProf : Boolean = false
-    var chPerceptionProf : Boolean = false
-    var chPerformanceProf : Boolean = false
-    var chPersuasionProf : Boolean = false
-    var chReligionProf : Boolean = false
-    var chSleightOfHandProf : Boolean = false
-    var chStealthProf : Boolean = false
-    var chSurvivalProf : Boolean = false
+    var chSkillProfs = mutableMapOf<String,Int>("dexAcrobatics" to 0,"wisAnimalHandling" to 0,"intArcana" to 0,
+                                                "strAthletics" to 0, "chaDeception" to 0,"intHistory" to 0,
+                                                "wisInsight" to 0, "chaIntimidation" to 0,"intInvestigation" to 0,
+                                                "wisMedicine" to 0, "intNature" to 0,"wisPerception" to 0,
+                                                "chaPerformance" to 0, "chaPersuasion" to 0,"intReligion" to 0,
+                                                "dexSleightOfHand" to 0, "dexStealth" to 0,"wisSurvival" to 0)
+
     //Saving Throws
-    var chStrSave : Int = 0
-    var chDexSave : Int = 0
-    var chConSave : Int = 0
-    var chIntSave : Int = 0
-    var chWisSave : Int = 0
-    var chChaSave : Int = 0
+    var chSavingThrows = mutableMapOf<String,Int>("strSave" to 0, "dexSave" to 0,"conSave" to 0,
+                                                    "intSave" to 0,"wisSave" to 0,"chaSave" to 0)
+
     //Saving Throws Prof
-    var chStrSaveProf : Boolean = false
-    var chDexSaveProf : Boolean = false
-    var chConSaveProf : Boolean = false
-    var chIntSaveProf : Boolean = false
-    var chWisSaveProf : Boolean = false
-    var chChaSaveProf : Boolean = false
+    var chSavingThrowProfs = mutableMapOf<String,Int>("strSave" to 0, "dexSave" to 0,"conSave" to 0,
+                                                        "intSave" to 0,"wisSave" to 0,"chaSave" to 0)
+
     //Traits
     var chSpeedWalk : Int = 0
     var chSpeedFly : Int = 0
@@ -108,107 +77,15 @@ public class Character {
     var chShield : String = ""
     var chWeapons : String = ""
 
-    fun setAbilityScores(){
-        chArcana = if (chArcanaProf) {
-            chInt + chPoficiencyBonus
-        } else chInt
-
-        chAcrobatics = if (chAcrobaticsProf) {
-            chDex + chPoficiencyBonus
-        } else chDex
-
-        chAnimalH = if (chAnimalHProf){
-            chWis + chPoficiencyBonus
-        }else chWis
-
-        chAthletics = if (chAthleticsProf){
-            chStr + chPoficiencyBonus
-        } else chStr
-
-        chDeception = if (chDeceptionProf){
-            chCha + chPoficiencyBonus
-        } else chCha
-
-        chHistory = if (chHistoryProf){
-            chInt + chPoficiencyBonus
-        } else chInt
-
-        chInsight = if (chInsightProf){
-            chWis + chPoficiencyBonus
-        } else chWis
-
-        chIntimidation = if (chIntimidationProf){
-            chCha + chPoficiencyBonus
-        } else chCha
-
-        chInvestigation = if (chInvestigationProf){
-            chInt + chPoficiencyBonus
-        } else chInt
-
-        chMedicine = if (chMedicineProf){
-            chWis + chPoficiencyBonus
-        } else chWis
-
-        chNature = if (chNatureProf){
-            chInt + chPoficiencyBonus
-        } else chInt
-
-        chPerception = if (chPerceptionProf){
-            chWis + chPoficiencyBonus
-        } else chWis
-
-        chPerformance = if (chPerformanceProf){
-            chCha + chPoficiencyBonus
-        } else chCha
-
-        chPersuasion = if (chPersuasionProf){
-            chCha + chPoficiencyBonus
-        } else chCha
-
-        chReligion = if (chReligionProf){
-            chInt + chPoficiencyBonus
-        } else chInt
-
-        chSleightOfHand = if (chSleightOfHandProf){
-            chDex + chPoficiencyBonus
-        } else chDex
-
-        chStealth = if (chStealthProf){
-            chDex + chPoficiencyBonus
-        } else chDex
-
-        chSurvival = if (chSurvivalProf){
-            chWis + chPoficiencyBonus
-        } else chWis
+    fun setSkills() {
+        for (pair in chSkills) {
+            chSkills[pair.key] = chAbilities[pair.key.substring(0, 3)]!! + chProficiencyBonus * chSkillProfs[pair.key]!!
+        }
     }
-
     fun setSavingThrows(){
-        chStrSave = if (chStrSaveProf) {
-            chStr + chPoficiencyBonus
-        } else chStr
-
-        chDexSave = if (chDexSaveProf) {
-            chDex + chPoficiencyBonus
-        } else chDex
-
-        chConSave = if (chConSaveProf){
-            chCon + chPoficiencyBonus
-        }else chCon
-
-        chIntSave = if (chIntSaveProf){
-            chInt + chPoficiencyBonus
-        } else chInt
-
-        chWisSave = if (chWisSaveProf){
-            chWis + chPoficiencyBonus
-        } else chWis
-
-        chChaSave = if (chChaSaveProf){
-            chCha + chPoficiencyBonus
-        } else chCha
-
-
+        for(pair in chSavingThrows){
+            chSavingThrows[pair.key] = chAbilities[pair.key.substring(0,3)]!! + chProficiencyBonus*chSavingThrowProfs[pair.key]!!
+        }
     }
-
 }
 

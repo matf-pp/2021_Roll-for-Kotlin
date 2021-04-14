@@ -21,11 +21,6 @@ class AbilityFragment : Fragment() {
 
     }
 
-    override fun onStop() {
-        super.onStop()
-        getValues()
-    }
-
     private fun rollStats(): Int{
         val d1 = Random.nextInt(1,7)
         val d2 = Random.nextInt(1,7)
@@ -163,16 +158,22 @@ class AbilityFragment : Fragment() {
         }
     }
 
+    override fun onStop() {
+        super.onStop()
+        getValues()
+    }
+
     fun getValues() {
         if(btnStrength.text.toString() != "" && btnDexterity.text.toString() != ""
             && btnConstitution.text.toString() != "" && btnIntelligence.text.toString() != ""
             && btnWisdom.text.toString() != "" && btnCharisma.text.toString() != "") {
-            ActivityScreen1.newCharacter.chStr = btnStrength.text.toString().toInt()
-            ActivityScreen1.newCharacter.chDex = btnDexterity.text.toString().toInt()
-            ActivityScreen1.newCharacter.chCon = btnConstitution.text.toString().toInt()
-            ActivityScreen1.newCharacter.chInt = btnIntelligence.text.toString().toInt()
-            ActivityScreen1.newCharacter.chWis = btnWisdom.text.toString().toInt()
-            ActivityScreen1.newCharacter.chCha = btnCharisma.text.toString().toInt()
+            ActivityScreen1.newCharacter.chAbilities["str"] = btnStrength.text.toString().toInt()
+            ActivityScreen1.newCharacter.chAbilities["dex"] = btnDexterity.text.toString().toInt()
+            ActivityScreen1.newCharacter.chAbilities["con"] = btnConstitution.text.toString().toInt()
+            ActivityScreen1.newCharacter.chAbilities["int"] = btnIntelligence.text.toString().toInt()
+            ActivityScreen1.newCharacter.chAbilities["wis"] = btnWisdom.text.toString().toInt()
+            ActivityScreen1.newCharacter.chAbilities["cha"] = btnCharisma.text.toString().toInt()
+            ActivityScreen1.newCharacter.setSkills()
         }
     }
 

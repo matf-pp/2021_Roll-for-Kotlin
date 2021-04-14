@@ -50,11 +50,11 @@ class ActivityScreen1 : AppCompatActivity() {
         newCharacter.chLevel = level
 
         when (level) {
-            in 1..4 -> newCharacter.chPoficiencyBonus = 2
-            in 5..8 -> newCharacter.chPoficiencyBonus = 3
-            in 9..12 -> newCharacter.chPoficiencyBonus = 4
-            in 3..16 -> newCharacter.chPoficiencyBonus = 5
-            else -> newCharacter.chPoficiencyBonus = 6
+            in 1..4 -> newCharacter.chProficiencyBonus = 2
+            in 5..8 -> newCharacter.chProficiencyBonus = 3
+            in 9..12 -> newCharacter.chProficiencyBonus = 4
+            in 3..16 -> newCharacter.chProficiencyBonus = 5
+            else -> newCharacter.chProficiencyBonus = 6
         }
 
         /*val builder = AlertDialog.Builder(this)
