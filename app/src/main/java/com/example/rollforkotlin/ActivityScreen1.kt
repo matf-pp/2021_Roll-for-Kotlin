@@ -53,7 +53,7 @@ class ActivityScreen1 : AppCompatActivity() {
             in 1..4 -> newCharacter.chProficiencyBonus = 2
             in 5..8 -> newCharacter.chProficiencyBonus = 3
             in 9..12 -> newCharacter.chProficiencyBonus = 4
-            in 3..16 -> newCharacter.chProficiencyBonus = 5
+            in 13..16 -> newCharacter.chProficiencyBonus = 5
             else -> newCharacter.chProficiencyBonus = 6
         }
 

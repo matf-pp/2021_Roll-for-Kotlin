@@ -150,22 +150,22 @@ class ToolsFragment : Fragment(), View.OnClickListener {
         if(cbPrAcrobatics.isChecked){
             list.add(cbPrAcrobatics.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["dexAcrobatics"] = 1
-        }
+        } else ActivityScreen1.newCharacter.chSkillProfs["dexAcrobatics"] = 0
         if(cbTlAlchemistS.isChecked){
             list.add(cbTlAlchemistS.text.toString())
         }
         if(cbPrAnimalH.isChecked){
             list.add(cbPrAnimalH.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["wisAnimalHandling"] = 1
-        }
+        } else ActivityScreen1.newCharacter.chSkillProfs["wisAnimalHandling"] = 0
         if(cbPrArcana.isChecked){
             list.add(cbPrArcana.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["intArcana"] = 1
-        }
+        } else ActivityScreen1.newCharacter.chSkillProfs["intArcana"] = 0
         if(cbPrAthletics.isChecked){
             list.add(cbPrAthletics.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["strAthletics"] = 1
-        }
+        } else ActivityScreen1.newCharacter.chSkillProfs["strAthletics"] = 0
         if(cbTlCartographerT.isChecked){
             list.add(cbTlCartographerT.text.toString())
         }
@@ -178,7 +178,7 @@ class ToolsFragment : Fragment(), View.OnClickListener {
         if(cbPrDeception.isChecked){
             list.add(cbPrDeception.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["chaDeception"] = 1
-        }
+        } else ActivityScreen1.newCharacter.chSkillProfs["chaDeception"] = 0
         if(cbLgDwarvish.isChecked){
             list.add(cbLgDwarvish.text.toString())
         }
@@ -197,61 +197,61 @@ class ToolsFragment : Fragment(), View.OnClickListener {
         if(cbPrHistory.isChecked){
             list.add(cbPrHistory.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["intHistory"] = 1
-        }
+        } else ActivityScreen1.newCharacter.chSkillProfs["intHistory"] = 0
         if(cbLgInfernal.isChecked){
             list.add(cbLgInfernal.text.toString())
         }
         if(cbPrInsight.isChecked) {
             list.add(cbPrInsight.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["wisInsight"] = 1
-        }
+        } else ActivityScreen1.newCharacter.chSkillProfs["wisInsight"] = 0
         if(cbPrIntimidation.isChecked){
             list.add(cbPrIntimidation.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["chaIntimidation"] = 1
-        }
+        } else ActivityScreen1.newCharacter.chSkillProfs["chaIntimidation"] = 0
         if(cbPrInvestigation.isChecked){
             list.add(cbPrInvestigation.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["intInvestigation"] = 1
-        }
+        } else ActivityScreen1.newCharacter.chSkillProfs["intInvestigation"] = 0
         if(cbTlJewelerT.isChecked){
             list.add(cbTlJewelerT.text.toString())
         }
         if(cbPrMedicine.isChecked){
             list.add(cbPrMedicine.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["wisMedicine"] = 1
-        }
+        } else ActivityScreen1.newCharacter.chSkillProfs["wisMedicine"] = 0
         if(cbPrNature.isChecked){
             list.add(cbPrNature.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["intNature"] = 1
-        }
+        } else ActivityScreen1.newCharacter.chSkillProfs["intNature"] = 0
         if(cbPrPerception.isChecked){
             list.add(cbPrPerception.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["wisPerception"] = 1
-        }
+        } else ActivityScreen1.newCharacter.chSkillProfs["wisPerception"] = 0
         if(cbPrPerformance.isChecked){
             list.add(cbPrPerformance.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["chaPerformance"] = 1
-        }
+        } else ActivityScreen1.newCharacter.chSkillProfs["chaPerformance"] = 0
         if(cbPrPersuasion.isChecked){
             list.add(cbPrPersuasion.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["chaPersuasion"] = 1
-        }
+        } else ActivityScreen1.newCharacter.chSkillProfs["chaPersuasion"] = 0
         if(cbPrReligion.isChecked){
             list.add(cbPrReligion.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["intReligion"] = 1
-        }
+        } else ActivityScreen1.newCharacter.chSkillProfs["intReligion"] = 0
         if(cbPrSleightOfHand.isChecked){
             list.add(cbPrSleightOfHand.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["dexSleightOfHand"] = 1
-        }
+        } else ActivityScreen1.newCharacter.chSkillProfs["dexSleightOfHand"] = 0
         if(cbPrStealth.isChecked){
             list.add(cbPrStealth.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["dexStealth"] = 1
-        }
+        } else ActivityScreen1.newCharacter.chSkillProfs["dexStealth"] = 0
         if(cbPrSurvival.isChecked){
             list.add(cbPrSurvival.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["wisSurvival"] = 1
-        }
+        } else ActivityScreen1.newCharacter.chSkillProfs["wisSurvival"] = 0
         if(cbLgSylvan.isChecked){
             list.add(cbLgSylvan.text.toString())
         }
