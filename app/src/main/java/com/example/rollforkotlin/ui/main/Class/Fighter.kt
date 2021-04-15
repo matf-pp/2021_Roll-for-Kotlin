@@ -8,19 +8,14 @@ class Fighter() : ClassGeneral() {
     override var toolProf = "None"
     override var savingThrowsProf = "Strength, Constitution"
     override var spellCastingMod = ""
-    override var skillsLvl1 = "Second Wind\n" +
+    override var classTraits = arrayListOf("Second Wind\n" +
             "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level.\n" +
             "\n" +
-            "Once you use this feature, you must finish a short or long rest before you can use it again."
-    override var skillsLvl2 = "Action Surge\n" +
+            "Once you use this feature, you must finish a short or long rest before you can use it again.","Action Surge\n" +
             "Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action.\n" +
             "\n" +
-            "Once you use this feature, you must finish a short or long rest before you can use it again."
-    override var skillsLvl3 = ""
-    override var skillsLvl4 = ""
-    override var skillsLvl5 = "Extra Attack\n" +
-            "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
-    override var skillsLvl6 = ""
+            "Once you use this feature, you must finish a short or long rest before you can use it again.","","","Extra Attack\n" +
+            "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.","")
     override var language = 0
 
 
@@ -48,19 +43,19 @@ class Fighter() : ClassGeneral() {
         return ""
     }
 
-    override fun getCantrips(lvl : Int): Int {
+    override fun getCantripsNumber(lvl : Int): Int {
         return 0
     }
 
-    override fun getSpellLvl1(lvl : Int): Int {
+    override fun getSpellLvl1Number(lvl : Int): Int {
         return 0
     }
 
-    override fun getSpellLvl2(lvl : Int): Int {
+    override fun getSpellLvl2Number(lvl : Int): Int {
         return 0
     }
 
-    override fun getSpellLvl3(lvl : Int): Int {
+    override fun getSpellLvl3Number(lvl : Int): Int {
         return 0
     }
 

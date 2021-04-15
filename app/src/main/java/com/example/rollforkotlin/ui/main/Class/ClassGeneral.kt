@@ -8,19 +8,14 @@ abstract class ClassGeneral {
     abstract var toolProf : String
     abstract var savingThrowsProf : String
     abstract var spellCastingMod : String
-    abstract var skillsLvl1 : String
-    abstract var skillsLvl2 : String
-    abstract var skillsLvl3 : String
-    abstract var skillsLvl4 : String
-    abstract var skillsLvl5 : String
-    abstract var skillsLvl6 : String
+    abstract var classTraits : ArrayList<String>
     abstract var language : Int
 
     abstract fun getSavingThrowProf(ability : String) : Boolean
     abstract fun getHitDice(lvl : Int) : String
-    abstract fun getCantrips(lvl : Int) : Int
-    abstract fun getSpellLvl1(lvl : Int) : Int
-    abstract fun getSpellLvl2(lvl : Int) : Int
-    abstract fun getSpellLvl3(lvl : Int) : Int
+    abstract fun getCantripsNumber(lvl : Int) : Int
+    abstract fun getSpellLvl1Number(lvl : Int) : Int
+    abstract fun getSpellLvl2Number(lvl : Int) : Int
+    abstract fun getSpellLvl3Number(lvl : Int) : Int
     abstract fun getSpellCastingModifier() : String
 }

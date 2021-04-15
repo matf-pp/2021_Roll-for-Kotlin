@@ -8,9 +8,8 @@ class Cleric() : ClassGeneral() {
     override var toolProf = "None"
     override var savingThrowsProf = "Wisdom, Charisma"
     override var spellCastingMod = "Intelligence"
-    override var skillsLvl1 = "Ritual Casting\n" +
-            "You can cast a cleric spell as a ritual if that spell has the ritual tag and you have the spell prepared."
-    override var skillsLvl2 = "Channel Divinity\n" +
+    override var classTraits = arrayListOf("Ritual Casting\n" +
+            "You can cast a cleric spell as a ritual if that spell has the ritual tag and you have the spell prepared.","Channel Divinity\n" +
             "At 2nd level, you gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. You start with two such effects: Turn Undead and an effect determined by your domain. Some domains grant you additional effects as you advance in levels, as noted in the domain description.\n" +
             "\n" +
             "When you use your Channel Divinity, you choose which effect to create. You must then finish a short or long rest to use your Channel Divinity again.\n" +
@@ -19,11 +18,9 @@ class Cleric() : ClassGeneral() {
             "As an action, you present your holy symbol and speak a prayer censuring the undead. Each undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.\n" +
             "\n" +
             "A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action."
-    override var skillsLvl3 = ""
-    override var skillsLvl4 = ""
-    override var skillsLvl5 = "Destroy Undead\n" +
+                ,"","","Destroy Undead\n" +
             "Starting at 5th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below a certain threshold, as shown in the Cleric table above."
-    override var skillsLvl6 = ""
+                ,"")
     override var language = 0
 
 
@@ -51,7 +48,7 @@ class Cleric() : ClassGeneral() {
         return ""
     }
 
-    override fun getCantrips(lvl : Int): Int {
+    override fun getCantripsNumber(lvl : Int): Int {
         when (lvl){
             1 -> return 3
             2 -> return 3
@@ -63,7 +60,7 @@ class Cleric() : ClassGeneral() {
         return 0
     }
 
-    override fun getSpellLvl1(lvl : Int): Int {
+    override fun getSpellLvl1Number(lvl : Int): Int {
         when (lvl){
             1 -> return 2
             2 -> return 3
@@ -75,7 +72,7 @@ class Cleric() : ClassGeneral() {
         return 0
     }
 
-    override fun getSpellLvl2(lvl : Int): Int {
+    override fun getSpellLvl2Number(lvl : Int): Int {
         when (lvl){
             1 -> return 0
             2 -> return 0
@@ -87,7 +84,7 @@ class Cleric() : ClassGeneral() {
         return 0
     }
 
-    override fun getSpellLvl3(lvl : Int): Int {
+    override fun getSpellLvl3Number(lvl : Int): Int {
         when (lvl){
             1 -> return 0
             2 -> return 0

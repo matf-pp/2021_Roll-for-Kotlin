@@ -1,6 +1,9 @@
 package com.example.rollforkotlin
 
-public class Character {
+import android.util.Range
+import com.example.rollforkotlin.ui.main.Class.*
+
+class Character {
     //Basics
     var chName: String = ""
     var chLevel: Int = 0
@@ -67,6 +70,10 @@ public class Character {
     var chSpellCastingAbility : String = ""
     var chSpellSaveDC : Int = 0
     var chSpellPrepared : Int = 0
+    var chSpellCantripCounter : Int = 0
+    var chSpellLvl1Counter : Int = 0
+    var chSpellLvl2Counter : Int = 0
+    var chSpellLvl3Counter : Int = 0
     //Gold
     var chCopper : Int = 0
     var chSilver : Int = 0
@@ -83,9 +90,51 @@ public class Character {
         }
     }
     fun setSavingThrows(){
+        
         for(pair in chSavingThrows){
             chSavingThrows[pair.key] = chAbilities[pair.key.substring(0,3)]!! + chProficiencyBonus*chSavingThrowProfs[pair.key]!!
         }
     }
+    fun getSpellNumbers(){
+        var classInfo : ClassGeneral
+        when(chClass){
+            "Wizard" -> {
+                classInfo = Wizard()
+                chSpellCantripCounter = classInfo.getCantripsNumber(chLevel)
+                chSpellLvl1Counter = classInfo.getSpellLvl1Number(chLevel)
+                chSpellLvl2Counter = classInfo.getSpellLvl2Number(chLevel)
+                chSpellLvl3Counter= classInfo.getSpellLvl3Number(chLevel)
+            }
+            "Bard" -> {
+                classInfo = Bard()
+                chSpellCantripCounter = classInfo.getCantripsNumber(chLevel)
+                chSpellLvl1Counter = classInfo.getSpellLvl1Number(chLevel)
+                chSpellLvl2Counter = classInfo.getSpellLvl2Number(chLevel)
+                chSpellLvl3Counter= classInfo.getSpellLvl3Number(chLevel)
+            }
+            "Ranger" -> {
+                classInfo = Ranger()
+                chSpellCantripCounter = classInfo.getCantripsNumber(chLevel)
+                chSpellLvl1Counter = classInfo.getSpellLvl1Number(chLevel)
+                chSpellLvl2Counter = classInfo.getSpellLvl2Number(chLevel)
+                chSpellLvl3Counter= classInfo.getSpellLvl3Number(chLevel)
+            }
+            "Cleric" -> {
+                classInfo = Cleric()
+                chSpellCantripCounter = classInfo.getCantripsNumber(chLevel)
+                chSpellLvl1Counter = classInfo.getSpellLvl1Number(chLevel)
+                chSpellLvl2Counter = classInfo.getSpellLvl2Number(chLevel)
+                chSpellLvl3Counter= classInfo.getSpellLvl3Number(chLevel)
+            }
+            else -> {
+                chSpellCantripCounter = 0
+                chSpellLvl1Counter = 0
+                chSpellLvl2Counter = 0
+                chSpellLvl3Counter = 0
+            }
+        }
+    }
+
+
 }
 

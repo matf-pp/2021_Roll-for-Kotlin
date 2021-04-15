@@ -59,11 +59,21 @@ class SpellsFragment : Fragment() , View.OnClickListener{
 
     }
 
+    //Podesavanje limita za spell-ove
+    private var cantripCounter = 0
+    private var spell1Counter = 0
+    private var spell2Counter = 0
+    private var spell3Counter = 0
+
     var oldClass:String = ""
     override fun onStart() {
         if (ActivityScreen1.newCharacter.chClass != oldClass){
             oldClass = ActivityScreen1.newCharacter.chClass
             clearSpells()
+            cantripCounter = ActivityScreen1.newCharacter.chSpellCantripCounter
+            spell1Counter = ActivityScreen1.newCharacter.chSpellLvl1Counter
+            spell2Counter = ActivityScreen1.newCharacter.chSpellLvl2Counter
+            spell3Counter = ActivityScreen1.newCharacter.chSpellLvl3Counter
         }
         if(ActivityScreen1.newCharacter.chClass=="Bard" || ActivityScreen1.newCharacter.chClass=="Cleric" || ActivityScreen1.newCharacter.chClass=="Ranger" || ActivityScreen1.newCharacter.chClass=="Wizard"){
             showSpells(ActivityScreen1.newCharacter.chClass)
@@ -84,6 +94,8 @@ class SpellsFragment : Fragment() , View.OnClickListener{
                     spell.visibility = View.VISIBLE
                 }
                 lbCantrip.visibility = View.VISIBLE
+                lbSelectCantrip.visibility = View.VISIBLE
+                txtCantripCount.visibility = View.VISIBLE
             }
             "Cleric" -> {
                 for(spell in clericList){
@@ -91,6 +103,8 @@ class SpellsFragment : Fragment() , View.OnClickListener{
                 }
                 lbPrepare.visibility = View.VISIBLE
                 lbCantrip.visibility = View.VISIBLE
+                lbSelectCantrip.visibility = View.VISIBLE
+                txtCantripCount.visibility = View.VISIBLE
             }
             "Ranger" -> {
                 for(spell in rangerList){
@@ -102,11 +116,19 @@ class SpellsFragment : Fragment() , View.OnClickListener{
                     spell.visibility = View.VISIBLE
                 }
                 lbCantrip.visibility = View.VISIBLE
+                lbSelectCantrip.visibility = View.VISIBLE
+                txtCantripCount.visibility = View.VISIBLE
             }
         }
         lbSpellLevel1.visibility = View.VISIBLE
+        lbSelectSpell1.visibility = View.VISIBLE
+        txtSpell1Count.visibility = View.VISIBLE
         lbSpellLevel2.visibility = View.VISIBLE
+        lbSelectSpell2.visibility = View.VISIBLE
+        txtSpell2Count.visibility = View.VISIBLE
         lbSpellLevel3.visibility = View.VISIBLE
+        lbSelectSpell3.visibility = View.VISIBLE
+        txtSpell3Count.visibility = View.VISIBLE
         lbNoSpell.visibility = View.GONE
     }
 

@@ -8,7 +8,7 @@ class Ranger() : ClassGeneral() {
     override var toolProf = "None"
     override var savingThrowsProf = "Strength, Dexterity"
     override var spellCastingMod = "Wisdom"
-    override var skillsLvl1 = "Favored Enemy\n" +
+    override var classTraits = arrayListOf("Favored Enemy\n" +
             "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.\n" +
             "\n" +
             "Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.\n" +
@@ -24,13 +24,8 @@ class Ranger() : ClassGeneral() {
             "Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.\n" +
             "If you are traveling alone, you can move stealthily at a normal pace.\n" +
             "When you forage, you find twice as much food as you normally would.\n" +
-            "While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area."
-    override var skillsLvl2 = ""
-    override var skillsLvl3 = ""
-    override var skillsLvl4 = ""
-    override var skillsLvl5 = "Extra Attack\n" +
-            "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
-    override var skillsLvl6 = ""
+            "While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.","","","","Extra Attack\n" +
+            "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.","")
     override var language = 1
 
 
@@ -58,7 +53,7 @@ class Ranger() : ClassGeneral() {
         return ""
     }
 
-    override fun getCantrips(lvl : Int): Int {
+    override fun getCantripsNumber(lvl : Int): Int {
         when (lvl){
             1 -> return 0
             2 -> return 2
@@ -70,7 +65,7 @@ class Ranger() : ClassGeneral() {
         return 0
     }
 
-    override fun getSpellLvl1(lvl : Int): Int {
+    override fun getSpellLvl1Number(lvl : Int): Int {
         when (lvl){
             1 -> return 0
             2 -> return 2
@@ -82,7 +77,7 @@ class Ranger() : ClassGeneral() {
         return 0
     }
 
-    override fun getSpellLvl2(lvl : Int): Int {
+    override fun getSpellLvl2Number(lvl : Int): Int {
         when (lvl){
             1 -> return 0
             2 -> return 0
@@ -94,7 +89,7 @@ class Ranger() : ClassGeneral() {
         return 0
     }
 
-    override fun getSpellLvl3(lvl : Int): Int {
+    override fun getSpellLvl3Number(lvl : Int): Int {
         when (lvl){
             1 -> return 0
             2 -> return 0

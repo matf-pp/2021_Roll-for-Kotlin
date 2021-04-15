@@ -81,6 +81,9 @@ class RaceFragment : Fragment(){
         ActivityScreen1.newCharacter.chRace = race
         ActivityScreen1.newCharacter.chClass = klasa
         ActivityScreen1.newCharacter.chBackgroud = background
+        //Uzimanja broja spell-ova
+        ActivityScreen1.newCharacter.getSpellNumbers()
+
         /*val builder = AlertDialog.Builder(requireActivity())
         builder.setTitle("Androidly Alert")
         builder.setMessage(ActivityScreen1.newCharacter.chRace)

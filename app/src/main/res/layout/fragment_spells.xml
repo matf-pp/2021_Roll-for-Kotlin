@@ -36,6 +36,31 @@
                 android:textColor="#535353"
                 android:textSize="20sp"
                 android:visibility="gone" />
+            <TextView
+                android:id="@+id/lbSelectCantrip"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="170dp"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="-25dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/select"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/txtCantripCount"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="235dp"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="-30dp"
+                android:fontFamily="@font/percy_goth"
+                android:gravity="clip_vertical"
+                android:text="@string/empty"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:visibility="gone"/>
 
             <CheckBox
                 android:id="@+id/cbControlFlame"
@@ -161,6 +186,31 @@
                 android:textColor="#535353"
                 android:textSize="20sp"
                 android:visibility="gone" />
+            <TextView
+                android:id="@+id/lbSelectSpell1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="170dp"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="-25dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/select"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/txtSpell1Count"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="235dp"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="-30dp"
+                android:fontFamily="@font/percy_goth"
+                android:gravity="clip_vertical"
+                android:text="@string/empty"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:visibility="gone"/>
 
             <CheckBox
                 android:id="@+id/cbAbsorbElements"
@@ -300,6 +350,31 @@
                 android:textColor="#535353"
                 android:textSize="20sp"
                 android:visibility="gone" />
+            <TextView
+                android:id="@+id/lbSelectSpell2"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="170dp"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="-25dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/select"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/txtSpell2Count"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="235dp"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="-30dp"
+                android:fontFamily="@font/percy_goth"
+                android:gravity="clip_vertical"
+                android:text="@string/empty"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:visibility="gone"/>
 
 
             <CheckBox
@@ -449,6 +524,31 @@
                 android:textColor="#535353"
                 android:textSize="20sp"
                 android:visibility="gone" />
+            <TextView
+                android:id="@+id/lbSelectSpell3"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="170dp"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="-25dp"
+                android:fontFamily="@font/percy_goth"
+                android:text="@string/select"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/txtSpell3Count"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="235dp"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="-30dp"
+                android:fontFamily="@font/percy_goth"
+                android:gravity="clip_vertical"
+                android:text="@string/empty"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:visibility="gone"/>
 
             <CheckBox
                 android:id="@+id/cbAnimateDead"

@@ -8,13 +8,10 @@ class Wizard() : ClassGeneral() {
     override var toolProf = "None"
     override var savingThrowsProf = "Intelligence, Wisdom"
     override var spellCastingMod = "Intelligence"
-    override var skillsLvl1 = "Arcane Recovery \n Each time you gain a wizard level, you can add two wizard spells of your choice to your spellbook. Each of these spells must be of a level for which you have spell slots, as shown on the Wizard table. On your adventures, you might find other spells that you can add to your spellbook."
-    override var skillsLvl2 = ""
-    override var skillsLvl3 = "Cantrip Formulas\n" +
-            "At 3rd level, you have scribed a set of arcane formulas in your spellbook that you can use to formulate a cantrip in your mind. Whenever you finish a long rest and consult those formulas in your spellbook, you can replace one wizard cantrip you know with another cantrip from the wizard spell list."
-    override var skillsLvl4 = ""
-    override var skillsLvl5 = ""
-    override var skillsLvl6 = ""
+    override var classTraits = arrayListOf("Arcane Recovery \n Each time you gain a wizard level, you can add two wizard spells of your choice to your spellbook. Each of these spells must be of a level for which you have spell slots, as shown on the Wizard table. On your adventures, you might find other spells that you can add to your spellbook."
+                                            ,"","Cantrip Formulas\n" +
+                    "At 3rd level, you have scribed a set of arcane formulas in your spellbook that you can use to formulate a cantrip in your mind. Whenever you finish a long rest and consult those formulas in your spellbook, you can replace one wizard cantrip you know with another cantrip from the wizard spell list."
+                                            ,"","","")
     override var language = 0
 
 
@@ -42,7 +39,7 @@ class Wizard() : ClassGeneral() {
         return ""
     }
 
-    override fun getCantrips(lvl : Int): Int {
+    override fun getCantripsNumber(lvl : Int): Int {
         when (lvl){
             1 -> return 3
             2 -> return 3
@@ -54,7 +51,7 @@ class Wizard() : ClassGeneral() {
         return 0
     }
 
-    override fun getSpellLvl1(lvl : Int): Int {
+    override fun getSpellLvl1Number(lvl : Int): Int {
         when (lvl){
             1 -> return 2
             2 -> return 3
@@ -66,7 +63,7 @@ class Wizard() : ClassGeneral() {
         return 0
     }
 
-    override fun getSpellLvl2(lvl : Int): Int {
+    override fun getSpellLvl2Number(lvl : Int): Int {
         when (lvl){
             1 -> return 0
             2 -> return 0
@@ -78,7 +75,7 @@ class Wizard() : ClassGeneral() {
         return 0
     }
 
-    override fun getSpellLvl3(lvl : Int): Int {
+    override fun getSpellLvl3Number(lvl : Int): Int {
         when (lvl){
             1 -> return 0
             2 -> return 0
