@@ -17,6 +17,14 @@ buildscript {
 allprojects {
     repositories {
         google()
+        maven {
+            url "https://pdftron-maven.s3.amazonaws.com/release"
+        }
+        // *****Optionally Include if you are using the demo library*****
+        maven {
+            url "https://jitpack.io"
+        }
+        //
         jcenter()
         maven { url 'https://jitpack.io' }
     }
