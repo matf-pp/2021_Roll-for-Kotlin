@@ -42,7 +42,7 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/txtLgCount"
+                android:id="@+id/lbLgCount"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_marginStart="235dp"
@@ -146,7 +146,7 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/txtPrCount"
+                android:id="@+id/lbPrCount"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_marginStart="235dp"
@@ -330,7 +330,7 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/txtTlCount"
+                android:id="@+id/lbTlCount"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_marginStart="235dp"

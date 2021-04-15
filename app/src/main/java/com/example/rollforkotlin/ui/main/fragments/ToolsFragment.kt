@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
-import androidx.core.view.isVisible
 import com.example.rollforkotlin.ActivityScreen1
 import com.example.rollforkotlin.R
 import kotlinx.android.synthetic.main.fragment_tools.*
@@ -71,9 +70,9 @@ class ToolsFragment : Fragment(), View.OnClickListener {
         view.cbTlThievesT.setOnClickListener(this)
         view.cbTlTinkerT.setOnClickListener(this)
         view.cbTlWoodcarverT.setOnClickListener(this)
-        view.txtLgCount.text = languageCounter.toString()
-        view.txtPrCount.text = profCounter.toString()
-        view.txtTlCount.text = toolsCounter.toString()
+        view.lbLgCount.text = languageCounter.toString()
+        view.lbPrCount.text = profCounter.toString()
+        view.lbTlCount.text = toolsCounter.toString()
     }
 
     //Podesavanje limita za proficiency-e
@@ -99,7 +98,7 @@ class ToolsFragment : Fragment(), View.OnClickListener {
                 else {
                     ++languageCounter
                 }
-                txtLgCount.text = languageCounter.toString()
+                lbLgCount.text = languageCounter.toString()
                 }
 
             'p' -> {
@@ -113,7 +112,7 @@ class ToolsFragment : Fragment(), View.OnClickListener {
                 else {
                     ++profCounter
                 }
-                txtPrCount.text = profCounter.toString()
+                lbPrCount.text = profCounter.toString()
             }
 
             't' -> {
@@ -127,7 +126,7 @@ class ToolsFragment : Fragment(), View.OnClickListener {
                 else {
                     ++toolsCounter
                 }
-                txtTlCount.text = toolsCounter.toString()
+                lbTlCount.text = toolsCounter.toString()
             }
 
         }

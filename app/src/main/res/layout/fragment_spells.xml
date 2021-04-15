@@ -35,7 +35,9 @@
                 android:text="@string/cantrip"
                 android:textColor="#535353"
                 android:textSize="20sp"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
+
             <TextView
                 android:id="@+id/lbSelectCantrip"
                 android:layout_width="wrap_content"
@@ -47,9 +49,11 @@
                 android:text="@string/select"
                 android:textColor="#000000"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone"
+                tools:visibility="visible" />
+
             <TextView
-                android:id="@+id/txtCantripCount"
+                android:id="@+id/lbCantripCount"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_marginStart="235dp"
@@ -58,108 +62,120 @@
                 android:fontFamily="@font/percy_goth"
                 android:gravity="clip_vertical"
                 android:text="@string/empty"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbControlFlame"
+                android:id="@+id/cbCanControlFlame"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/controlFlame"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbFirebolt"
+                android:id="@+id/cbCanFirebolt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/firebolt"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbFriends"
+                android:id="@+id/cbCanFriends"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/friends"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbGuidance"
+                android:id="@+id/cbCanGuidance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/guidance"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbLight"
+                android:id="@+id/cbCanLight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/light"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbMageHand"
+                android:id="@+id/cbCanMageHand"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/mageHand"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbMending"
+                android:id="@+id/cbCanMending"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/mending"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbMinorIlusion"
+                android:id="@+id/cbCanMinorIlusion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/minorIlusion"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbSacredFlame"
+                android:id="@+id/cbCanSacredFlame"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/sacredFlame"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbSpareTheDying"
+                android:id="@+id/cbCanSpareTheDying"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/spareTheDying"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbViciousMockery"
+                android:id="@+id/cbCanViciousMockery"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/viciousMockery"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <TextView
                 android:id="@+id/lbPrepare"
@@ -172,7 +188,8 @@
                 android:text="@string/prepare"
                 android:textColor="#535353"
                 android:textSize="20sp"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <TextView
                 android:id="@+id/lbSpellLevel1"
@@ -185,7 +202,9 @@
                 android:text="@string/spellLevel1"
                 android:textColor="#535353"
                 android:textSize="20sp"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
+
             <TextView
                 android:id="@+id/lbSelectSpell1"
                 android:layout_width="wrap_content"
@@ -197,9 +216,11 @@
                 android:text="@string/select"
                 android:textColor="#000000"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone"
+                tools:visibility="visible" />
+
             <TextView
-                android:id="@+id/txtSpell1Count"
+                android:id="@+id/lbSpell1Count"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_marginStart="235dp"
@@ -208,135 +229,150 @@
                 android:fontFamily="@font/percy_goth"
                 android:gravity="clip_vertical"
                 android:text="@string/empty"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbAbsorbElements"
+                android:id="@+id/cbLv1AbsorbElements"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/absorbElements"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbAlarm"
+                android:id="@+id/cbLv1Alarm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/alarm"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbBless"
+                android:id="@+id/cbLv1Bless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/bless"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbBurningHands"
+                android:id="@+id/cbLv1BurningHands"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/burningHands"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbCauseFear"
+                android:id="@+id/cbLv1CauseFear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/causeFear"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbCharmPerson"
+                android:id="@+id/cbLv1CharmPerson"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/charmPerson"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbColorSpray"
+                android:id="@+id/cbLv1ColorSpray"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/colorSpray"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbCureWounds"
+                android:id="@+id/cbLv1CureWounds"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/cureWounds"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbDetectMagic"
+                android:id="@+id/cbLv1DetectMagic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/detectMagic"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbEntangle"
+                android:id="@+id/cbLv1Entangle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/entangle"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbFeatherFall"
+                android:id="@+id/cbLv1FeatherFall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/featherFall"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbHealingWord"
+                android:id="@+id/cbLv1HealingWord"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/healingWord"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbInflictWounds"
+                android:id="@+id/cbLv1InflictWounds"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/inflictWounds"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbSilentImage"
+                android:id="@+id/cbLv1SilentImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/silentImage"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <TextView
                 android:id="@+id/lbSpellLevel2"
@@ -349,7 +385,9 @@
                 android:text="@string/spellLevel2"
                 android:textColor="#535353"
                 android:textSize="20sp"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
+
             <TextView
                 android:id="@+id/lbSelectSpell2"
                 android:layout_width="wrap_content"
@@ -361,9 +399,11 @@
                 android:text="@string/select"
                 android:textColor="#000000"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone"
+                tools:visibility="visible" />
+
             <TextView
-                android:id="@+id/txtSpell2Count"
+                android:id="@+id/lbSpell2Count"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_marginStart="235dp"
@@ -372,145 +412,161 @@
                 android:fontFamily="@font/percy_goth"
                 android:gravity="clip_vertical"
                 android:text="@string/empty"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone"
+                tools:visibility="visible" />
 
 
             <CheckBox
-                android:id="@+id/cbAnimalMessenger"
+                android:id="@+id/cbLv2AnimalMessenger"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/animalMessenger"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbBlindDeaf"
+                android:id="@+id/cbLv2BlindDeaf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/blindDeaf"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbCalmEmotion"
+                android:id="@+id/cbLv2CalmEmotion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/calmEmotion"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cdDarkness"
+                android:id="@+id/cbLv2Darkness"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/darkness"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbDarkvision"
+                android:id="@+id/cbLv2Darkvision"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/darkVision"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cdDetectThoughts"
+                android:id="@+id/cbLv2DetectThoughts"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/detectThoughts"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone"  />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbEnhanceAbility"
+                android:id="@+id/cbLv2EnhanceAbility"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/enhanceAbility"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone"  />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbFindTraps"
+                android:id="@+id/cbLv2FindTraps"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/findTraps"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbGustOfWind"
+                android:id="@+id/cbLv2GustOfWind"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/gustOfWind"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbInvisibility"
+                android:id="@+id/cbLv2Invisibility"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/invisibility"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbMinorImage"
+                android:id="@+id/cbLv2MinorImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/minorImage"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbPrayerOfHealing"
+                android:id="@+id/cbLv2PrayerOfHealing"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/prayerOfHealing"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbSilence"
+                android:id="@+id/cbLv2Silence"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/silence"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone"  />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbSpiritualWeapon"
+                android:id="@+id/cbLv2SpiritualWeapon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/spiritualWeapon"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbWeb"
+                android:id="@+id/cbLv2Web"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/web"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <TextView
                 android:id="@+id/lbSpellLevel3"
@@ -523,7 +579,9 @@
                 android:text="@string/spellLevel3"
                 android:textColor="#535353"
                 android:textSize="20sp"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
+
             <TextView
                 android:id="@+id/lbSelectSpell3"
                 android:layout_width="wrap_content"
@@ -535,9 +593,11 @@
                 android:text="@string/select"
                 android:textColor="#000000"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone"
+                tools:visibility="visible" />
+
             <TextView
-                android:id="@+id/txtSpell3Count"
+                android:id="@+id/lbSpell3Count"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_marginStart="235dp"
@@ -546,162 +606,180 @@
                 android:fontFamily="@font/percy_goth"
                 android:gravity="clip_vertical"
                 android:text="@string/empty"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbAnimateDead"
+                android:id="@+id/cbLv3AnimateDead"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/animateDead"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbBlink"
+                android:id="@+id/cbLv3Blink"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/blink"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbConjureAnimals"
+                android:id="@+id/cbLv3ConjureAnimals"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/conjureAnimals"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbCounterspell"
+                android:id="@+id/cbLv3Counterspell"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/counterSpell"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbDispellMagic"
+                android:id="@+id/cbLv3DispellMagic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/dispelMagic"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbFear"
+                android:id="@+id/cbLv3Fear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/fear"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbFly"
+                android:id="@+id/cbLv3Fly"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/fly"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbIntellectFortress"
+                android:id="@+id/cbLv3IntellectFortress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/intellectfort"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbLifeTransference"
+                android:id="@+id/cbLv3LifeTransference"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/lifeTransference"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbLightningArrow"
+                android:id="@+id/cbLv3LightningArrow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/lightingArrow"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbMajorImage"
+                android:id="@+id/cbLv3MajorImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/majorImage"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbMassHealingWord"
+                android:id="@+id/cbLv3MassHealingWord"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/massHealingWord"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone"  />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbSending"
+                android:id="@+id/cbLv3Sending"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/sending"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone"  />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbSlow"
+                android:id="@+id/cbLv3Slow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/slow"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbSummonFey"
+                android:id="@+id/cbLv3SummonFey"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/summonFey"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbTongues"
+                android:id="@+id/cbLv3Tongues"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/tongues"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone"  />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <CheckBox
-                android:id="@+id/cbWaterWalk"
+                android:id="@+id/cbLv3WaterWalk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="@string/waterWalk"
                 android:theme="@style/SpinnerTheme2"
-                android:visibility="gone"/>
+                android:visibility="gone"
+                tools:visibility="visible" />
 
         </LinearLayout>
     </ScrollView>
