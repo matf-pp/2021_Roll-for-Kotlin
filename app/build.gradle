@@ -56,12 +56,8 @@ dependencies {
     implementation 'com.github.AnuraganuPunalur:Multi-Selection-Spinner-Android:1.0'
 
 
-    implementation "com.pdftron:pdftron:8.1.2"
-    implementation "com.pdftron:tools:8.1.2"
+    implementation 'com.itextpdf:itextg:5.5.10'
+    implementation 'com.karumi:dexter:5.0.0'
 
-    implementation 'androidx.multidex:multidex:2.0.1'
 
-    // ***** Optionally include the demo library ****
-    implementation "com.pdftron:demo:8.1.2"
-    // **********************************************
 }
