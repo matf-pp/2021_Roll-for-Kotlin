@@ -15,6 +15,10 @@ android {
         versionCode 1
         versionName kotlin_version
 
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        manifestPlaceholders = [pdftronLicenseKey:PDFTRON_LICENSE_KEY]
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -50,4 +54,14 @@ dependencies {
     implementation "com.google.android.material:material:1.1.0"
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
     implementation 'com.github.AnuraganuPunalur:Multi-Selection-Spinner-Android:1.0'
+
+
+    implementation "com.pdftron:pdftron:8.1.2"
+    implementation "com.pdftron:tools:8.1.2"
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // ***** Optionally include the demo library ****
+    implementation "com.pdftron:demo:8.1.2"
+    // **********************************************
 }

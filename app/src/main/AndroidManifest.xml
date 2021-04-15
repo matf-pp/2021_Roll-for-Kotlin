@@ -9,24 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.RollForKotlin">
-        <activity android:name=".LoadingScreenActivity"
+        <activity android:name=".FinishActivity"
+                    android:theme="@style/LoadingScreenTheme"/>
+        <activity
+            android:name=".LoadingScreenActivity"
             android:theme="@style/LoadingScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityScreen1"
-            android:theme="@style/LoadingScreenTheme">
-
-        </activity>
-
+        <activity
+            android:name=".ActivityScreen1"
+            android:theme="@style/LoadingScreenTheme" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.RollForKotlin.NoActionBar">
+            android:theme="@style/Theme.RollForKotlin.NoActionBar" /> <!-- Add license key in meta-data tag here. This should be inside the application tag. -->
 
-        </activity>
     </application>
 
 </manifest>

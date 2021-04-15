@@ -1,14 +1,14 @@
 package com.example.rollforkotlin.ui.main.fragments
 
+import android.content.Intent
+import android.graphics.pdf.PdfDocument
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
-import com.example.rollforkotlin.ActivityScreen1
-import com.example.rollforkotlin.Character
-import com.example.rollforkotlin.R
+import com.example.rollforkotlin.*
 import kotlinx.android.synthetic.main.fragment_details.*
 
 
@@ -17,6 +17,7 @@ class DetailsFragment : Fragment() {
         super.onCreate(savedInstanceState)
         arguments?.let {
         }
+
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -38,7 +39,14 @@ class DetailsFragment : Fragment() {
         // Apply the adapter to the spinner
         spAlignment.adapter = adapter
 
+        btnFinish.setOnClickListener {
+            activity?.let{
+                val i = Intent (it, FinishActivity::class.java)
+                it.startActivity(i)
+            }
+        }
     }
+
 
     override fun onStop() {
         super.onStop()
