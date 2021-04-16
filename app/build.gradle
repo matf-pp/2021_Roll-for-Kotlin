@@ -56,8 +56,16 @@ dependencies {
     implementation 'com.github.AnuraganuPunalur:Multi-Selection-Spinner-Android:1.0'
 
 
+    //file picker yt tutorial
     implementation 'com.itextpdf:itextg:5.5.10'
     implementation 'com.karumi:dexter:5.0.0'
+
+    //file picker java not working
+    implementation 'lib.kashif:folderpicker:2.2'
+
+
+    //file picker
+    implementation 'com.github.androidbuffer:kotlinfilepicker:v0.0.4-alpha'
 
 
 }

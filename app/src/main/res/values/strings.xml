@@ -21,6 +21,8 @@
     <string name="dexterity">Dexterity</string>
     <string name="charisma">Charisma</string>
     <string name="constitution">Constitution</string>
+    <string name="save">Save PDF</string>
+
     <string-array name="levels">
         <item>1 lvl</item>
         <item>2 lvl</item>
@@ -182,7 +184,7 @@
     <string name="spareTheDying">   Spare the dying</string>
     <string name="viciousMockery">  Vicious mockery</string>
 
-    <string name="prepare">         Prepare:</string>
+    <string name="prepare">         Prepare</string>
 
     <string name="spellLevel1">     Spell Level 1</string>
     <string name="absorbElements">  Absorb Elements</string>
