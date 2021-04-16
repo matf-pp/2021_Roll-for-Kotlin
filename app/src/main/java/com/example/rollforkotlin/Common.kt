@@ -11,7 +11,7 @@ object Common {
 
         val file = File(path, "character.pdf")*/
 
-    /*   val dir = File(
+      /* val dir = File(
             android.os.Environment.getExternalStorageDirectory().toString()
                     + File.separator
                     + context.resources.getString(R.string.app_name)

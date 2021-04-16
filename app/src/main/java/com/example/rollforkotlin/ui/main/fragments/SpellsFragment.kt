@@ -74,10 +74,18 @@ class SpellsFragment : Fragment() , View.OnClickListener{
             spell1Counter = ActivityScreen1.newCharacter.chSpellLvl1Counter
             spell2Counter = ActivityScreen1.newCharacter.chSpellLvl2Counter
             spell3Counter = ActivityScreen1.newCharacter.chSpellLvl3Counter
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
         }
         if(ActivityScreen1.newCharacter.chClass=="Bard" || ActivityScreen1.newCharacter.chClass=="Cleric" || ActivityScreen1.newCharacter.chClass=="Ranger" || ActivityScreen1.newCharacter.chClass=="Wizard"){
             showSpells(ActivityScreen1.newCharacter.chClass)
         }
+        lbCantripCount.text = cantripCounter.toString()
+        lbSpell1Count.text = spell1Counter.toString()
+        lbSpell2Count.text = spell2Counter.toString()
+        lbSpell3Count.text = spell3Counter.toString()
         super.onStart()
     }
 
