@@ -2,6 +2,8 @@ package com.example.rollforkotlin
 
 import android.util.Range
 import com.example.rollforkotlin.ui.main.Class.*
+import java.util.logging.Level
+import kotlin.random.Random
 
 class Character {
     //Basics
@@ -58,13 +60,14 @@ class Character {
     var chSavingThrowProfs = mutableMapOf<String,Int>("strSave" to 0, "dexSave" to 0,"conSave" to 0,
                                                         "intSave" to 0,"wisSave" to 0,"chaSave" to 0)
 
-    //Traits
+    //Race traits
     var chSpeedWalk : Int = 0
     var chSpeedFly : Int = 0
     var chSpeedClimb : Int = 0
     var chSpeedSwim : Int = 0
-    var chRacialTraits : String = ""
-    var chClassTraits : String = ""
+    lateinit var chRacialTraits : ArrayList<String>
+    //Class traits
+    lateinit var chClassTraits : ArrayList<String>
     //Spells
     var chSpellAttackBonus : Int = 0
     var chSpellCastingAbility : String = ""
@@ -90,9 +93,24 @@ class Character {
         }
     }
     fun setSavingThrows(){
-        
-        for(pair in chSavingThrows){
+        var classInfo = getClass()
+        for(pair in chSavingThrows) {
+            chSavingThrowProfs[pair.key] = classInfo.getSavingThrowProf(pair.key)
             chSavingThrows[pair.key] = chAbilities[pair.key.substring(0,3)]!! + chProficiencyBonus*chSavingThrowProfs[pair.key]!!
+        }
+    }
+    fun getAllHPVariables(){
+        var hitDice = getClass().getHitDice()
+        for (i in 1..chLevel){
+            chMaxHP += Random.nextInt(1, hitDice) + (chAbilities["con"]?.toInt() ?: 0)
+        }
+        chCurrentHP = chMaxHP
+        chHitDice = chLevel.toString() + "d" + hitDice.toString()
+    }
+    fun getClassTraits(){
+        var classInfo = getClass()
+        for (i in 1..chLevel){
+            chClassTraits[i] = classInfo.classTraits[i]
         }
     }
     fun getSpellNumbers(){
@@ -134,7 +152,29 @@ class Character {
             }
         }
     }
-
+    fun getClass() : ClassGeneral {
+        when(chClass) {
+            "Wizard" -> {
+               return Wizard()
+            }
+            "Bard" -> {
+                return Bard()
+            }
+            "Ranger" -> {
+                return Ranger()
+            }
+            "Cleric" -> {
+                return Cleric()
+            }
+            "Fighter" -> {
+                return Fighter()
+            }
+            "Rogue" -> {
+                return Rogue()
+            }
+        }
+        return Barbarian()
+    }
 
 }
 

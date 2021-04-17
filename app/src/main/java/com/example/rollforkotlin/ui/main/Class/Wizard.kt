@@ -15,28 +15,16 @@ class Wizard() : ClassGeneral() {
     override var language = 0
 
 
-    override fun getSavingThrowProf(ability : String): Boolean {
-        when(ability){
-            "chStr" -> false
-            "chDex" -> false
-            "chCon" -> false
-            "chInt" -> true
-            "chWis" -> true
-            "chCha" -> false
+    override fun getSavingThrowProf(ability : String): Int {
+        return when(ability){
+            "intSave" -> 1
+            "wisSave" -> 1
+            else -> 0
         }
-        return false
     }
 
-    override fun getHitDice(lvl : Int): String {
-        when (lvl){
-            1 -> return "1d6"
-            2 -> return "2d6"
-            3 -> return "3d6"
-            4 -> return "4d6"
-            5 -> return "5d6"
-            6 -> return "6d6"
-        }
-        return ""
+    override fun getHitDice(): Int{
+        return 6
     }
 
     override fun getCantripsNumber(lvl : Int): Int {

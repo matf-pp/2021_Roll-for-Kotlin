@@ -29,28 +29,16 @@ class Ranger() : ClassGeneral() {
     override var language = 1
 
 
-    override fun getSavingThrowProf(ability : String): Boolean {
-        when(ability){
-            "chStr" -> true
-            "chDex" -> true
-            "chCon" -> false
-            "chInt" -> false
-            "chWis" -> false
-            "chCha" -> false
+    override fun getSavingThrowProf(ability : String): Int {
+        return when(ability){
+            "strSave" -> 1
+            "dexSave" -> 1
+            else -> 0
         }
-        return false
     }
 
-    override fun getHitDice(lvl : Int): String {
-        when (lvl){
-            1 -> return "1d10"
-            2 -> return "2d10"
-            3 -> return "3d10"
-            4 -> return "4d10"
-            5 -> return "5d10"
-            6 -> return "6d10"
-        }
-        return ""
+    override fun getHitDice(): Int {
+        return 10
     }
 
     override fun getCantripsNumber(lvl : Int): Int {

@@ -27,28 +27,16 @@ class Bard() : ClassGeneral() {
             "At 6th level, you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced or if you voluntarily end it (no action required).")
     override var language = 0
 
-    override fun getSavingThrowProf(ability : String): Boolean {
-        when(ability){
-            "chStr" -> false
-            "chDex" -> true
-            "chCon" -> false
-            "chInt" -> false
-            "chWis" -> false
-            "chCha" -> true
+    override fun getSavingThrowProf(ability : String): Int {
+        return when(ability){
+            "dexSave" -> 1
+            "chaSave" -> 1
+            else -> 0
         }
-        return false
     }
 
-    override fun getHitDice(lvl : Int): String {
-        when (lvl){
-            1 -> return "1d8"
-            2 -> return "2d8"
-            3 -> return "3d8"
-            4 -> return "4d8"
-            5 -> return "5d8"
-            6 -> return "6d8"
-        }
-        return ""
+    override fun getHitDice(): Int {
+        return 8
     }
 
     override fun getCantripsNumber(lvl : Int): Int {

@@ -24,28 +24,16 @@ class Cleric() : ClassGeneral() {
     override var language = 0
 
 
-    override fun getSavingThrowProf(ability : String): Boolean {
-        when(ability){
-            "chStr" -> false
-            "chDex" -> false
-            "chCon" -> false
-            "chInt" -> false
-            "chWis" -> true
-            "chCha" -> true
+    override fun getSavingThrowProf(ability : String): Int {
+        return when(ability){
+            "wisSave" -> 1
+            "chaSave" -> 1
+            else -> 0
         }
-        return false
     }
 
-    override fun getHitDice(lvl : Int): String {
-        when (lvl){
-            1 -> return "1d8"
-            2 -> return "2d8"
-            3 -> return "3d8"
-            4 -> return "4d8"
-            5 -> return "5d8"
-            6 -> return "6d8"
-        }
-        return ""
+    override fun getHitDice(): Int {
+        return 8
     }
 
     override fun getCantripsNumber(lvl : Int): Int {

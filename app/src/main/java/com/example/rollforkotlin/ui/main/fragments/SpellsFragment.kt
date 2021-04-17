@@ -33,29 +33,28 @@ class SpellsFragment : Fragment() , View.OnClickListener{
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        wizardList = arrayListOf(cbControlFlame,cbFirebolt,cbFriends,cbLight,cbMageHand,cbMending,cbMinorIlusion,
-            cbAbsorbElements,cbAlarm,cbBurningHands,cbCauseFear,cbCharmPerson,cbColorSpray,cbDetectMagic,cbFeatherFall,cbSilentImage,
-            cbBlindDeaf,cdDarkness,cbDarkvision,cdDetectThoughts,cbEnhanceAbility,cbGustOfWind,cbInvisibility,cbMinorImage,cbWeb,
-            cbAnimateDead,cbBlink,cbCounterspell,cbDispellMagic,cbFear,cbFly,cbIntellectFortress,cbLifeTransference,cbMajorImage,cbSending,cbSlow,cbSummonFey,cbTongues)
+        wizardList = arrayListOf(cbCanControlFlame,cbCanFirebolt,cbCanFriends,cbCanLight,cbCanMageHand,cbCanMending,cbCanMinorIlusion,
+            cbLv1AbsorbElements,cbLv1Alarm,cbLv1BurningHands,cbLv1CauseFear,cbLv1CharmPerson,cbLv1ColorSpray,cbLv1DetectMagic,cbLv1FeatherFall,cbLv1SilentImage,
+            cbLv2BlindDeaf,cbLv2Darkness,cbLv2Darkvision,cbLv2DetectThoughts,cbLv2EnhanceAbility,cbLv2GustOfWind,cbLv2Invisibility,cbLv2MinorImage,cbLv2Web,
+            cbLv3AnimateDead,cbLv3Blink,cbLv3Counterspell,cbLv3DispellMagic,cbLv3Fear,cbLv3Fly,cbLv3IntellectFortress,cbLv3LifeTransference,cbLv3MajorImage,cbLv3Sending,cbLv3Slow,cbLv3SummonFey,cbLv3Tongues)
 
-        bardList = arrayListOf(cbFriends,cbLight,cbMageHand,cbMending,cbMinorIlusion,cbViciousMockery,
-            cbCharmPerson,cbColorSpray,cbCureWounds,cbDetectMagic,cbHealingWord,cbSilentImage,
-            cbAnimalMessenger,cbBlindDeaf,cbCalmEmotion,cdDetectThoughts,cbEnhanceAbility,cbInvisibility,cbMinorImage,cbSilence,
-            cbDispellMagic,cbFear,cbIntellectFortress,cbMajorImage,cbMassHealingWord,cbSending,cbSlow,cbTongues)
+        bardList = arrayListOf(cbCanFriends,cbCanLight,cbCanMageHand,cbCanMending,cbCanMinorIlusion,cbCanViciousMockery,
+            cbLv1CharmPerson,cbLv1ColorSpray,cbLv1CureWounds,cbLv1DetectMagic,cbLv1HealingWord,cbLv1SilentImage,
+            cbLv2AnimalMessenger,cbLv2BlindDeaf,cbLv2CalmEmotion,cbLv2DetectThoughts,cbLv2EnhanceAbility,cbLv2Invisibility,cbLv2MinorImage,cbLv2Silence,
+            cbLv3DispellMagic,cbLv3Fear,cbLv3IntellectFortress,cbLv3MajorImage,cbLv3MassHealingWord,cbLv3Sending,cbLv3Slow,cbLv3Tongues)
 
-        clericList = arrayListOf(cbGuidance,cbLight,cbMending,cbSacredFlame,cbSpareTheDying,
-            cbBless,cbCureWounds,cbDetectMagic,cbHealingWord,cbInflictWounds,
-            cbBlindDeaf,cbCalmEmotion,cbEnhanceAbility,cbFindTraps,cbPrayerOfHealing,cbSilence,cbSpiritualWeapon,
-            cbAnimateDead,cbDispellMagic,cbLifeTransference,cbMassHealingWord,cbSending,cbTongues,cbWaterWalk)
+        clericList = arrayListOf(cbCanGuidance,cbCanLight,cbCanMending,cbCanSacredFlame,cbCanSpareTheDying,
+            cbLv1Bless,cbLv1CureWounds,cbLv1DetectMagic,cbLv1HealingWord,cbLv1InflictWounds,
+            cbLv2BlindDeaf,cbLv2CalmEmotion,cbLv2EnhanceAbility,cbLv2FindTraps,cbLv2PrayerOfHealing,cbLv2Silence,cbLv2SpiritualWeapon,
+            cbLv3AnimateDead,cbLv3DispellMagic,cbLv3LifeTransference,cbLv3MassHealingWord,cbLv3Sending,cbLv3Tongues,cbLv3WaterWalk)
 
-        rangerList = arrayListOf(cbAbsorbElements,cbAlarm,cbCureWounds,cbDetectMagic,cbEntangle,
-            cbAnimalMessenger,cbDarkvision,cbEnhanceAbility,cbFindTraps,cbGustOfWind,cbSilence,
-            cbConjureAnimals,cbLightningArrow,cbSummonFey,cbWaterWalk)
-        allList = arrayListOf(cbControlFlame,cbFirebolt,cbFriends,cbGuidance,cbLight,cbMageHand,cbMending,cbMinorIlusion,cbSacredFlame,cbSpareTheDying,cbViciousMockery,
-                                cbAbsorbElements,cbAlarm,cbBless,cbBurningHands,cbCauseFear,cbCharmPerson,cbColorSpray,cbCureWounds,cbDetectMagic,cbEntangle,cbFeatherFall,cbHealingWord,cbInflictWounds,cbSilentImage,
-                                cbAnimalMessenger,cbBlindDeaf,cbCalmEmotion,cdDarkness,cbDarkvision,cdDetectThoughts,cbEnhanceAbility,cbFindTraps,cbGustOfWind,cbInvisibility,cbMinorImage,cbPrayerOfHealing,cbSilence,cbSpiritualWeapon,cbWeb,
-                                cbAnimateDead,cbBlink,cbConjureAnimals,cbCounterspell,cbDispellMagic,cbFear,cbFly,cbIntellectFortress,cbLifeTransference,cbLightningArrow,cbMajorImage,cbMassHealingWord,cbSending,cbSlow,cbSummonFey,cbTongues,cbWaterWalk)
-
+        rangerList = arrayListOf(cbLv1AbsorbElements,cbLv1Alarm,cbLv1CureWounds,cbLv1DetectMagic,cbLv1Entangle,
+            cbLv2AnimalMessenger,cbLv2Darkvision,cbLv2EnhanceAbility,cbLv2FindTraps,cbLv2GustOfWind,cbLv2Silence,
+            cbLv3ConjureAnimals,cbLv3LightningArrow,cbLv3SummonFey,cbLv3WaterWalk)
+        allList = arrayListOf(cbCanControlFlame,cbCanFirebolt,cbCanFriends,cbCanGuidance,cbCanLight,cbCanMageHand,cbCanMending,cbCanMinorIlusion,cbCanSacredFlame,cbCanSpareTheDying,cbCanViciousMockery,
+                cbLv1AbsorbElements,cbLv1Alarm,cbLv1Bless,cbLv1BurningHands,cbLv1CauseFear,cbLv1CharmPerson,cbLv1ColorSpray,cbLv1CureWounds,cbLv1DetectMagic,cbLv1Entangle,cbLv1FeatherFall,cbLv1HealingWord,cbLv1InflictWounds,cbLv1SilentImage,
+                cbLv2AnimalMessenger,cbLv2BlindDeaf,cbLv2CalmEmotion,cbLv2Darkness,cbLv2Darkvision,cbLv2DetectThoughts,cbLv2EnhanceAbility,cbLv2FindTraps,cbLv2GustOfWind,cbLv2Invisibility,cbLv2MinorImage,cbLv2PrayerOfHealing,cbLv2Silence,cbLv2SpiritualWeapon,cbLv2Web,
+                cbLv3AnimateDead,cbLv3Blink,cbLv3ConjureAnimals,cbLv3Counterspell,cbLv3DispellMagic,cbLv3Fear,cbLv3Fly,cbLv3IntellectFortress,cbLv3LifeTransference,cbLv3LightningArrow,cbLv3MajorImage,cbLv3MassHealingWord,cbLv3Sending,cbLv3Slow,cbLv3SummonFey,cbLv3Tongues,cbLv3WaterWalk)
 
     }
 
@@ -74,10 +73,7 @@ class SpellsFragment : Fragment() , View.OnClickListener{
             spell1Counter = ActivityScreen1.newCharacter.chSpellLvl1Counter
             spell2Counter = ActivityScreen1.newCharacter.chSpellLvl2Counter
             spell3Counter = ActivityScreen1.newCharacter.chSpellLvl3Counter
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
         }
         if(ActivityScreen1.newCharacter.chClass=="Bard" || ActivityScreen1.newCharacter.chClass=="Cleric" || ActivityScreen1.newCharacter.chClass=="Ranger" || ActivityScreen1.newCharacter.chClass=="Wizard"){
             showSpells(ActivityScreen1.newCharacter.chClass)
@@ -103,7 +99,7 @@ class SpellsFragment : Fragment() , View.OnClickListener{
                 }
                 lbCantrip.visibility = View.VISIBLE
                 lbSelectCantrip.visibility = View.VISIBLE
-                txtCantripCount.visibility = View.VISIBLE
+                lbCantripCount.visibility = View.VISIBLE
             }
             "Cleric" -> {
                 for(spell in clericList){
@@ -112,7 +108,7 @@ class SpellsFragment : Fragment() , View.OnClickListener{
                 lbPrepare.visibility = View.VISIBLE
                 lbCantrip.visibility = View.VISIBLE
                 lbSelectCantrip.visibility = View.VISIBLE
-                txtCantripCount.visibility = View.VISIBLE
+                lbCantripCount.visibility = View.VISIBLE
             }
             "Ranger" -> {
                 for(spell in rangerList){
@@ -125,18 +121,18 @@ class SpellsFragment : Fragment() , View.OnClickListener{
                 }
                 lbCantrip.visibility = View.VISIBLE
                 lbSelectCantrip.visibility = View.VISIBLE
-                txtCantripCount.visibility = View.VISIBLE
+                lbCantripCount.visibility = View.VISIBLE
             }
         }
         lbSpellLevel1.visibility = View.VISIBLE
         lbSelectSpell1.visibility = View.VISIBLE
-        txtSpell1Count.visibility = View.VISIBLE
+        lbSpell1Count.visibility = View.VISIBLE
         lbSpellLevel2.visibility = View.VISIBLE
         lbSelectSpell2.visibility = View.VISIBLE
-        txtSpell2Count.visibility = View.VISIBLE
+        lbSpell2Count.visibility = View.VISIBLE
         lbSpellLevel3.visibility = View.VISIBLE
         lbSelectSpell3.visibility = View.VISIBLE
-        txtSpell3Count.visibility = View.VISIBLE
+        lbSpell3Count.visibility = View.VISIBLE
         lbNoSpell.visibility = View.GONE
     }
 

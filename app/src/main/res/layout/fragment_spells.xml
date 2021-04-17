@@ -7,543 +7,7 @@
     android:background="#FFFFFF"
     tools:context=".ui.main.fragments.SpellsFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingLeft="10dp"
-        android:paddingTop="20dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp">
 
-        <TextView
-            android:id="@+id/lbNoSpell"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:fontFamily="@font/percy_goth"
-            android:text="@string/noSpell"
-            android:textColor="#535353"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/lbCantrip"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="5dp"
-            android:background="#960E0E"
-            android:fontFamily="@font/percy_goth"
-            android:paddingStart="10dp"
-            android:paddingLeft="10dp"
-            android:paddingEnd="0dp"
-            android:paddingRight="0dp"
-            android:text="@string/cantrip"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/lbSelectCantrip"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="170dp"
-            android:layout_marginLeft="170dp"
-            android:layout_marginTop="-25dp"
-            android:fontFamily="@font/percy_goth"
-            android:text="@string/select"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/txtCantripCount"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="235dp"
-            android:layout_marginLeft="235dp"
-            android:layout_marginTop="-30dp"
-            android:fontFamily="@font/percy_goth"
-            android:gravity="clip_vertical"
-            android:text="@string/empty"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbControlFlame"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/controlFlame"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbFirebolt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/firebolt"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbFriends"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/friends"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbGuidance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/guidance"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbLight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/light"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbMageHand"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/mageHand"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbMending"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/mending"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbMinorIlusion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/minorIlusion"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbSacredFlame"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/sacredFlame"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbSpareTheDying"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/spareTheDying"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbViciousMockery"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/viciousMockery"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/lbPrepare"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="5dp"
-            android:background="#960E0E"
-            android:fontFamily="@font/percy_goth"
-            android:paddingStart="10dp"
-            android:paddingLeft="10dp"
-            android:paddingEnd="0dp"
-            android:paddingRight="0dp"
-            android:text="@string/prepare"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/lbSpellLevel1"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="5dp"
-            android:background="#960E0E"
-            android:fontFamily="@font/percy_goth"
-            android:paddingStart="10dp"
-            android:paddingLeft="10dp"
-            android:paddingEnd="0dp"
-            android:paddingRight="0dp"
-            android:text="@string/spellLevel1"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/lbSelectSpell1"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="170dp"
-            android:layout_marginLeft="170dp"
-            android:layout_marginTop="-25dp"
-            android:fontFamily="@font/percy_goth"
-            android:text="@string/select"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/txtSpell1Count"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="235dp"
-            android:layout_marginLeft="235dp"
-            android:layout_marginTop="-30dp"
-            android:fontFamily="@font/percy_goth"
-            android:gravity="clip_vertical"
-            android:text="@string/empty"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbAbsorbElements"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/absorbElements"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbAlarm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/alarm"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbBless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/bless"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbBurningHands"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/burningHands"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbCauseFear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/causeFear"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbCharmPerson"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/charmPerson"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbColorSpray"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/colorSpray"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbCureWounds"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/cureWounds"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbDetectMagic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/detectMagic"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbEntangle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/entangle"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbFeatherFall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/featherFall"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbHealingWord"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/healingWord"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbInflictWounds"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/inflictWounds"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbSilentImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/silentImage"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/lbSpellLevel2"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="5dp"
-            android:background="#960E0E"
-            android:fontFamily="@font/percy_goth"
-            android:paddingStart="10dp"
-            android:paddingLeft="10dp"
-            android:paddingEnd="0dp"
-            android:paddingRight="0dp"
-            android:text="@string/spellLevel2"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/lbSelectSpell2"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="170dp"
-            android:layout_marginLeft="170dp"
-            android:layout_marginTop="-25dp"
-            android:fontFamily="@font/percy_goth"
-            android:text="@string/select"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/txtSpell2Count"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="235dp"
-            android:layout_marginLeft="235dp"
-            android:layout_marginTop="-30dp"
-            android:background="#FFFFFF"
-            android:fontFamily="@font/percy_goth"
-            android:gravity="clip_vertical"
-            android:text="@string/empty"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:visibility="gone" />
-
-
-        <CheckBox
-            android:id="@+id/cbAnimalMessenger"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/animalMessenger"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbBlindDeaf"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/blindDeaf"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbCalmEmotion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/calmEmotion"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cdDarkness"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/darkness"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbDarkvision"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/darkVision"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cdDetectThoughts"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/detectThoughts"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbEnhanceAbility"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/enhanceAbility"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbFindTraps"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/findTraps"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbGustOfWind"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/gustOfWind"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbInvisibility"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/invisibility"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbMinorImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/minorImage"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbPrayerOfHealing"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/prayerOfHealing"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbSilence"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/silence"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbSpiritualWeapon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/spiritualWeapon"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbWeb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/web"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-<<<<<<< Updated upstream
-        <TextView
-            android:id="@+id/lbSpellLevel3"
-=======
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -742,12 +206,8 @@
 
         <TextView
             android:id="@+id/lbSpellLevel1"
->>>>>>> Stashed changes
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-<<<<<<< Updated upstream
+            android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="#960E0E"
             android:fontFamily="@font/percy_goth"
@@ -758,27 +218,9 @@
             android:text="@string/spellLevel3"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/lbSelectSpell3"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="170dp"
-            android:layout_marginLeft="170dp"
-=======
-            android:paddingLeft="10dp"
-            android:paddingStart="10dp"
-            android:paddingRight="0dp"
-            android:paddingEnd="0dp"
-            android:layout_marginTop="0dp"
-            android:background="#960E0E"
-            android:fontFamily="@font/percy_goth"
-            android:text="@string/spellLevel1"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
             android:visibility="gone"
             tools:visibility="visible" />
+
 
         <TextView
             android:id="@+id/lbSelectSpell1"
@@ -794,7 +236,7 @@
             android:textSize="15sp"
             android:visibility="gone"
             tools:visibility="visible"
- />
+            />
 
         <TextView
             android:id="@+id/lbSpell1Count"
@@ -975,69 +417,33 @@
             android:id="@+id/lbSelectSpell2"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="-25dp"
             android:layout_marginEnd="60dp"
             android:layout_marginRight="60dp"
-            android:layout_gravity="right"
->>>>>>> Stashed changes
-            android:layout_marginTop="-25dp"
             android:fontFamily="@font/percy_goth"
             android:text="@string/select"
             android:textColor="#FFFFFF"
             android:textSize="15sp"
-<<<<<<< Updated upstream
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/txtSpell3Count"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="235dp"
-            android:layout_marginLeft="235dp"
-=======
             android:visibility="gone"
             tools:visibility="visible" />
+
 
         <TextView
             android:id="@+id/lbSpell2Count"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="-30dp"
             android:layout_marginEnd="40dp"
             android:layout_marginRight="40dp"
-            android:layout_gravity="right"
->>>>>>> Stashed changes
-            android:layout_marginTop="-30dp"
             android:fontFamily="@font/percy_goth"
             android:gravity="clip_vertical"
             android:text="@string/empty"
             android:textColor="#FFFFFF"
             android:textSize="15sp"
-<<<<<<< Updated upstream
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbAnimateDead"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/animateDead"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbBlink"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/blink"
-            android:theme="@style/SpinnerTheme2"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbConjureAnimals"
-=======
             android:visibility="gone"
             tools:visibility="visible" />
-
 
         <CheckBox
             android:id="@+id/cbLv2AnimalMessenger"
@@ -1261,259 +667,172 @@
 
         <CheckBox
             android:id="@+id/cbLv3ConjureAnimals"
->>>>>>> Stashed changes
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:text="@string/conjureAnimals"
             android:theme="@style/SpinnerTheme2"
-<<<<<<< Updated upstream
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbCounterspell"
-=======
             android:visibility="gone"
             tools:visibility="visible" />
 
+
         <CheckBox
             android:id="@+id/cbLv3Counterspell"
->>>>>>> Stashed changes
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:text="@string/counterSpell"
             android:theme="@style/SpinnerTheme2"
-<<<<<<< Updated upstream
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbDispellMagic"
-=======
             android:visibility="gone"
             tools:visibility="visible" />
 
+
         <CheckBox
             android:id="@+id/cbLv3DispellMagic"
->>>>>>> Stashed changes
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:text="@string/dispelMagic"
             android:theme="@style/SpinnerTheme2"
-<<<<<<< Updated upstream
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbFear"
-=======
             android:visibility="gone"
             tools:visibility="visible" />
 
+
         <CheckBox
             android:id="@+id/cbLv3Fear"
->>>>>>> Stashed changes
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:text="@string/fear"
             android:theme="@style/SpinnerTheme2"
-<<<<<<< Updated upstream
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbFly"
-=======
             android:visibility="gone"
             tools:visibility="visible" />
 
+
         <CheckBox
             android:id="@+id/cbLv3Fly"
->>>>>>> Stashed changes
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:text="@string/fly"
             android:theme="@style/SpinnerTheme2"
-<<<<<<< Updated upstream
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbIntellectFortress"
-=======
             android:visibility="gone"
             tools:visibility="visible" />
 
+
         <CheckBox
             android:id="@+id/cbLv3IntellectFortress"
->>>>>>> Stashed changes
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:text="@string/intellectfort"
             android:theme="@style/SpinnerTheme2"
-<<<<<<< Updated upstream
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbLifeTransference"
-=======
             android:visibility="gone"
             tools:visibility="visible" />
 
+
         <CheckBox
             android:id="@+id/cbLv3LifeTransference"
->>>>>>> Stashed changes
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:text="@string/lifeTransference"
             android:theme="@style/SpinnerTheme2"
-<<<<<<< Updated upstream
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbLightningArrow"
-=======
             android:visibility="gone"
             tools:visibility="visible" />
 
+
         <CheckBox
             android:id="@+id/cbLv3LightningArrow"
->>>>>>> Stashed changes
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:text="@string/lightingArrow"
             android:theme="@style/SpinnerTheme2"
-<<<<<<< Updated upstream
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbMajorImage"
-=======
             android:visibility="gone"
             tools:visibility="visible" />
 
+
         <CheckBox
             android:id="@+id/cbLv3MajorImage"
->>>>>>> Stashed changes
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:text="@string/majorImage"
             android:theme="@style/SpinnerTheme2"
-<<<<<<< Updated upstream
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbMassHealingWord"
-=======
             android:visibility="gone"
             tools:visibility="visible" />
 
+
         <CheckBox
             android:id="@+id/cbLv3MassHealingWord"
->>>>>>> Stashed changes
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:text="@string/massHealingWord"
             android:theme="@style/SpinnerTheme2"
-<<<<<<< Updated upstream
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbSending"
-=======
             android:visibility="gone"
             tools:visibility="visible" />
 
+
         <CheckBox
             android:id="@+id/cbLv3Sending"
->>>>>>> Stashed changes
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:text="@string/sending"
             android:theme="@style/SpinnerTheme2"
-<<<<<<< Updated upstream
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbSlow"
-=======
             android:visibility="gone"
             tools:visibility="visible" />
 
+
         <CheckBox
             android:id="@+id/cbLv3Slow"
->>>>>>> Stashed changes
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:text="@string/slow"
             android:theme="@style/SpinnerTheme2"
-<<<<<<< Updated upstream
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbSummonFey"
-=======
             android:visibility="gone"
             tools:visibility="visible" />
 
+
         <CheckBox
             android:id="@+id/cbLv3SummonFey"
->>>>>>> Stashed changes
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:text="@string/summonFey"
             android:theme="@style/SpinnerTheme2"
-<<<<<<< Updated upstream
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbTongues"
-=======
             android:visibility="gone"
             tools:visibility="visible" />
 
+
         <CheckBox
             android:id="@+id/cbLv3Tongues"
->>>>>>> Stashed changes
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:text="@string/tongues"
             android:theme="@style/SpinnerTheme2"
-<<<<<<< Updated upstream
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/cbWaterWalk"
-=======
             android:visibility="gone"
             tools:visibility="visible" />
 
         <CheckBox
             android:id="@+id/cbLv3WaterWalk"
->>>>>>> Stashed changes
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:text="@string/waterWalk"
             android:theme="@style/SpinnerTheme2"
-<<<<<<< Updated upstream
-            android:visibility="gone" />
-
-    </LinearLayout>
-</ScrollView>
-=======
             android:visibility="gone"
             tools:visibility="visible" />
 
+        tools:visibility="visible" />
+
+
     </LinearLayout>
-    </ScrollView>
->>>>>>> Stashed changes
+</ScrollView>
+
+
+

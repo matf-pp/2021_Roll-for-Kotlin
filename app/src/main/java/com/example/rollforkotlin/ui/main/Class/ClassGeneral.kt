@@ -11,8 +11,8 @@ abstract class ClassGeneral {
     abstract var classTraits : ArrayList<String>
     abstract var language : Int
 
-    abstract fun getSavingThrowProf(ability : String) : Boolean
-    abstract fun getHitDice(lvl : Int) : String
+    abstract fun getSavingThrowProf(ability : String) : Int
+    abstract fun getHitDice() : Int
     abstract fun getCantripsNumber(lvl : Int) : Int
     abstract fun getSpellLvl1Number(lvl : Int) : Int
     abstract fun getSpellLvl2Number(lvl : Int) : Int
