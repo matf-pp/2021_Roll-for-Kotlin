@@ -215,7 +215,7 @@
             android:paddingLeft="10dp"
             android:paddingEnd="0dp"
             android:paddingRight="0dp"
-            android:text="@string/spellLevel3"
+            android:text="@string/spellLevel1"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:visibility="gone"

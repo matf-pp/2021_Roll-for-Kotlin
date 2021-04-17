@@ -55,7 +55,7 @@ class SpellsFragment : Fragment() , View.OnClickListener{
                 cbLv1AbsorbElements,cbLv1Alarm,cbLv1Bless,cbLv1BurningHands,cbLv1CauseFear,cbLv1CharmPerson,cbLv1ColorSpray,cbLv1CureWounds,cbLv1DetectMagic,cbLv1Entangle,cbLv1FeatherFall,cbLv1HealingWord,cbLv1InflictWounds,cbLv1SilentImage,
                 cbLv2AnimalMessenger,cbLv2BlindDeaf,cbLv2CalmEmotion,cbLv2Darkness,cbLv2Darkvision,cbLv2DetectThoughts,cbLv2EnhanceAbility,cbLv2FindTraps,cbLv2GustOfWind,cbLv2Invisibility,cbLv2MinorImage,cbLv2PrayerOfHealing,cbLv2Silence,cbLv2SpiritualWeapon,cbLv2Web,
                 cbLv3AnimateDead,cbLv3Blink,cbLv3ConjureAnimals,cbLv3Counterspell,cbLv3DispellMagic,cbLv3Fear,cbLv3Fly,cbLv3IntellectFortress,cbLv3LifeTransference,cbLv3LightningArrow,cbLv3MajorImage,cbLv3MassHealingWord,cbLv3Sending,cbLv3Slow,cbLv3SummonFey,cbLv3Tongues,cbLv3WaterWalk)
-
+        for(cb in allList) cb.setOnClickListener(this)
     }
 
     //Podesavanje limita za spell-ove
@@ -137,7 +137,65 @@ class SpellsFragment : Fragment() , View.OnClickListener{
     }
 
     override fun onClick(v: View?) {
-        TODO("Not yet implemented")
+        v as CheckBox
+        val name = v.resources.getResourceName(v.id)
+        when(checkSpellType(name)){
+            'c' -> {
+                if(cantripCounter==0 && v.isChecked){
+                    v.isChecked = false
+                } else if (v.isChecked){
+                    --cantripCounter
+                } else {
+                    ++cantripCounter
+                }
+                lbCantripCount.text = cantripCounter.toString()
+            }
+            '1' -> {
+                if(spell1Counter==0 && v.isChecked){
+                    v.isChecked = false
+                } else if (v.isChecked){
+                    --spell1Counter
+                } else {
+                    ++spell1Counter
+                }
+                lbSpell1Count.text = spell1Counter.toString()
+            }
+            '2' -> {
+                if(spell2Counter==0 && v.isChecked){
+                    v.isChecked = false
+                } else if (v.isChecked){
+                    --spell2Counter
+                } else {
+                    ++spell2Counter
+                }
+                lbSpell2Count.text = spell2Counter.toString()
+            }
+            '3' -> {
+                if(spell3Counter==0 && v.isChecked){
+                    v.isChecked = false
+                } else if (v.isChecked){
+                    --spell3Counter
+                } else {
+                    ++spell3Counter
+                }
+                lbSpell3Count.text = spell3Counter.toString()
+            }
+        }
+    }
+    private fun checkSpellType(id:String): Char?{
+        if(id.startsWith("com.example.rollforkotlin:id/cbCan")){
+            return 'c'
+        }
+        if(id.startsWith("com.example.rollforkotlin:id/cbLv1")){
+            return '1'
+        }
+        if(id.startsWith("com.example.rollforkotlin:id/cbLv2")){
+            return '2'
+        }
+        if(id.startsWith("com.example.rollforkotlin:id/cbLv3")){
+            return '3'
+        }
+        return null
     }
 
 }
