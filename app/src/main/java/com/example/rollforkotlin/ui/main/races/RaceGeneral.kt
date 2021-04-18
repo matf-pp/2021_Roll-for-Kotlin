@@ -5,4 +5,5 @@ abstract class RaceGeneral {
     abstract fun setSpeed()
     abstract fun addLanguages()
     abstract fun addRacialFeatures()
+    abstract fun clearAll()
 }

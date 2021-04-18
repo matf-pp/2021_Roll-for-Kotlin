@@ -16,4 +16,8 @@ class Human: RaceGeneral() {
     override fun addRacialFeatures() {
         TODO("Not yet implemented")
     }
+
+    override fun clearAll() {
+        TODO("Not yet implemented")
+    }
 }
