@@ -67,7 +67,7 @@ class Character {
     var chSpeedSwim : Int = 0
     lateinit var chRacialTraits : ArrayList<String>
     //Class traits
-    lateinit var chClassTraits : ArrayList<String>
+    var chClassTraits : ArrayList<String> = ArrayList()
     //Spells
     var chSpellAttackBonus : Int = 0
     var chSpellCastingAbility : String = ""
@@ -89,20 +89,20 @@ class Character {
 
     fun setSkills() {
         for (pair in chSkills) {
-            chSkills[pair.key] = chAbilities[pair.key.substring(0, 3)]!! + chProficiencyBonus * chSkillProfs[pair.key]!!
+            chSkills[pair.key] = (chAbilities[pair.key.substring(0, 3)]!! - 10) / 2 + chProficiencyBonus * chSkillProfs[pair.key]!!
         }
     }
     fun setSavingThrows(){
         var classInfo = getClass()
         for(pair in chSavingThrows) {
             chSavingThrowProfs[pair.key] = classInfo.getSavingThrowProf(pair.key)
-            chSavingThrows[pair.key] = chAbilities[pair.key.substring(0,3)]!! + chProficiencyBonus*chSavingThrowProfs[pair.key]!!
+            chSavingThrows[pair.key] = (chAbilities[pair.key.substring(0,3)]!! - 10 ) /2 + chProficiencyBonus*chSavingThrowProfs[pair.key]!!
         }
     }
     fun getAllHPVariables(){
         var hitDice = getClass().getHitDice()
         for (i in 1..chLevel){
-            chMaxHP += Random.nextInt(1, hitDice) + (chAbilities["con"]?.toInt() ?: 0)
+            chMaxHP += Random.nextInt(1, hitDice) + ((chAbilities["con"]?.toInt()?.minus(10))?.div(2)  ?: 0)
         }
         chCurrentHP = chMaxHP
         chHitDice = chLevel.toString() + "d" + hitDice.toString()
@@ -110,7 +110,7 @@ class Character {
     fun getClassTraits(){
         var classInfo = getClass()
         for (i in 1..chLevel){
-            chClassTraits[i] = classInfo.classTraits[i]
+            chClassTraits.add(classInfo.classTraits[i])
         }
     }
     fun getSpellNumbers(){
