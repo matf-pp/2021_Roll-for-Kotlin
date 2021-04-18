@@ -1,7 +1,7 @@
-package com.example.rollforkotlin.ui.main.Background
+package com.example.rollforkotlin.ui.main.backgrounds
 
-class Knight() : BackgroundGeneral() {
-    override var equipment = "A set of fine clothes, a signet ring, a scroll of pedigree, and a purse containing 25gp"
+class Noble() : BackgroundGeneral() {
+    override var equipment = " A set of fine clothesValue:15gp Weight:6lbs, a signet ring, a scroll of pedigree, and a purse containing 25gp"
     override var skillProf = arrayListOf("History", "Persuasion")
     override var toolProf = arrayListOf("One gaming set")
     override var backgroundTraits = arrayListOf("Position of Privilege\n" +

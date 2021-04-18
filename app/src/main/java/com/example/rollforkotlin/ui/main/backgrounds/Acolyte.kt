@@ -1,4 +1,4 @@
-package com.example.rollforkotlin.ui.main.Background
+package com.example.rollforkotlin.ui.main.backgrounds
 
 class Acolyte() : BackgroundGeneral() {
     override var equipment = "A holy symbol (a gift to you when you entered the priesthood), a prayer book or prayer wheel, 5 sticks of incense, vestments, a set of common clothes, and a belt pouch containing 15gp"

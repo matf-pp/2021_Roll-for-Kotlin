@@ -1,4 +1,4 @@
-package com.example.rollforkotlin.ui.main.Class
+package com.example.rollforkotlin.ui.main.classes
 
 class Barbarian() : ClassGeneral() {
     override var className = "Barbarian"

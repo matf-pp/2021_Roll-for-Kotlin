@@ -1,4 +1,4 @@
-package com.example.rollforkotlin.ui.main.Background
+package com.example.rollforkotlin.ui.main.backgrounds
 
 class FolkHero() : BackgroundGeneral() {
     override var equipment = "A set of artisan's tools, a shovel, an iron pot, a set of common clothes, and a belt pouch containing 10gp"

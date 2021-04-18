@@ -1,4 +1,4 @@
-package com.example.rollforkotlin.ui.main.Background
+package com.example.rollforkotlin.ui.main.backgrounds
 
 class Sailor() : BackgroundGeneral() {
     override var equipment = " A belaying pin (club), 50 feet of silk rope, a lucky charm such as a rabbit foot or a small stone with a hole in the center (or you may roll for a random trinket on the Trinkets table in chapter 5), a set of common clothes, and a belt pouch containing 10gp"

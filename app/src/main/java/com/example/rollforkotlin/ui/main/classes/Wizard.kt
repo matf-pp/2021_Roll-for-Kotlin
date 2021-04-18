@@ -1,4 +1,4 @@
-package com.example.rollforkotlin.ui.main.Class
+package com.example.rollforkotlin.ui.main.classes
 
 class Wizard() : ClassGeneral() {
     override var className = "Wizard"
