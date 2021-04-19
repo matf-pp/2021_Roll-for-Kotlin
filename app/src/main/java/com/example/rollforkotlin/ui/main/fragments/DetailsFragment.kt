@@ -40,6 +40,9 @@ class DetailsFragment : Fragment() {
         spAlignment.adapter = adapter
 
         btnFinish.setOnClickListener {
+            ActivityScreen1.newCharacter.getAllHPVariables()
+            ActivityScreen1.newCharacter.setSavingThrows()
+            ActivityScreen1.newCharacter.getClassTraits()
             activity?.let{
                 val i = Intent (it, FinishActivity::class.java)
                 it.startActivity(i)
