@@ -2,11 +2,11 @@ package com.example.rollforkotlin.ui.main.classes
 
 class Barbarian() : ClassGeneral() {
     override var className = "Barbarian"
-    override var hitDice = "1d12 per fighter level"
+    override var hitDice = 12
     override var armorProf = "Light armor, medium armor, shields"
     override var weaponProf = "Simple weapons, martial weapons"
     override var toolProf = "None"
-    override var savingThrowsProf = "Strength, Constitution"
+    override var savingThrowsProf = arrayListOf("strSave","conSave")
     override var spellCastingMod = ""
     override var classTraits = arrayListOf("Rage\n" +
             "In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action.\n" +
@@ -36,36 +36,9 @@ class Barbarian() : ClassGeneral() {
             "Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor.","")
     override var language = 0
 
+    override var cantripNumbers = arrayListOf(0)
+    override var spell1Numbers = arrayListOf(0)
+    override var spell2Numbers = arrayListOf(0)
+    override var spell3Numbers = arrayListOf(0)
 
-    override fun getSavingThrowProf(ability : String): Int {
-        return when(ability){
-            "strSave" -> 1
-            "conSave" -> 1
-            else -> 0
-        }
-    }
-
-    override fun getHitDice(): Int {
-        return 12
-    }
-
-    override fun getCantripsNumber(lvl : Int): Int {
-        return 0
-    }
-
-    override fun getSpellLvl1Number(lvl : Int): Int {
-        return 0
-    }
-
-    override fun getSpellLvl2Number(lvl : Int): Int {
-        return 0
-    }
-
-    override fun getSpellLvl3Number(lvl : Int): Int {
-        return 0
-    }
-
-    override fun getSpellCastingModifier(): String {
-        return ""
-    }
 }
