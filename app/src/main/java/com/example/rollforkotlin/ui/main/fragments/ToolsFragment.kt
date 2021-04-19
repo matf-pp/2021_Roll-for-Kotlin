@@ -2,11 +2,11 @@ package com.example.rollforkotlin.ui.main.fragments
 
 import android.app.AlertDialog
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
+import androidx.fragment.app.Fragment
 import com.example.rollforkotlin.ActivityScreen1
 import com.example.rollforkotlin.R
 import kotlinx.android.synthetic.main.fragment_tools.*
@@ -32,119 +32,138 @@ class ToolsFragment : Fragment(), View.OnClickListener {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?){
-        //Languages
-        view.cbLgDwarvish.setOnClickListener(this)
-        view.cbLgElvish.setOnClickListener(this)
-        view.cbLgGnomish.setOnClickListener(this)
-        view.cbLgGoblin.setOnClickListener(this)
-        view.cbLgHalfling.setOnClickListener(this)
-        view.cbLgInfernal.setOnClickListener(this)
-        view.cbLgSylvan.setOnClickListener(this)
-        view.cbLgUndercommon.setOnClickListener(this)
+        allCBList = arrayListOf(
+                //Languages
+                cbLgDwarvish, cbLgElvish, cbLgGnomish, cbLgGoblin, cbLgHalfling, cbLgInfernal, cbLgSylvan, cbLgUndercommon,
+                //Proficiencies
+                cbPrAcrobatics, cbPrAnimalH, cbPrArcana, cbPrAthletics, cbPrDeception, cbPrHistory, cbPrInsight, cbPrIntimidation, cbPrInvestigation,
+                cbPrMedicine, cbPrNature, cbPrPerception, cbPrPerformance, cbPrPersuasion, cbPrReligion, cbPrSleightOfHand, cbPrStealth, cbPrSurvival,
+                //Tools
+                cbTlAlchemistS, cbTlCartographerT, cbTlCookU, cbTlJewelerT, cbTlThievesT, cbTlTinkerT, cbTlWoodcarverT,
+                //Expertise
+                cbPrAcrobaticsExp, cbPrAnimalHExp, cbPrArcanaExp, cbPrAthleticsExp, cbPrDeceptionExp, cbPrHistoryExp, cbPrInsightExp, cbPrIntimidationExp, cbPrInvestigationExp,
+                cbPrMedicineExp, cbPrNatureExp, cbPrPerceptionExp, cbPrPerformanceExp, cbPrPersuasionExp, cbPrReligionExp, cbPrSleightOfHandExp, cbPrStealth, cbPrSurvivalExp)
 
-        //Proficiencies
-        view.cbPrAcrobatics.setOnClickListener(this)
-        view.cbPrAnimalH.setOnClickListener(this)
-        view.cbPrArcana.setOnClickListener(this)
-        view.cbPrAthletics.setOnClickListener(this)
-        view.cbPrDeception.setOnClickListener(this)
-        view.cbPrHistory.setOnClickListener(this)
-        view.cbPrInsight.setOnClickListener(this)
-        view.cbPrIntimidation.setOnClickListener(this)
-        view.cbPrInvestigation.setOnClickListener(this)
-        view.cbPrMedicine.setOnClickListener(this)
-        view.cbPrNature.setOnClickListener(this)
-        view.cbPrPerception.setOnClickListener(this)
-        view.cbPrPerformance.setOnClickListener(this)
-        view.cbPrPersuasion.setOnClickListener(this)
-        view.cbPrReligion.setOnClickListener(this)
-        view.cbPrSleightOfHand.setOnClickListener(this)
-        view.cbPrStealth.setOnClickListener(this)
-        view.cbPrSurvival.setOnClickListener(this)
-
-        //Tools
-        view.cbTlAlchemistS.setOnClickListener(this)
-        view.cbTlCartographerT.setOnClickListener(this)
-        view.cbTlCookU.setOnClickListener(this)
-        view.cbTlJewelerT.setOnClickListener(this)
-        view.cbTlThievesT.setOnClickListener(this)
-        view.cbTlTinkerT.setOnClickListener(this)
-        view.cbTlWoodcarverT.setOnClickListener(this)
-        view.lbLgCount.text = languageCounter.toString()
-        view.lbPrCount.text = profCounter.toString()
-        view.lbTlCount.text = toolsCounter.toString()
+        profCBList = arrayListOf( cbPrAcrobatics, cbPrAnimalH, cbPrArcana, cbPrAthletics, cbPrDeception, cbPrHistory, cbPrInsight, cbPrIntimidation, cbPrInvestigation,
+                cbPrMedicine, cbPrNature, cbPrPerception, cbPrPerformance, cbPrPersuasion, cbPrReligion, cbPrSleightOfHand, cbPrStealth, cbPrSurvival)
+        lbLgCount.text = languageCounter.toString()
+        lbPrCount.text = profCounter.toString()
+        lbTlCount.text = toolsCounter.toString()
+        lbExpCount.text = expertiseCounter.toString()
+        for (cb in allCBList!!) cb.setOnClickListener(this)
     }
 
-    //Podesavanje limita za proficiency-e
+    override fun onStart() {
+        super.onStart()
+        hasExpertise = checkHasExpertise()
+        reset()
+        lbLgCount.text = languageCounter.toString()
+        lbPrCount.text = profCounter.toString()
+        lbTlCount.text = toolsCounter.toString()
+        lbExpCount.text = expertiseCounter.toString()
+        setExpertiseVisibility()
+    }
+
+    //Promenljive
     private var languageCounter = 3
-    private var profCounter = 2
+    private var profCounter = 4
     private var toolsCounter = 2
+    private var expertiseCounter = 2
+    private var allCBList: ArrayList<CheckBox>? = null
+    private var profCBList: ArrayList<CheckBox>? = null
+    private var hasExpertise = false
+    private var oldClass = ""
+    private var oldRace = ""
+    private var oldBackground = ""
+
 
     override fun onClick(v: View?) {
         v as CheckBox
-        val name = v.resources.getResourceName(v.id)
+        val name = v.resources.getResourceEntryName(v.id)
         val builder = AlertDialog.Builder(activity)
         builder.setTitle("Androidly Alert")
-        builder.setMessage("Too many items selected")
+        builder.setMessage(v.resources.getResourceEntryName(v.id))
         when(checkCBGroup(name)){
             'l' -> {
-                if (languageCounter == 0 && v.isChecked){
-                //builder.show()
+                if (languageCounter == 0 && v.isChecked) {
+                    //builder.show()
                     v.isChecked = false
-                }
-                else if (v.isChecked){
+                } else if (v.isChecked) {
                     --languageCounter
-                }
-                else {
+                } else {
                     ++languageCounter
                 }
                 lbLgCount.text = languageCounter.toString()
-                }
+            }
 
             'p' -> {
-                if (profCounter == 0 && v.isChecked){
+                if (profCounter == 0 && v.isChecked) {
                     //builder.show()
                     v.isChecked = false
-                }
-                else if (v.isChecked){
+                } else if (v.isChecked) {
                     --profCounter
-                }
-                else {
+                    if (hasExpertise) {
+                        val expTmp = name + "Exp"
+                        val idTmp = resources.getIdentifier(expTmp, "id", v.resources.getResourcePackageName(v.id))
+                        val vTmp = view?.findViewById<CheckBox>(idTmp)
+                        vTmp?.visibility = View.VISIBLE
+                    }
+                } else {
                     ++profCounter
+                    if (hasExpertise) {
+                        val expTmp = name + "Exp"
+                        val idTmp = resources.getIdentifier(expTmp, "id", v.resources.getResourcePackageName(v.id))
+                        val vTmp = view?.findViewById<CheckBox>(idTmp)
+                        vTmp?.visibility = View.GONE
+                    }
                 }
                 lbPrCount.text = profCounter.toString()
             }
 
             't' -> {
-                if (toolsCounter == 0 && v.isChecked){
-                    builder.show()
+                if (toolsCounter == 0 && v.isChecked) {
+                    //builder.show()
                     v.isChecked = false
-                }
-                else if (v.isChecked){
+                } else if (v.isChecked) {
                     --toolsCounter
-                }
-                else {
+                } else {
                     ++toolsCounter
                 }
                 lbTlCount.text = toolsCounter.toString()
             }
 
+            'e' -> {
+                if (expertiseCounter == 0 && v.isChecked) {
+                    //builder.show()
+                    v.isChecked = false
+                } else if (v.isChecked) {
+                    --expertiseCounter
+                } else {
+                    ++expertiseCounter
+                }
+                lbExpCount.text = expertiseCounter.toString()
+            }
+
         }
     }
     private fun checkCBGroup(id: String): Char? {
-        if(id.startsWith("com.example.rollforkotlin:id/cbLg")) {
+        if(id.startsWith("cbLg")) {
             return 'l'
         }
-        if(id.startsWith("com.example.rollforkotlin:id/cbPr")) {
-            return 'p'
+        if(id.startsWith("cbPr")) {
+            return if(id.endsWith("Exp")) {
+                'e'
+            } else {
+                'p'
+            }
         }
-        if(id.startsWith("com.example.rollforkotlin:id/cbTl")) {
+        if(id.startsWith("cbTl")) {
             return 't'
         }
         return null
     }
 
-    fun getValues() {
+    private fun getValues() {
         val list = arrayListOf<String>()
         if(cbPrAcrobatics.isChecked){
             list.add(cbPrAcrobatics.text.toString())
@@ -266,5 +285,43 @@ class ToolsFragment : Fragment(), View.OnClickListener {
 
     }
 
+    private fun checkHasExpertise(): Boolean{
+        return ActivityScreen1.newCharacter.chClass == "Rogue" || (ActivityScreen1.newCharacter.chClass == "Bard" && ActivityScreen1.newCharacter.chLevel >= 3)
+    }
 
+    private fun setExpertiseVisibility() {
+        if(hasExpertise) {
+            lbExpertise.visibility = View.VISIBLE
+            lbSelectExp.visibility = View.VISIBLE
+            lbExpCount.visibility = View.VISIBLE
+            for(cb in profCBList!!){
+                if(cb.isChecked){
+                    val name = cb.resources.getResourceEntryName(cb.id)
+                    val expTmp = name + "Exp"
+                    val idTmp = resources.getIdentifier(expTmp, "id", cb.resources.getResourcePackageName(cb.id))
+                    val vTmp = view?.findViewById<CheckBox>(idTmp)
+                    vTmp?.visibility = View.VISIBLE
+                }
+            }
+        }
+    }
+
+    private fun reset(){
+        if(ActivityScreen1.newCharacter.chClass != oldClass || ActivityScreen1.newCharacter.chRace != oldRace || ActivityScreen1.newCharacter.chBackgroud != oldBackground) {
+            oldClass = ActivityScreen1.newCharacter.chClass
+            oldRace = ActivityScreen1.newCharacter.chRace
+            oldBackground = ActivityScreen1.newCharacter.chBackgroud
+            for (cb in allCBList!!) {
+                cb.isChecked = false
+            }
+            setRestrictions()
+        }
+    }
+
+    private fun setRestrictions(){
+        languageCounter = 3
+        profCounter = 4
+        toolsCounter = 2
+        expertiseCounter = 2
+    }
 }
