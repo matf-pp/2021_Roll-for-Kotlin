@@ -1,12 +1,17 @@
 package com.example.rollforkotlin.ui.main.fragments
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import com.example.rollforkotlin.ActivityScreen1
 import com.example.rollforkotlin.R
 import kotlinx.android.synthetic.main.fragment_equipment.*
+import kotlinx.android.synthetic.main.fragment_race.*
 import kotlin.random.Random
 
 
@@ -35,6 +40,26 @@ class EquipmentFragment : Fragment() {
         btnPlatinum.setOnClickListener {
             btnPlatinum.text = Random.nextInt(0, 3).toString()
         }
+        // Create an ArrayAdapter
+        val adapterA = ArrayAdapter.createFromResource( requireActivity(),
+                R.array.armor, R.layout.spinner_item2)
+        // Specify the layout to use when the list of choices appears
+        adapterA.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        // Apply the adapter to the spinner
+        spArmor.adapter = adapterA
+        val listener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                getValues()
+            }
+        }
+        spArmor.onItemSelectedListener = listener
+    }
+
+    fun getValues() {
+        ActivityScreen1.newCharacter.chArmor = spArmor.selectedItem.toString()
+        ActivityScreen1.newCharacter.setAC()
     }
 
 }

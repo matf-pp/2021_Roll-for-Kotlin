@@ -6,7 +6,7 @@ class Ranger() : ClassGeneral() {
     override var armorProf = "Light armor, medium armor, shields"
     override var weaponProf = " Simple weapons, martial weapons"
     override var toolProf = "None"
-    override var savingThrowsProf = "Strength, Dexterity"
+    override var savingThrowsProf = arrayListOf("strSave","dexSave")
     override var spellCastingMod = "Wisdom"
     override var classTraits = arrayListOf("Favored Enemy\n" +
             "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.\n" +
@@ -28,60 +28,9 @@ class Ranger() : ClassGeneral() {
             "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.","")
     override var language = 1
 
-
-    override fun getSavingThrowProf(ability : String): Int {
-        return when(ability){
-            "strSave" -> 1
-            "dexSave" -> 1
-            else -> 0
-        }
-    }
-    override fun getCantripsNumber(lvl : Int): Int {
-        when (lvl){
-            1 -> return 0
-            2 -> return 2
-            3 -> return 3
-            4 -> return 3
-            5 -> return 4
-            6 -> return 4
-        }
-        return 0
-    }
-
-    override fun getSpellLvl1Number(lvl : Int): Int {
-        when (lvl){
-            1 -> return 0
-            2 -> return 2
-            3 -> return 3
-            4 -> return 3
-            5 -> return 4
-            6 -> return 4
-        }
-        return 0
-    }
-
-    override fun getSpellLvl2Number(lvl : Int): Int {
-        when (lvl){
-            1 -> return 0
-            2 -> return 0
-            3 -> return 0
-            4 -> return 0
-            5 -> return 2
-            6 -> return 2
-        }
-        return 0
-    }
-
-    override fun getSpellLvl3Number(lvl : Int): Int {
-        when (lvl){
-            1 -> return 0
-            2 -> return 0
-            3 -> return 0
-            4 -> return 0
-            5 -> return 0
-            6 -> return 0
-        }
-        return 0
-    }
+    override var cantripNumbers = arrayListOf(0)
+    override var spell1Numbers = arrayListOf(0,2,3,3,4,4)
+    override var spell2Numbers = arrayListOf(0,0,0,0,2,2)
+    override var spell3Numbers = arrayListOf(0,0,0,0,0,0)
 
 }

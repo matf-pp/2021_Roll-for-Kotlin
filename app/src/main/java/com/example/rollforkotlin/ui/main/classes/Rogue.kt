@@ -6,7 +6,7 @@ class Rogue() : ClassGeneral() {
     override var armorProf = "Light armor"
     override var weaponProf = "Simple weapons, hand crossbows, longswords, rapiers, shortswords"
     override var toolProf = "Thieves' tools"
-    override var savingThrowsProf = "Dexterity, Intelligence"
+    override var savingThrowsProf = arrayListOf("dexSave","intSave")
     override var spellCastingMod = ""
     override var classTraits = arrayListOf("Expertise\n" +
             "At 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with thieves' tools. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies."
@@ -25,28 +25,9 @@ class Rogue() : ClassGeneral() {
             "Starting at 5th level, when an attacker that you can see hits you with an attack, you can use your reaction to halve the attack's damage against you.","")
     override var language = 0
 
-
-    override fun getSavingThrowProf(ability : String): Int {
-        return when(ability){
-            "dexSave" -> 1
-            "intSave" -> 1
-            else -> 0
-        }
-    }
-    override fun getCantripsNumber(lvl : Int): Int {
-        return 0
-    }
-
-    override fun getSpellLvl1Number(lvl : Int): Int {
-        return 0
-    }
-
-    override fun getSpellLvl2Number(lvl : Int): Int {
-        return 0
-    }
-
-    override fun getSpellLvl3Number(lvl : Int): Int {
-        return 0
-    }
+    override var cantripNumbers = arrayListOf(0)
+    override var spell1Numbers = arrayListOf(0)
+    override var spell2Numbers = arrayListOf(0)
+    override var spell3Numbers = arrayListOf(0)
 
 }

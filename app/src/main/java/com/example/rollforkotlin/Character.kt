@@ -87,8 +87,11 @@ class Character {
     var chPlatinum : Int = 0
     //Equipment
     var chArmor : String = ""
+    var chArmorProf : String = ""
     var chShield : String = ""
     var chWeapons : String = ""
+    var chWeaponProf : String = ""
+    var chToolProf : String = ""
 
     fun setSkills() {
         for (pair in chSkills) {
@@ -97,7 +100,8 @@ class Character {
     }
     fun setSavingThrows(){
         for(pair in chSavingThrows) {
-            chSavingThrowProfs[pair.key] = chClassObject.getSavingThrowProf(pair.key)
+            if (chClassObject.savingThrowsProf.contains(pair.key))
+                chSavingThrowProfs[pair.key] = 1
             chSavingThrows[pair.key] = (chAbilities[pair.key.substring(0,3)]!! - 10 ) /2 + chProficiencyBonus*chSavingThrowProfs[pair.key]!!
         }
     }
@@ -107,6 +111,29 @@ class Character {
         }
         chCurrentHP = chMaxHP
         chHitDice = chLevel.toString() + "d" + chClassObject.hitDice.toString()
+    }
+    fun setLanguages(){
+        chLanguageCounter = chClassObject.language + chBackgroundObject.language
+    }
+    fun setArmorAndWeaponProf(){
+        chArmorProf = chClassObject.armorProf
+        chWeaponProf = chClassObject.weaponProf
+        chToolProf = chClassObject.toolProf
+    }
+    fun setAC(){
+        when(chArmor.substring(0,3)){
+            "(L)" -> {
+                chArmorClass = chArmor.takeLast(2).toInt() + ((chAbilities["dex"]?.toInt()?.minus(10))?.div(2)  ?: 0)
+            }
+            "(M)" -> {
+                if (((chAbilities["dex"]?.toInt()?.minus(10))?.div(2)  ?: 0) <= 2)
+                    chArmorClass = chArmor.takeLast(2).toInt() + ((chAbilities["dex"]?.toInt()?.minus(10))?.div(2)  ?: 0)
+                else chArmorClass = chArmor.takeLast(2).toInt()
+            }
+            "(H)" -> {
+                chArmorClass = chArmor.takeLast(2).toInt()
+            }
+        }
     }
     fun getClassTraits(){
         for (i in 1..chLevel){
@@ -119,41 +146,24 @@ class Character {
         }
     }
     fun getSpellNumbers(){
-        var classInfo : ClassGeneral
         when(chClass){
-            "Wizard" -> {
-                classInfo = Wizard()
-                chSpellCantripCounter = classInfo.getCantripsNumber(chLevel)
-                chSpellLvl1Counter = classInfo.getSpellLvl1Number(chLevel)
-                chSpellLvl2Counter = classInfo.getSpellLvl2Number(chLevel)
-                chSpellLvl3Counter= classInfo.getSpellLvl3Number(chLevel)
-            }
-            "Bard" -> {
-                classInfo = Bard()
-                chSpellCantripCounter = classInfo.getCantripsNumber(chLevel)
-                chSpellLvl1Counter = classInfo.getSpellLvl1Number(chLevel)
-                chSpellLvl2Counter = classInfo.getSpellLvl2Number(chLevel)
-                chSpellLvl3Counter= classInfo.getSpellLvl3Number(chLevel)
+            "Wizard", "Bard", "Cleric"-> {
+                chSpellCantripCounter = chClassObject.cantripNumbers[chLevel-1]
+                chSpellLvl1Counter    = chClassObject.spell1Numbers[chLevel-1]
+                chSpellLvl2Counter    = chClassObject.spell2Numbers[chLevel-1]
+                chSpellLvl3Counter    = chClassObject.spell3Numbers[chLevel-1]
             }
             "Ranger" -> {
-                classInfo = Ranger()
-                chSpellCantripCounter = classInfo.getCantripsNumber(chLevel)
-                chSpellLvl1Counter = classInfo.getSpellLvl1Number(chLevel)
-                chSpellLvl2Counter = classInfo.getSpellLvl2Number(chLevel)
-                chSpellLvl3Counter= classInfo.getSpellLvl3Number(chLevel)
-            }
-            "Cleric" -> {
-                classInfo = Cleric()
-                chSpellCantripCounter = classInfo.getCantripsNumber(chLevel)
-                chSpellLvl1Counter = classInfo.getSpellLvl1Number(chLevel)
-                chSpellLvl2Counter = classInfo.getSpellLvl2Number(chLevel)
-                chSpellLvl3Counter= classInfo.getSpellLvl3Number(chLevel)
+                chSpellCantripCounter = 0
+                chSpellLvl1Counter    = chClassObject.spell1Numbers[chLevel-1]
+                chSpellLvl2Counter    = chClassObject.spell2Numbers[chLevel-1]
+                chSpellLvl3Counter    = chClassObject.spell3Numbers[chLevel-1]
             }
             else -> {
                 chSpellCantripCounter = 0
-                chSpellLvl1Counter = 0
-                chSpellLvl2Counter = 0
-                chSpellLvl3Counter = 0
+                chSpellLvl1Counter    = 0
+                chSpellLvl2Counter    = 0
+                chSpellLvl3Counter    = 0
             }
         }
     }
@@ -214,6 +224,5 @@ class Character {
             }
         }
     }
-
 }
 
