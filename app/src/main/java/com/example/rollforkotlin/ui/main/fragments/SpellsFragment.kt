@@ -138,7 +138,7 @@ class SpellsFragment : Fragment() , View.OnClickListener{
 
     override fun onClick(v: View?) {
         v as CheckBox
-        val name = v.resources.getResourceName(v.id)
+        val name = v.resources.getResourceEntryName(v.id)
         when(checkSpellType(name)){
             'c' -> {
                 if(cantripCounter==0 && v.isChecked){
@@ -183,16 +183,16 @@ class SpellsFragment : Fragment() , View.OnClickListener{
         }
     }
     private fun checkSpellType(id:String): Char?{
-        if(id.startsWith("com.example.rollforkotlin:id/cbCan")){
+        if(id.startsWith("cbCan")){
             return 'c'
         }
-        if(id.startsWith("com.example.rollforkotlin:id/cbLv1")){
+        if(id.startsWith("cbLv1")){
             return '1'
         }
-        if(id.startsWith("com.example.rollforkotlin:id/cbLv2")){
+        if(id.startsWith("cbLv2")){
             return '2'
         }
-        if(id.startsWith("com.example.rollforkotlin:id/cbLv3")){
+        if(id.startsWith("cbLv3")){
             return '3'
         }
         return null
