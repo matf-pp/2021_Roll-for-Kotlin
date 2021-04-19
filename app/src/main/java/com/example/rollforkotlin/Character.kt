@@ -1,6 +1,7 @@
 package com.example.rollforkotlin
 
 import android.util.Range
+import com.example.rollforkotlin.ui.main.Background.*
 import com.example.rollforkotlin.ui.main.Class.*
 import java.util.logging.Level
 import kotlin.random.Random
@@ -11,8 +12,10 @@ class Character {
     var chLevel: Int = 0
     var chGender : String = ""
     var chClass : String = ""
+    lateinit var chClassObject : ClassGeneral
     var chRace : String = ""
     var chBackgroud : String = ""
+    lateinit var chBackgroundObject: BackgroundGeneral
     var chDeity : String = ""
     var chAlignment : String = ""
     var chProficiencyBonus : Int = 2
@@ -68,6 +71,8 @@ class Character {
     lateinit var chRacialTraits : ArrayList<String>
     //Class traits
     var chClassTraits : ArrayList<String> = ArrayList()
+    //Background traits
+    var chBackgroundTraits : ArrayList<String> = ArrayList()
     //Spells
     var chSpellAttackBonus : Int = 0
     var chSpellCastingAbility : String = ""
@@ -93,24 +98,26 @@ class Character {
         }
     }
     fun setSavingThrows(){
-        var classInfo = getClass()
         for(pair in chSavingThrows) {
-            chSavingThrowProfs[pair.key] = classInfo.getSavingThrowProf(pair.key)
+            chSavingThrowProfs[pair.key] = chClassObject.getSavingThrowProf(pair.key)
             chSavingThrows[pair.key] = (chAbilities[pair.key.substring(0,3)]!! - 10 ) /2 + chProficiencyBonus*chSavingThrowProfs[pair.key]!!
         }
     }
     fun getAllHPVariables(){
-        var hitDice = getClass().getHitDice()
         for (i in 1..chLevel){
-            chMaxHP += Random.nextInt(1, hitDice) + ((chAbilities["con"]?.toInt()?.minus(10))?.div(2)  ?: 0)
+            chMaxHP += Random.nextInt(1, chClassObject.hitDice) + ((chAbilities["con"]?.toInt()?.minus(10))?.div(2)  ?: 0)
         }
         chCurrentHP = chMaxHP
-        chHitDice = chLevel.toString() + "d" + hitDice.toString()
+        chHitDice = chLevel.toString() + "d" + chClassObject.hitDice.toString()
     }
     fun getClassTraits(){
-        var classInfo = getClass()
         for (i in 1..chLevel){
-            chClassTraits.add(classInfo.classTraits[i])
+            chClassTraits.add(chClassObject.classTraits[i])
+        }
+    }
+    fun getBackgroundTraits(){
+        for (trait in chBackgroundObject.backgroundTraits){
+            chBackgroundTraits.add(trait)
         }
     }
     fun getSpellNumbers(){
@@ -152,28 +159,62 @@ class Character {
             }
         }
     }
-    fun getClass() : ClassGeneral {
+    fun setClass(){
         when(chClass) {
             "Wizard" -> {
-               return Wizard()
+               chClassObject = Wizard()
             }
             "Bard" -> {
-                return Bard()
+                chClassObject = Bard()
             }
             "Ranger" -> {
-                return Ranger()
+                chClassObject = Ranger()
             }
             "Cleric" -> {
-                return Cleric()
+                chClassObject = Cleric()
             }
             "Fighter" -> {
-                return Fighter()
+                chClassObject = Fighter()
             }
             "Rogue" -> {
-                return Rogue()
+                chClassObject = Rogue()
+            }
+            "Barbarian" -> {
+                chClassObject = Barbarian()
             }
         }
-        return Barbarian()
+    }
+
+    fun setBackground() {
+        when(chBackgroud) {
+            "Acolyte" -> {
+                chBackgroundObject = Acolyte()
+            }
+            "Charlatan" -> {
+                chBackgroundObject = Charlatan()
+            }
+            "Criminal" -> {
+                chBackgroundObject = Criminal()
+            }
+            "Entertainer" -> {
+                chBackgroundObject = Entertainer()
+            }
+            "FolkHero" -> {
+                chBackgroundObject = FolkHero()
+            }
+            "Knight" -> {
+                chBackgroundObject = Knight()
+            }
+            "Noble" -> {
+                chBackgroundObject = Noble()
+            }
+            "Sailor" -> {
+                chBackgroundObject = Sailor()
+            }
+            "Soldier" -> {
+                chBackgroundObject = Soldier()
+            }
+        }
     }
 
 }

@@ -80,6 +80,7 @@ class RaceFragment : Fragment(){
         val background = spBackground.selectedItem.toString()
         ActivityScreen1.newCharacter.chRace = race
         ActivityScreen1.newCharacter.chClass = klasa
+        ActivityScreen1.newCharacter.setClass()
         ActivityScreen1.newCharacter.chBackgroud = background
         //Uzimanja broja spell-ova
         ActivityScreen1.newCharacter.getSpellNumbers()

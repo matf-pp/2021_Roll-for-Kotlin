@@ -2,7 +2,7 @@ package com.example.rollforkotlin.ui.main.Class
 
 class Bard() : ClassGeneral() {
     override var className = "Bard"
-    override var hitDice = "1d8 per bard level"
+    override var hitDice = 8
     override var armorProf = "Light armor"
     override var weaponProf = "Simple weapons, hand crossbows, longswords, rapiers, shortswords"
     override var toolProf = "Three musical instruments of your choice"
@@ -33,10 +33,6 @@ class Bard() : ClassGeneral() {
             "chaSave" -> 1
             else -> 0
         }
-    }
-
-    override fun getHitDice(): Int {
-        return 8
     }
 
     override fun getCantripsNumber(lvl : Int): Int {
@@ -87,7 +83,4 @@ class Bard() : ClassGeneral() {
         return 0
     }
 
-    override fun getSpellCastingModifier(): String {
-        return "Cha"
-    }
 }

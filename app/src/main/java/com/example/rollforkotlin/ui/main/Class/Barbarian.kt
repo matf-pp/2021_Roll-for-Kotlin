@@ -2,7 +2,7 @@ package com.example.rollforkotlin.ui.main.Class
 
 class Barbarian() : ClassGeneral() {
     override var className = "Barbarian"
-    override var hitDice = "1d12 per fighter level"
+    override var hitDice = 12
     override var armorProf = "Light armor, medium armor, shields"
     override var weaponProf = "Simple weapons, martial weapons"
     override var toolProf = "None"
@@ -44,11 +44,6 @@ class Barbarian() : ClassGeneral() {
             else -> 0
         }
     }
-
-    override fun getHitDice(): Int {
-        return 12
-    }
-
     override fun getCantripsNumber(lvl : Int): Int {
         return 0
     }
@@ -63,9 +58,5 @@ class Barbarian() : ClassGeneral() {
 
     override fun getSpellLvl3Number(lvl : Int): Int {
         return 0
-    }
-
-    override fun getSpellCastingModifier(): String {
-        return ""
     }
 }
