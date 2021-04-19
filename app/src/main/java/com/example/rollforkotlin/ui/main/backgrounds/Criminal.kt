@@ -1,4 +1,4 @@
-package com.example.rollforkotlin.ui.main.Background
+package com.example.rollforkotlin.ui.main.backgrounds
 
 class Criminal() : BackgroundGeneral() {
     override var equipment = "A crowbar, a set of dark common clothes including a hood, and a belt pouch containing 15gp"

@@ -1,4 +1,4 @@
-package com.example.rollforkotlin.ui.main.Background
+package com.example.rollforkotlin.ui.main.backgrounds
 
 class Entertainer() : BackgroundGeneral() {
     override var equipment = "The favor of an admirer (love letter, lock of hair, or trinket), a costume, and a belt pouch containing 15gp"

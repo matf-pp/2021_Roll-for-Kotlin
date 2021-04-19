@@ -1,4 +1,4 @@
-package com.example.rollforkotlin.ui.main.Background
+package com.example.rollforkotlin.ui.main.backgrounds
 
 class Knight() : BackgroundGeneral() {
     override var equipment = "A set of fine clothes, a signet ring, a scroll of pedigree, and a purse containing 25gp"

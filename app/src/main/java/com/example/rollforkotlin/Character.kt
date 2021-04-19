@@ -1,9 +1,7 @@
 package com.example.rollforkotlin
 
-import android.util.Range
-import com.example.rollforkotlin.ui.main.Background.*
-import com.example.rollforkotlin.ui.main.Class.*
-import java.util.logging.Level
+import com.example.rollforkotlin.ui.main.classes.*
+import com.example.rollforkotlin.ui.main.backgrounds.*
 import kotlin.random.Random
 
 class Character {

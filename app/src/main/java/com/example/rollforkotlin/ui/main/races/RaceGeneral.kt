@@ -1,4 +1,4 @@
-package com.example.rollforkotlin.ui.main.race
+package com.example.rollforkotlin.ui.main.races
 
 abstract class RaceGeneral {
     abstract fun addAbilityScoreIncrease()
