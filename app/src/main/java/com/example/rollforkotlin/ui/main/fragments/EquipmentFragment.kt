@@ -59,7 +59,6 @@ class EquipmentFragment : Fragment() {
 
     fun getValues() {
         ActivityScreen1.newCharacter.chArmor = spArmor.selectedItem.toString()
-        ActivityScreen1.newCharacter.setAC()
     }
 
 }

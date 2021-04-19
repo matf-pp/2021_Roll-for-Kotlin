@@ -37,7 +37,7 @@ class Character {
     var chAbilities = mutableMapOf<String,Int>("str" to 0, "dex" to 0,"con" to 0,
                                                 "int" to 0,"wis" to 0,"cha" to 0)
 
-    //Stats
+    //Skills
     var chSkills = mutableMapOf<String,Int>("dexAcrobatics" to 0,"wisAnimalHandling" to 0,"intArcana" to 0,
                                     "strAthletics" to 0, "chaDeception" to 0,"intHistory" to 0,
                                     "wisInsight" to 0, "chaIntimidation" to 0,"intInvestigation" to 0,
@@ -45,13 +45,21 @@ class Character {
                                     "chaPerformance" to 0, "chaPersuasion" to 0,"intReligion" to 0,
                                     "dexSleightOfHand" to 0, "dexStealth" to 0,"wisSurvival" to 0)
 
-    //Stat Prof
+    //Skill Proficiencies
     var chSkillProfs = mutableMapOf<String,Int>("dexAcrobatics" to 0,"wisAnimalHandling" to 0,"intArcana" to 0,
                                                 "strAthletics" to 0, "chaDeception" to 0,"intHistory" to 0,
                                                 "wisInsight" to 0, "chaIntimidation" to 0,"intInvestigation" to 0,
                                                 "wisMedicine" to 0, "intNature" to 0,"wisPerception" to 0,
                                                 "chaPerformance" to 0, "chaPersuasion" to 0,"intReligion" to 0,
                                                 "dexSleightOfHand" to 0, "dexStealth" to 0,"wisSurvival" to 0)
+
+    //Skill Expertise
+    var chSkillExp = mutableMapOf<String,Int>("dexAcrobatics" to 0,"wisAnimalHandling" to 0,"intArcana" to 0,
+            "strAthletics" to 0, "chaDeception" to 0,"intHistory" to 0,
+            "wisInsight" to 0, "chaIntimidation" to 0,"intInvestigation" to 0,
+            "wisMedicine" to 0, "intNature" to 0,"wisPerception" to 0,
+            "chaPerformance" to 0, "chaPersuasion" to 0,"intReligion" to 0,
+            "dexSleightOfHand" to 0, "dexStealth" to 0,"wisSurvival" to 0)
 
     //Saving Throws
     var chSavingThrows = mutableMapOf<String,Int>("strSave" to 0, "dexSave" to 0,"conSave" to 0,
@@ -95,7 +103,7 @@ class Character {
 
     fun setSkills() {
         for (pair in chSkills) {
-            chSkills[pair.key] = (chAbilities[pair.key.substring(0, 3)]!! - 10) / 2 + chProficiencyBonus * chSkillProfs[pair.key]!!
+            chSkills[pair.key] = (chAbilities[pair.key.substring(0, 3)]!! - 10) / 2 + chProficiencyBonus * (chSkillProfs[pair.key]!! + chSkillExp[pair.key]!!)
         }
     }
     fun setSavingThrows(){
@@ -106,8 +114,10 @@ class Character {
         }
     }
     fun getAllHPVariables(){
-        for (i in 1..chLevel){
-            chMaxHP += Random.nextInt(1, chClassObject.hitDice) + ((chAbilities["con"]?.toInt()?.minus(10))?.div(2)  ?: 0)
+        chMaxHP = 0
+        chMaxHP += chClassObject.hitDice + ((chAbilities["con"]?.toInt()?.minus(10))?.div(2)  ?: 0)
+        for (i in 2..chLevel){
+            chMaxHP += Random.nextInt(1, chClassObject.hitDice+1) + ((chAbilities["con"]?.toInt()?.minus(10))?.div(2)  ?: 0)
         }
         chCurrentHP = chMaxHP
         chHitDice = chLevel.toString() + "d" + chClassObject.hitDice.toString()
@@ -126,9 +136,12 @@ class Character {
                 chArmorClass = chArmor.takeLast(2).toInt() + ((chAbilities["dex"]?.toInt()?.minus(10))?.div(2)  ?: 0)
             }
             "(M)" -> {
-                if (((chAbilities["dex"]?.toInt()?.minus(10))?.div(2)  ?: 0) <= 2)
-                    chArmorClass = chArmor.takeLast(2).toInt() + ((chAbilities["dex"]?.toInt()?.minus(10))?.div(2)  ?: 0)
-                else chArmorClass = chArmor.takeLast(2).toInt()
+                chArmorClass = if (((chAbilities["dex"]?.toInt()?.minus(10))?.div(2)  ?: 0) <= 2) {
+                    chArmor.takeLast(2).toInt() + ((chAbilities["dex"]?.toInt()?.minus(10))?.div(2)
+                            ?: 0)
+                } else {
+                    chArmor.takeLast(2).toInt() + 2
+                }
             }
             "(H)" -> {
                 chArmorClass = chArmor.takeLast(2).toInt()

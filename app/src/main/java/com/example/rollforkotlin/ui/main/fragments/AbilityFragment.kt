@@ -173,7 +173,6 @@ class AbilityFragment : Fragment() {
             ActivityScreen1.newCharacter.chAbilities["int"] = btnIntelligence.text.toString().toInt()
             ActivityScreen1.newCharacter.chAbilities["wis"] = btnWisdom.text.toString().toInt()
             ActivityScreen1.newCharacter.chAbilities["cha"] = btnCharisma.text.toString().toInt()
-            ActivityScreen1.newCharacter.setSkills()
         }
     }
 
