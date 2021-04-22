@@ -5,6 +5,7 @@ abstract class ClassGeneral {
     abstract var hitDice : Int
     abstract var armorProf : String
     abstract var weaponProf : String
+    abstract var weaponProfList : ArrayList<String>
     abstract var toolProf : String
     abstract var savingThrowsProf : ArrayList<String>
     abstract var spellCastingMod : String

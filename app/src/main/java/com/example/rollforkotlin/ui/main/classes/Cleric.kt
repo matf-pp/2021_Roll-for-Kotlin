@@ -5,6 +5,7 @@ class Cleric() : ClassGeneral() {
     override var hitDice = 8
     override var armorProf = "Light armor, medium armor, shields"
     override var weaponProf = "All simple weapons"
+    override var weaponProfList = arrayListOf<String>("Simp")
     override var toolProf = "None"
     override var savingThrowsProf = arrayListOf("wisSave","chaSave")
     override var spellCastingMod = "Intelligence"

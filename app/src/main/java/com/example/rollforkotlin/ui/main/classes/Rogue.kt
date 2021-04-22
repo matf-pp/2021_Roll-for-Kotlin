@@ -5,6 +5,7 @@ class Rogue() : ClassGeneral() {
     override var hitDice = 8
     override var armorProf = "Light armor"
     override var weaponProf = "Simple weapons, hand crossbows, longswords, rapiers, shortswords"
+    override var weaponProfList = arrayListOf<String>("Simp", "Longsword","Rapier")
     override var toolProf = "Thieves' tools"
     override var savingThrowsProf = arrayListOf("dexSave","intSave")
     override var spellCastingMod = ""

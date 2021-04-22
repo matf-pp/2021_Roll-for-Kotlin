@@ -5,6 +5,7 @@ class Wizard() : ClassGeneral() {
     override var hitDice = 6
     override var armorProf = "None"
     override var weaponProf = "Daggers, darts, slings, quarterstaffs, light crossbows"
+    override var weaponProfList = arrayListOf<String>("Dagger", "Quarterstaff","CrossbowL")
     override var toolProf = "None"
     override var savingThrowsProf = arrayListOf("intSave","wisSave")
     override var spellCastingMod = "Intelligence"

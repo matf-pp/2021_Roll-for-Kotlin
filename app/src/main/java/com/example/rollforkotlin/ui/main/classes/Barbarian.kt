@@ -5,6 +5,7 @@ class Barbarian() : ClassGeneral() {
     override var hitDice = 12
     override var armorProf = "Light armor, medium armor, shields"
     override var weaponProf = "Simple weapons, martial weapons"
+    override var weaponProfList = arrayListOf<String>("Simp", "Mart")
     override var toolProf = "None"
     override var savingThrowsProf = arrayListOf("strSave","conSave")
     override var spellCastingMod = ""

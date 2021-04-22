@@ -1,8 +1,11 @@
 package com.example.rollforkotlin
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import com.example.rollforkotlin.ui.main.classes.*
 import com.example.rollforkotlin.ui.main.backgrounds.*
 import kotlin.random.Random
+import kotlin.math.*
 
 class Character {
     //Basics
@@ -94,11 +97,32 @@ class Character {
     var chGold : Int = 0
     var chPlatinum : Int = 0
     //Equipment
+    var chInstruments :ArrayList<String> = arrayListOf()
+    var chEquipment : String = ""
+    var chHasPotion : Boolean = false
     var chArmor : String = ""
     var chArmorProf : String = ""
-    var chShield : String = ""
-    var chWeapons : String = ""
-    var chWeaponProf : String = ""
+    var chWeapons : ArrayList<String> = arrayListOf()
+    var chWeaponType = mutableMapOf<String,String>("Dagger" to "fin", "Battleaxe" to "str","CrossbowL" to "dex", "Greataxe" to "str",
+                                                    "Greatsword" to "str","Javelin" to "str", "Quarterstaff" to "str", "Shortbow" to "dex",
+                                                    "Longsword" to "str", "Rapier" to "fin", "Longbow" to "dex")
+    //Weapon type lists
+    var simpleWeaponList = arrayListOf<String>("Dagger", "Javelin", "Quarterstaff", "CrossbowL", "Shortbow")
+    var martialWeaponList = arrayListOf<String>("Battleaxe","Greataxe", "Greatsword", "Longsword", "Rapier", "Longbow")
+    var weaponDamageMap =  mutableMapOf<String,String>("Dagger" to "1d4", "Battleaxe" to "1d8","CrossbowL" to "1d8", "Greataxe" to "1d12",
+                                                "Greatsword" to "2d6","Javelin" to "1d6", "Quarterstaff" to "1d6", "Shortbow" to "1d6",
+                                                "Longsword" to "1d8", "Rapier" to "1d8", "Longbow" to "1d8")
+    var weaponDagameTypeMap =  mutableMapOf<String,String>("Dagger" to "piercing", "Battleaxe" to "slashing","CrossbowL" to "piercing", "Greataxe" to "slashing",
+                                                "Greatsword" to "slashing","Javelin" to "piercing", "Quarterstaff" to "bludgeoning", "Shortbow" to "piercing",
+                                                "Longsword" to "slashing", "Rapier" to "piercing", "Longbow" to "piercing")
+    var chWeaponRange = mutableMapOf<String,String>("Dagger" to "20/60ft", "Battleaxe" to "5ft","CrossbowL" to "80/320ft", "Greataxe" to "5ft",
+                                                "Greatsword" to "5ft","Javelin" to "30/120ft", "Quarterstaff" to "5ft", "Shortbow" to "80/320ft",
+                                                "Longsword" to "5ft", "Rapier" to "5ft", "Longbow" to "150/600ft")
+    var chWeaponToHitBonus = mutableMapOf<String,Int>()
+    var chWeaponDamageBonus = mutableMapOf<String,Int>()
+
+    var chWeaponProfTypes: String = ""
+    var chWeaponProfList: ArrayList<String> = arrayListOf()
     var chToolProf : String = ""
 
     fun setSkills() {
@@ -127,8 +151,45 @@ class Character {
     }
     fun setArmorAndWeaponProf(){
         chArmorProf = chClassObject.armorProf
-        chWeaponProf = chClassObject.weaponProf
+        chWeaponProfTypes = chClassObject.weaponProf
         chToolProf = chClassObject.toolProf
+        for (type in chClassObject.weaponProfList){
+            when (type){
+                "Simp" -> {
+                    for (i in simpleWeaponList){
+                        chWeaponProfList.add(i)
+                    }
+                }
+                "Mart" -> {
+                    for (i in martialWeaponList){
+                        chWeaponProfList.add(i)
+                    }
+                }
+                else -> {
+                    chWeaponProfList.add(type)
+                }
+            }
+        }
+    }
+    fun setWeaponBonus(){
+        for(weapon in chWeapons){
+            if (chWeaponType[weapon] == "fin"){
+                chWeaponToHitBonus[weapon] = (max(chAbilities["str"]!!, chAbilities["dex"]!!) - 10) /2 + chProficiencyBonus * checkWeaponProf(weapon)
+                chWeaponDamageBonus[weapon] = (max(chAbilities["str"]!!, chAbilities["dex"]!!) - 10) /2
+            } else if (chWeaponType[weapon] == "str"){
+                chWeaponToHitBonus[weapon] = ((chAbilities["str"]?.toInt()?.minus(10))?.div(2)  ?: 0) + chProficiencyBonus * checkWeaponProf(weapon)
+                chWeaponDamageBonus[weapon] = ((chAbilities["str"]?.toInt()?.minus(10))?.div(2)  ?: 0)
+            } else {
+                chWeaponToHitBonus[weapon] = ((chAbilities["dex"]?.toInt()?.minus(10))?.div(2)  ?: 0) + chProficiencyBonus * checkWeaponProf(weapon)
+                chWeaponDamageBonus[weapon] = ((chAbilities["str"]?.toInt()?.minus(10))?.div(2)  ?: 0)
+            }
+        }
+    }
+    fun checkWeaponProf(weapon : String): Int{
+        if (chWeaponProfList.contains(weapon)){
+            return 1
+        }
+        return 0
     }
     fun setAC(){
         when(chArmor.substring(0,3)){
@@ -150,13 +211,14 @@ class Character {
     }
     fun getClassTraits(){
         for (i in 1..chLevel){
-            chClassTraits.add(chClassObject.classTraits[i])
+            chClassTraits.add(chClassObject.classTraits[i-1])
         }
     }
     fun getBackgroundTraits(){
         for (trait in chBackgroundObject.backgroundTraits){
             chBackgroundTraits.add(trait)
         }
+        chEquipment = chBackgroundObject.equipment
     }
     fun getSpellNumbers(){
         when(chClass){

@@ -23,6 +23,8 @@
     <string name="constitution">Constitution</string>
     <string name="save">Save PDF</string>
 
+    <string name="zero">0</string>
+
     <string-array name="levels">
         <item>1 lvl</item>
         <item>2 lvl</item>

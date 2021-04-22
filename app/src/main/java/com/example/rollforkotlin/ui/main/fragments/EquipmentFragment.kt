@@ -8,14 +8,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.CheckBox
 import com.example.rollforkotlin.ActivityScreen1
 import com.example.rollforkotlin.R
 import kotlinx.android.synthetic.main.fragment_equipment.*
 import kotlinx.android.synthetic.main.fragment_race.*
+import kotlinx.android.synthetic.main.fragment_tools.*
 import kotlin.random.Random
 
 
-class EquipmentFragment : Fragment() {
+class EquipmentFragment : Fragment(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -55,10 +58,71 @@ class EquipmentFragment : Fragment() {
             }
         }
         spArmor.onItemSelectedListener = listener
+
+        allCBList = arrayListOf(
+                //Potions
+                cbHealingPotion
+                //Weapons
+                ,cbWpDagger,cbWpBattleaxe,cbWpCrossbowL,cbWpGreataxe,cbWpGreatsword,cbWpJavelin,cbWpQuarterstaff,cbWpShortbow,cbWpLongsword,cbWpRapier,cbWpLongbow
+                //Instruments
+                ,cbInDrum,cbInFlute,cbInLyre,cbInHorn,cbInPanFlute
+                )
+        weaponCBList = arrayListOf(cbWpDagger,cbWpBattleaxe,cbWpCrossbowL,cbWpGreataxe,cbWpGreatsword,cbWpJavelin,cbWpQuarterstaff,cbWpShortbow,cbWpLongsword,cbWpRapier,cbWpLongbow)
+        instrumentCBList = arrayListOf(cbInDrum,cbInFlute,cbInLyre,cbInHorn,cbInPanFlute)
+        for (cb in allCBList!!) cb.setOnClickListener(this)
+    }
+    //Promenljive
+    private var allCBList: ArrayList<CheckBox>? = null
+    private var weaponCBList: ArrayList<CheckBox>? = null
+    private var instrumentCBList: ArrayList<CheckBox>? = null
+
+    override fun onClick(v: View?) {
+        v as CheckBox
+        val name = v.resources.getResourceEntryName(v.id)
+        when(checkCBGroup(name)){
+            'w' -> {
+                if(v.isChecked){
+                    ActivityScreen1.newCharacter.chWeapons?.add(name.substring(4))
+                } else  {
+                    ActivityScreen1.newCharacter.chWeapons?.remove(name.substring(4))
+                }
+            }
+            'i' -> {
+                if(v.isChecked){
+                    ActivityScreen1.newCharacter.chInstruments?.add(name.substring(4))
+                } else  {
+                    ActivityScreen1.newCharacter.chInstruments?.remove(name.substring(4))
+                }
+            }
+            else -> {
+                ActivityScreen1.newCharacter.chHasPotion = v.isChecked
+            }
+        }
+    }
+
+    private fun checkCBGroup(id: String): Char? {
+        if(id.startsWith("cbWp")) {
+            return 'w'
+        }
+        if(id.startsWith("cbIn")) {
+            return 'i'
+        }
+        return null
+    }
+
+    override fun onStop() {
+        super.onStop()
+        getValues()
     }
 
     fun getValues() {
+        //Uzimanje armora
         ActivityScreen1.newCharacter.chArmor = spArmor.selectedItem.toString()
-    }
+        //Uzimanje vrednosti novca
+        ActivityScreen1.newCharacter.chCopper = btnCopper.text.toString().toInt()
+        ActivityScreen1.newCharacter.chSilver = btnSilver.text.toString().toInt()
+        ActivityScreen1.newCharacter.chGold = btnGold.text.toString().toInt()
+        ActivityScreen1.newCharacter.chPlatinum = btnPlatinum.text.toString().toInt()
 
+    }
 }

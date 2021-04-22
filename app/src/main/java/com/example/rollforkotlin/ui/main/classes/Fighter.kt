@@ -5,6 +5,7 @@ class Fighter() : ClassGeneral() {
     override var hitDice = 10
     override var armorProf = "All armor, shields"
     override var weaponProf = "Simple weapons, martial weapons"
+    override var weaponProfList = arrayListOf<String>("Simp", "Mart")
     override var toolProf = "None"
     override var savingThrowsProf = arrayListOf("strSave","conSave")
     override var spellCastingMod = ""
