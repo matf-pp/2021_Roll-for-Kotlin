@@ -23,6 +23,8 @@
     <string name="constitution">Constitution</string>
     <string name="save">Save PDF</string>
 
+    <string name="zero">0</string>
+
     <string-array name="levels">
         <item>1 lvl</item>
         <item>2 lvl</item>
@@ -64,16 +66,16 @@
     </string-array>
 
     <string-array name="armor">
-        <item>Leather</item>
-        <item>Studded leather</item>
-        <item>Hide</item>
-        <item>Chain shirt</item>
-        <item>Scale mail</item>
-        <item>Breastplate</item>
-        <item>Half plate</item>
-        <item>Ring mail</item>
-        <item>Chain mail</item>
-        <item>Plate</item>
+        <item>(L) Leather AC 11</item>
+        <item>(L) Studded leather AC 12</item>
+        <item>(M) Hide AC 12</item>
+        <item>(M) Chain shirt AC 13</item>
+        <item>(M) Scale mail AC 14</item>
+        <item>(M) Breastplate AC 14</item>
+        <item>(M) Half plate AC 15</item>
+        <item>(H) Ring mail AC 14</item>
+        <item>(H) Chain mail AC 16</item>
+        <item>(H) Plate AC 18</item>
     </string-array>
 
     <string-array name="alignment">

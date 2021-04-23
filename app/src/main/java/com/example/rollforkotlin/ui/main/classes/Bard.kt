@@ -2,11 +2,12 @@ package com.example.rollforkotlin.ui.main.classes
 
 class Bard() : ClassGeneral() {
     override var className = "Bard"
-    override var hitDice = "1d8 per bard level"
+    override var hitDice = 8
     override var armorProf = "Light armor"
     override var weaponProf = "Simple weapons, hand crossbows, longswords, rapiers, shortswords"
+    override var weaponProfList = arrayListOf<String>("simp", "Longsword", "Rapier")
     override var toolProf = "Three musical instruments of your choice"
-    override var savingThrowsProf = "Dexterity, Charisma"
+    override var savingThrowsProf = arrayListOf("dexSave","chaSave")
     override var spellCastingMod = "Charisma"
     override var classTraits = arrayListOf("Bardic Inspiration\n" +
             "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6.\n" +
@@ -27,67 +28,9 @@ class Bard() : ClassGeneral() {
             "At 6th level, you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced or if you voluntarily end it (no action required).")
     override var language = 0
 
-    override fun getSavingThrowProf(ability : String): Int {
-        return when(ability){
-            "dexSave" -> 1
-            "chaSave" -> 1
-            else -> 0
-        }
-    }
+    override var cantripNumbers = arrayListOf(2,2,2,3,3,3)
+    override var spell1Numbers = arrayListOf(2,3,4,4,4,4)
+    override var spell2Numbers = arrayListOf(0,0,2,3,3,3)
+    override var spell3Numbers = arrayListOf(0,0,0,0,2,3)
 
-    override fun getHitDice(): Int {
-        return 8
-    }
-
-    override fun getCantripsNumber(lvl : Int): Int {
-        when (lvl){
-            1 -> return 2
-            2 -> return 2
-            3 -> return 2
-            4 -> return 3
-            5 -> return 3
-            6 -> return 3
-        }
-        return 0
-    }
-
-    override fun getSpellLvl1Number(lvl : Int): Int {
-        when (lvl){
-            1 -> return 2
-            2 -> return 3
-            3 -> return 4
-            4 -> return 4
-            5 -> return 4
-            6 -> return 4
-        }
-        return 0
-    }
-
-    override fun getSpellLvl2Number(lvl : Int): Int {
-        when (lvl){
-            1 -> return 0
-            2 -> return 0
-            3 -> return 2
-            4 -> return 3
-            5 -> return 3
-            6 -> return 3
-        }
-        return 0
-    }
-
-    override fun getSpellLvl3Number(lvl : Int): Int {
-        when (lvl){
-            1 -> return 0
-            2 -> return 0
-            3 -> return 0
-            4 -> return 0
-            5 -> return 2
-            6 -> return 3
-        }
-        return 0
-    }
-
-    override fun getSpellCastingModifier(): String {
-        return "Cha"
-    }
 }

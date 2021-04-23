@@ -158,6 +158,15 @@ class AbilityFragment : Fragment() {
         }
     }
 
+    override fun onStart() {
+        super.onStart()
+        btnStrength.text = ActivityScreen1.newCharacter.chAbilities["str"].toString()
+        btnDexterity.text = ActivityScreen1.newCharacter.chAbilities["dex"].toString()
+        btnConstitution.text = ActivityScreen1.newCharacter.chAbilities["con"].toString()
+        btnIntelligence.text = ActivityScreen1.newCharacter.chAbilities["int"].toString()
+        btnWisdom.text = ActivityScreen1.newCharacter.chAbilities["wis"].toString()
+        btnCharisma.text = ActivityScreen1.newCharacter.chAbilities["cha"].toString()
+    }
     override fun onStop() {
         super.onStop()
         getValues()
@@ -173,7 +182,6 @@ class AbilityFragment : Fragment() {
             ActivityScreen1.newCharacter.chAbilities["int"] = btnIntelligence.text.toString().toInt()
             ActivityScreen1.newCharacter.chAbilities["wis"] = btnWisdom.text.toString().toInt()
             ActivityScreen1.newCharacter.chAbilities["cha"] = btnCharisma.text.toString().toInt()
-            ActivityScreen1.newCharacter.setSkills()
         }
     }
 

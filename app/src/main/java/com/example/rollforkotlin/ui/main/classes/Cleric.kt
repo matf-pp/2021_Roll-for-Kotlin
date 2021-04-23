@@ -2,11 +2,12 @@ package com.example.rollforkotlin.ui.main.classes
 
 class Cleric() : ClassGeneral() {
     override var className = "Cleric"
-    override var hitDice = "1d8 per cleric level"
+    override var hitDice = 8
     override var armorProf = "Light armor, medium armor, shields"
     override var weaponProf = "All simple weapons"
+    override var weaponProfList = arrayListOf<String>("Simp")
     override var toolProf = "None"
-    override var savingThrowsProf = "Wisdom, Charisma"
+    override var savingThrowsProf = arrayListOf("wisSave","chaSave")
     override var spellCastingMod = "Intelligence"
     override var classTraits = arrayListOf("Ritual Casting\n" +
             "You can cast a cleric spell as a ritual if that spell has the ritual tag and you have the spell prepared.","Channel Divinity\n" +
@@ -23,68 +24,9 @@ class Cleric() : ClassGeneral() {
                 ,"")
     override var language = 0
 
+    override var cantripNumbers = arrayListOf(3,3,3,4,4,4)
+    override var spell1Numbers = arrayListOf(2,3,4,4,4,4)
+    override var spell2Numbers = arrayListOf(0,0,2,3,3,3)
+    override var spell3Numbers = arrayListOf(0,0,0,0,2,3)
 
-    override fun getSavingThrowProf(ability : String): Int {
-        return when(ability){
-            "wisSave" -> 1
-            "chaSave" -> 1
-            else -> 0
-        }
-    }
-
-    override fun getHitDice(): Int {
-        return 8
-    }
-
-    override fun getCantripsNumber(lvl : Int): Int {
-        when (lvl){
-            1 -> return 3
-            2 -> return 3
-            3 -> return 3
-            4 -> return 4
-            5 -> return 4
-            6 -> return 4
-        }
-        return 0
-    }
-
-    override fun getSpellLvl1Number(lvl : Int): Int {
-        when (lvl){
-            1 -> return 2
-            2 -> return 3
-            3 -> return 4
-            4 -> return 4
-            5 -> return 4
-            6 -> return 4
-        }
-        return 0
-    }
-
-    override fun getSpellLvl2Number(lvl : Int): Int {
-        when (lvl){
-            1 -> return 0
-            2 -> return 0
-            3 -> return 2
-            4 -> return 3
-            5 -> return 3
-            6 -> return 3
-        }
-        return 0
-    }
-
-    override fun getSpellLvl3Number(lvl : Int): Int {
-        when (lvl){
-            1 -> return 0
-            2 -> return 0
-            3 -> return 0
-            4 -> return 0
-            5 -> return 2
-            6 -> return 3
-        }
-        return 0
-    }
-
-    override fun getSpellCastingModifier(): String {
-        return "Wis"
-    }
 }

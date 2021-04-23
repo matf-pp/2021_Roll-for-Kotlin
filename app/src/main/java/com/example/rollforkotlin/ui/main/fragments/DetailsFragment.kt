@@ -43,6 +43,11 @@ class DetailsFragment : Fragment() {
             ActivityScreen1.newCharacter.getAllHPVariables()
             ActivityScreen1.newCharacter.setSavingThrows()
             ActivityScreen1.newCharacter.getClassTraits()
+            ActivityScreen1.newCharacter.setSkills()
+            ActivityScreen1.newCharacter.setAC()
+            ActivityScreen1.newCharacter.setArmorAndWeaponProf()
+            ActivityScreen1.newCharacter.setWeaponBonus()
+            ActivityScreen1.newCharacter.getBackgroundTraits()
             activity?.let{
                 val i = Intent (it, FinishActivity::class.java)
                 it.startActivity(i)
@@ -69,6 +74,5 @@ class DetailsFragment : Fragment() {
         ActivityScreen1.newCharacter.chBackstory = backstory
         ActivityScreen1.newCharacter.chAppearance = appearance
         ActivityScreen1.newCharacter.chAdditionalInfo = additional
-
     }
 }
