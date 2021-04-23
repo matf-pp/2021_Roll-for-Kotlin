@@ -202,7 +202,7 @@ class FinishActivity : AppCompatActivity() {
             addNewItem(document, "Initiative : +$init", Element.ALIGN_LEFT, valueStyle)
             val pasPerc = ActivityScreen1.newCharacter.chPassivePerception
             addNewItem(document, "Passive percepcion : $pasPerc", Element.ALIGN_LEFT, valueStyle)
-            val speed = ActivityScreen1.newCharacter.chSpeedWalk
+            val speed = ActivityScreen1.newCharacter.chSpeed["walk"]
             addNewItem(document, "Movement speed : $speed", Element.ALIGN_LEFT, valueStyle)
 
             addLineSeparation(document)

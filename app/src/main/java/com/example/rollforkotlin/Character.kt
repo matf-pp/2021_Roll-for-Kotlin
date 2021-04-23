@@ -4,8 +4,7 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import com.example.rollforkotlin.ui.main.classes.*
 import com.example.rollforkotlin.ui.main.backgrounds.*
-import com.example.rollforkotlin.ui.main.races.Human
-import com.example.rollforkotlin.ui.main.races.RaceGeneral
+import com.example.rollforkotlin.ui.main.races.*
 import kotlin.random.Random
 import kotlin.math.*
 
@@ -17,7 +16,7 @@ class Character {
     var chClass : String = ""
     lateinit var chClassObject : ClassGeneral
     var chRace : String = ""
-    lateinit var chRaceObject : RaceGeneral
+    var chRaceObject: RaceGeneral? = null
     var chBackgroud : String = ""
     lateinit var chBackgroundObject: BackgroundGeneral
     var chDeity : String = ""
@@ -30,6 +29,7 @@ class Character {
     var chBackstory : String = ""
     var chAdditionalInfo : String = ""
     var chNotes : String = ""
+    var chLanguageList : ArrayList<String> = arrayListOf()
     //Counters
     var chLanguageCounter : Int = 1
     var chProfCounter : Int = 1
@@ -75,10 +75,7 @@ class Character {
                                                         "intSave" to 0,"wisSave" to 0,"chaSave" to 0)
 
     //Race traits
-    var chSpeedWalk : Int = 0
-    var chSpeedFly : Int = 0
-    var chSpeedClimb : Int = 0
-    var chSpeedSwim : Int = 0
+    var chSpeed = mutableMapOf("walk" to 0, "fly" to 0, "swim" to 0, "climb" to 0)
     lateinit var chRacialTraits : ArrayList<String>
     //Class traits
     var chClassTraits : ArrayList<String> = ArrayList()
@@ -149,7 +146,7 @@ class Character {
         chHitDice = chLevel.toString() + "d" + chClassObject.hitDice.toString()
     }
     fun setLanguages(){
-        chLanguageCounter = chClassObject.language + chBackgroundObject.language
+        chLanguageCounter = chClassObject.language + chBackgroundObject.language + chRaceObject!!.extraLanguage
     }
     fun setArmorAndWeaponProf(){
         chArmorProf = chClassObject.armorProf
@@ -247,9 +244,42 @@ class Character {
     fun setRace(){
         when(chRace) {
             "Human" -> {
-                chRaceObject = Human()
+                setupRace(Human())
+            }
+            "Elf" -> {
+                setupRace(Elf())
+            }
+            "Dwarf" -> {
+                setupRace(Dwarf())
+            }
+            "Gnome" -> {
+                setupRace(Gnome())
+            }
+            "Halfling" -> {
+                setupRace(Halfling())
+            }
+            "Tiefling" -> {
+                setupRace(Tiefling())
             }
         }
+    }
+    fun setupRace(race: RaceGeneral){
+        if(chRaceObject != null){
+            for(i in chRaceObject!!.abilityScoreList){
+                chAbilities[i.key] = chAbilities[i.key]!! - chRaceObject!!.abilityScoreList[i.key]!!
+            }
+            for(i in chSpeed){
+                chSpeed[i.key] = 0
+            }
+            chLanguageList = arrayListOf()
+            for(i in chRaceObject!!.proficienciesList){
+                chSkillProfs[i] = 0
+            }
+            chWeaponProfList = arrayListOf()
+            chToolsCounter = 0
+            chRacialTraits = arrayListOf()
+        }
+        // TODO: 23-Apr-21 ====================================================================================================== 
     }
 
     fun setClass(){
