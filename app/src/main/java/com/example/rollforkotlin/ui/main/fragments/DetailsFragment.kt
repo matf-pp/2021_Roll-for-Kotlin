@@ -48,6 +48,7 @@ class DetailsFragment : Fragment() {
             ActivityScreen1.newCharacter.setArmorAndWeaponProf()
             ActivityScreen1.newCharacter.setWeaponBonus()
             ActivityScreen1.newCharacter.getBackgroundTraits()
+            ActivityScreen1.newCharacter.getSpellInfo()
             activity?.let{
                 val i = Intent (it, FinishActivity::class.java)
                 it.startActivity(i)

@@ -74,6 +74,10 @@ class SpellsFragment : Fragment() , View.OnClickListener{
             spell2Counter = ActivityScreen1.newCharacter.chSpellLvl2Counter
             spell3Counter = ActivityScreen1.newCharacter.chSpellLvl3Counter
 
+            ActivityScreen1.newCharacter.chSpellCantripList = arrayListOf()
+            ActivityScreen1.newCharacter.chSpellLvl1List = arrayListOf()
+            ActivityScreen1.newCharacter.chSpellLvl2List = arrayListOf()
+            ActivityScreen1.newCharacter.chSpellLvl3List = arrayListOf()
         }
         if(ActivityScreen1.newCharacter.chClass=="Bard" || ActivityScreen1.newCharacter.chClass=="Cleric" || ActivityScreen1.newCharacter.chClass=="Ranger" || ActivityScreen1.newCharacter.chClass=="Wizard"){
             showSpells(ActivityScreen1.newCharacter.chClass)
@@ -145,8 +149,10 @@ class SpellsFragment : Fragment() , View.OnClickListener{
                     v.isChecked = false
                 } else if (v.isChecked){
                     --cantripCounter
+                    ActivityScreen1.newCharacter.chSpellCantripList.add(v.text.toString())
                 } else {
                     ++cantripCounter
+                    ActivityScreen1.newCharacter.chSpellCantripList.remove(v.text.toString())
                 }
                 lbCantripCount.text = cantripCounter.toString()
             }
@@ -155,8 +161,10 @@ class SpellsFragment : Fragment() , View.OnClickListener{
                     v.isChecked = false
                 } else if (v.isChecked){
                     --spell1Counter
+                    ActivityScreen1.newCharacter.chSpellLvl1List.add(v.text.toString())
                 } else {
                     ++spell1Counter
+                    ActivityScreen1.newCharacter.chSpellLvl1List.remove(v.text.toString())
                 }
                 lbSpell1Count.text = spell1Counter.toString()
             }
@@ -165,8 +173,10 @@ class SpellsFragment : Fragment() , View.OnClickListener{
                     v.isChecked = false
                 } else if (v.isChecked){
                     --spell2Counter
+                    ActivityScreen1.newCharacter.chSpellLvl2List.add(v.text.toString())
                 } else {
                     ++spell2Counter
+                    ActivityScreen1.newCharacter.chSpellLvl2List.remove(v.text.toString())
                 }
                 lbSpell2Count.text = spell2Counter.toString()
             }
@@ -175,8 +185,10 @@ class SpellsFragment : Fragment() , View.OnClickListener{
                     v.isChecked = false
                 } else if (v.isChecked){
                     --spell3Counter
+                    ActivityScreen1.newCharacter.chSpellLvl3List.add(v.text.toString())
                 } else {
                     ++spell3Counter
+                    ActivityScreen1.newCharacter.chSpellLvl3List.remove(v.text.toString())
                 }
                 lbSpell3Count.text = spell3Counter.toString()
             }
