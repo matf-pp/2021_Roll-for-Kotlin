@@ -91,7 +91,6 @@ class FinishActivity : AppCompatActivity() {
             document.addCreator("Divna Micic")
             document.addCreator("Aleksandar Sarbajic")
 
-
             //Font Setting
 
             val colorAccent = BaseColor(150, 14, 14, 255)
@@ -99,7 +98,6 @@ class FinishActivity : AppCompatActivity() {
             val valueFontSize = 28.0f
 
             //Custom font
-
             val fontName = BaseFont.createFont(
                 "res/font/percy_goth.ttf",
                 "UTF-8",
@@ -151,7 +149,13 @@ class FinishActivity : AppCompatActivity() {
             val hp = ActivityScreen1.newCharacter.chMaxHP
             addNewItemWithLeftAndRight(document, "HP : $hp ", "AC : $ac ", importantStyle, importantStyle)
             val hitDice = ActivityScreen1.newCharacter.chHitDice
-            addNewItem(document, "Hit dice : $hitDice", Element.ALIGN_LEFT, valueStyle)
+            val armor = ActivityScreen1.newCharacter.chArmor.split(" ")
+            var arm = ""
+            if(armor.size > 4)
+                arm = armor[1] + " " + armor[2]
+            else
+                arm = armor[1]
+            addNewItemWithLeftAndRight(document, "Hit dice : $hitDice", "Armor : $arm ", valueStyle, valueStyle)
 
             addLineSeparation(document)
 
@@ -168,8 +172,15 @@ class FinishActivity : AppCompatActivity() {
             addNewItemWithLeftAndRight(document, "Constitution : $con ", "Intelligence : $int", importantStyle, importantStyle)
             addNewItemWithLeftAndRight(document, "Wisdom : $wis ", "Charisma : $cha", importantStyle, importantStyle)
             addLineSpace(document)
-            for( i in ActivityScreen1.newCharacter.chSkills)
-                addNewItemWithLeftAndRight(document, i.key.substring(3), if(i.value>=0)" +${i.value}" else "${i.value}", valueStyle, valueStyle)
+            for( i in ActivityScreen1.newCharacter.chSkills) {
+                if (ActivityScreen1.newCharacter.chSkillProfs[i.key] != 0 && ActivityScreen1.newCharacter.chSkillExp[i.key] != 0) {
+                    addNewItemWithLeftAndRight(document, i.key.substring(3) + "**", if (i.value >= 0) " +${i.value}" else "${i.value}", valueStyle, valueStyle)
+                }
+                else if(ActivityScreen1.newCharacter.chSkillProfs[i.key] != 0)
+                    addNewItemWithLeftAndRight(document, i.key.substring(3) + "*", if (i.value >= 0) " +${i.value}" else "${i.value}", valueStyle, valueStyle)
+                else
+                    addNewItemWithLeftAndRight(document, i.key.substring(3) , if (i.value >= 0) " +${i.value}" else "${i.value}", valueStyle, valueStyle)
+            }
 
             addLineSpace(document)
 
@@ -180,9 +191,9 @@ class FinishActivity : AppCompatActivity() {
             int = ActivityScreen1.newCharacter.chSavingThrows["intSave"]
             wis = ActivityScreen1.newCharacter.chSavingThrows["wisSave"]
             cha = ActivityScreen1.newCharacter.chSavingThrows["chaSave"]
-            addNewItemWithLeftAndRight(document, "Strength : +$str ", "Dexterity : +$dex ", valueStyle, valueStyle)
-            addNewItemWithLeftAndRight(document, "Constitution : +$con ", "Intelligence : +$int ", valueStyle, valueStyle)
-            addNewItemWithLeftAndRight(document, "Wisdom : +$wis ", "Charisma : +$cha ", valueStyle, valueStyle)
+            addNewItemWithLeftAndRight(document, "Strength : " + if(str!! >=0) "+$str" else "$str" , "Dexterity : " +  if(dex!! >=0) "+$dex" else "$dex", valueStyle, valueStyle)
+            addNewItemWithLeftAndRight(document, "Constitution : "+ if(con!! >=0) "+$con" else "$con", "Intelligence : "+ if(int!! >=0) "+$int" else "$int", valueStyle, valueStyle)
+            addNewItemWithLeftAndRight(document, "Wisdom : "+ if(wis!! >=0) "+$wis" else "$wis" , "Charisma : "+ if(cha!! >=0) "+$cha" else "$cha", valueStyle, valueStyle)
 
             addLineSeparation(document)
 
@@ -193,15 +204,74 @@ class FinishActivity : AppCompatActivity() {
             addNewItem(document, "Passive percepcion : $pasPerc", Element.ALIGN_LEFT, valueStyle)
             val speed = ActivityScreen1.newCharacter.chSpeedWalk
             addNewItem(document, "Movement speed : $speed", Element.ALIGN_LEFT, valueStyle)
-            //num of attacks TODO
-            //armor, language, tools, weapon prof TODO
 
+            addLineSeparation(document)
+
+            //num of attacks TODO
+            addNewItem(document, "Attacks", Element.ALIGN_LEFT, headingStyle)
+            var w = ""
+            for(weapon1 in ActivityScreen1.newCharacter.chWeapons){
+                w = weapon1
+                val w2 = ActivityScreen1.newCharacter.chWeaponRange[w]
+                val w3 = ActivityScreen1.newCharacter.chWeaponToHitBonus[w]
+                val w4 = ActivityScreen1.newCharacter.weaponDamageMap[w]
+                val w5 = ActivityScreen1.newCharacter.chWeaponDamageBonus[w]
+                val w6 = ActivityScreen1.newCharacter.weaponDagameTypeMap[w]
+
+                w = "$w $w2"
+                w = "$w   to hit " + if (w3!! >= 0) "+$w3" else "$w3"
+                w = "$w $w4"
+                w = "$w" + if (w5!! >= 0) "+$w5" else "$w5"
+                w = "$w $w6"
+
+                addNewItem(document,  w, Element.ALIGN_LEFT, valueStyle)
+            }
+
+            addLineSeparation(document)
+
+            //armor, language, tools, weapon prof TODO
+            addNewItem(document, "Proficiencies", Element.ALIGN_LEFT, headingStyle)
+            val armorProf = ActivityScreen1.newCharacter.chArmorProf
+            addNewItem(document, "Armor proficency : $armorProf", Element.ALIGN_LEFT, valueStyle)
+            val weapProf = ActivityScreen1.newCharacter.chWeaponProfTypes
+            addNewItem(document, "Weapon proficency : $weapProf", Element.ALIGN_LEFT, valueStyle)
+            val toolProf = ActivityScreen1.newCharacter.chToolProf
+            addNewItem(document, "Tool proficency : $toolProf", Element.ALIGN_LEFT, valueStyle)
+
+            addLineSeparation(document)
 
             //attacks TODO + spell list and st dc, prepare, spcasting ability
 
+
             //class and race traits TODO
+            addNewItem(document, "Class, race & background traits", Element.ALIGN_LEFT, headingStyle)
+            val classTraits = ActivityScreen1.newCharacter.chClassTraits.joinToString("\n")
+            addNewItem(document, "Class traits ", Element.ALIGN_LEFT, redValueStyle)
+            addNewItem(document, classTraits, Element.ALIGN_LEFT, valueStyle)
+        /*    val raceTraits = ActivityScreen1.newCharacter.chRacialTraits.joinToString("\n")
+            addNewItem(document, "Racial traits ", Element.ALIGN_LEFT, redValueStyle)
+            addNewItem(document, raceTraits, Element.ALIGN_LEFT, valueStyle)*/
+            val bckgTraits = ActivityScreen1.newCharacter.chBackgroundTraits.joinToString("\n")
+            addNewItem(document, "Background traits", Element.ALIGN_LEFT, redValueStyle)
+            addNewItem(document, bckgTraits, Element.ALIGN_LEFT, valueStyle)
+
+            addLineSeparation(document)
 
             //inventory , money, potions, kits TODO
+            addNewItem(document, "Equipment", Element.ALIGN_LEFT, headingStyle)
+            val gp = ActivityScreen1.newCharacter.chGold
+            val pp = ActivityScreen1.newCharacter.chPlatinum
+            val sp = ActivityScreen1.newCharacter.chSilver
+            val cp = ActivityScreen1.newCharacter.chCopper
+            addNewItemWithLeftAndRight(document, "Platinum : $pp" , "Gold : $gp", importantStyle, importantStyle)
+            addNewItemWithLeftAndRight(document, "Silver : $sp" , "Copper : $cp", importantStyle, importantStyle)
+            if(ActivityScreen1.newCharacter.chHasPotion)
+                addNewItem(document, "Healing potion : 1d4 + 4", Element.ALIGN_LEFT, valueStyle)
+            val equip = ActivityScreen1.newCharacter.chEquipment
+            addNewItem(document, "Inventory : $equip", Element.ALIGN_LEFT, valueStyle)
+            val instru = ActivityScreen1.newCharacter.chInstruments.joinToString(", ")
+            addNewItem(document, "Instruments : $instru", Element.ALIGN_LEFT, valueStyle)
+
 
             //spells and cantrips details TODO
 
@@ -217,7 +287,6 @@ class FinishActivity : AppCompatActivity() {
             addNewItem(document, "Additional info : $info", Element.ALIGN_LEFT, valueStyle)
             val story = ActivityScreen1.newCharacter.chBackstory
             addNewItem(document, "Backstory : $story", Element.ALIGN_LEFT, valueStyle)
-
 
 
             document.close()

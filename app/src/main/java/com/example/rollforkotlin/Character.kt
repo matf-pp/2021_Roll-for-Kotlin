@@ -34,7 +34,6 @@ class Character {
     //HP
     var chCurrentHP : Int = 0
     var chMaxHP : Int = 0
-    var chTemporaryHP : Int = 0
     var chHitDice : String = ""
     //Ability Score
     var chAbilities = mutableMapOf<String,Int>("str" to 0, "dex" to 0,"con" to 0,
