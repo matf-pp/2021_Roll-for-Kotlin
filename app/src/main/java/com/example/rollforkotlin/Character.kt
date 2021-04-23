@@ -4,6 +4,8 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import com.example.rollforkotlin.ui.main.classes.*
 import com.example.rollforkotlin.ui.main.backgrounds.*
+import com.example.rollforkotlin.ui.main.races.Human
+import com.example.rollforkotlin.ui.main.races.RaceGeneral
 import kotlin.random.Random
 import kotlin.math.*
 
@@ -15,6 +17,7 @@ class Character {
     var chClass : String = ""
     lateinit var chClassObject : ClassGeneral
     var chRace : String = ""
+    lateinit var chRaceObject : RaceGeneral
     var chBackgroud : String = ""
     lateinit var chBackgroundObject: BackgroundGeneral
     var chDeity : String = ""
@@ -241,6 +244,14 @@ class Character {
             }
         }
     }
+    fun setRace(){
+        when(chRace) {
+            "Human" -> {
+                chRaceObject = Human()
+            }
+        }
+    }
+
     fun setClass(){
         when(chClass) {
             "Wizard" -> {

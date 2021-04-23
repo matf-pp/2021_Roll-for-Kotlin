@@ -1,9 +1,12 @@
 package com.example.rollforkotlin.ui.main.races
 
 abstract class RaceGeneral {
-    abstract fun addAbilityScoreIncrease()
-    abstract fun setSpeed()
-    abstract fun addLanguages()
-    abstract fun addRacialFeatures()
-    abstract fun clearAll()
+    abstract val abilityScoreList : MutableMap<String,Int>
+    abstract val speed : MutableMap<String,Int>
+    abstract val languageList : ArrayList<String>
+    abstract val extraLanguage : Int
+    abstract val proficienciesList : ArrayList<String>
+    abstract val weaponProficiencyList: ArrayList<String>
+    abstract val toolProficiencyNumber : Int
+    abstract val racialFeaturesList : ArrayList<String>
 }
