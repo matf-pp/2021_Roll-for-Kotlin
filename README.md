@@ -15,6 +15,8 @@ Neophodne biblioteke za rad sa PDF dokumentom :
 Namena aplikacije : android mobilni uređaji
 
 Tatjana Knežević    mi18218@alas.matf.bg.ac.rs
+
 Divna Mićić 	      mi18128@alas.matf.bg.ac.rs
+
 Aleksandar Šarbajić mi18145@alas.matf.bg.ac.rs
 
