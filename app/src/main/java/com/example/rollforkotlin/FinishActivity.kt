@@ -240,15 +240,40 @@ class FinishActivity : AppCompatActivity() {
 
             addLineSeparation(document)
 
-            //attacks TODO + spell list and st dc, prepare, spcasting ability
+            //spell attacks
+            addNewItem(document, "Spells", Element.ALIGN_LEFT, headingStyle)
+            val spellCast = ActivityScreen1.newCharacter.chSpellCastingAbility
+            addNewItem(document, "Spellcasting ability : $spellCast", Element.ALIGN_LEFT, valueStyle)
+            val spellBonus = ActivityScreen1.newCharacter.chSpellAttackBonus
+            addNewItem(document, "Spell attack bonus : "+ if(spellBonus!! >=0) "+$spellBonus" else "$spellBonus" , Element.ALIGN_LEFT, valueStyle)
+            val spellDC = ActivityScreen1.newCharacter.chSpellSaveDC
+            addNewItem(document, "Saving throw DC : $spellDC", Element.ALIGN_LEFT, valueStyle)
+            if(klasa == "Cleric") {
+                val prepare = ActivityScreen1.newCharacter.chSpellLvl1Counter + ActivityScreen1.newCharacter.chSpellLvl2Counter + ActivityScreen1.newCharacter.chSpellLvl3Counter
+                addNewItem(document, "Prepare : $prepare", Element.ALIGN_LEFT, valueStyle)
+            }
+            addNewItem(document, "Cantrips :", Element.ALIGN_LEFT, redValueStyle)
+            val cantrip = ActivityScreen1.newCharacter.chSpellCantripList.joinToString(", ")
+            addNewItem(document,  cantrip, Element.ALIGN_LEFT, valueStyle)
+            addNewItem(document, "1st lvl spells :", Element.ALIGN_LEFT, redValueStyle)
+            val first = ActivityScreen1.newCharacter.chSpellLvl1List.joinToString(", ")
+            addNewItem(document,  first, Element.ALIGN_LEFT, valueStyle)
+            addNewItem(document, "2nd lvl spells :", Element.ALIGN_LEFT, redValueStyle)
+            val second = ActivityScreen1.newCharacter.chSpellLvl2List.joinToString(", ")
+            addNewItem(document,  second, Element.ALIGN_LEFT, valueStyle)
+            addNewItem(document, "3rd lvl spells :", Element.ALIGN_LEFT, redValueStyle)
+            val third = ActivityScreen1.newCharacter.chSpellLvl3List.joinToString(", ")
+            addNewItem(document,  third, Element.ALIGN_LEFT, valueStyle)
 
+
+            addLineSeparation(document)
 
             //class and race traits TODO
             addNewItem(document, "Class, race & background traits", Element.ALIGN_LEFT, headingStyle)
             val classTraits = ActivityScreen1.newCharacter.chClassTraits.joinToString("\n")
             addNewItem(document, "Class traits ", Element.ALIGN_LEFT, redValueStyle)
             addNewItem(document, classTraits, Element.ALIGN_LEFT, valueStyle)
-        /*    val raceTraits = ActivityScreen1.newCharacter.chRacialTraits.joinToString("\n")
+          /*  val raceTraits = ActivityScreen1.newCharacter.chRacialTraits.joinToString("\n")
             addNewItem(document, "Racial traits ", Element.ALIGN_LEFT, redValueStyle)
             addNewItem(document, raceTraits, Element.ALIGN_LEFT, valueStyle)*/
             val bckgTraits = ActivityScreen1.newCharacter.chBackgroundTraits.joinToString("\n")
