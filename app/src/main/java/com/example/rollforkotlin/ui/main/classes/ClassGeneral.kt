@@ -3,6 +3,7 @@ package com.example.rollforkotlin.ui.main.classes
 abstract class ClassGeneral {
     abstract var className : String
     abstract var hitDice : Int
+    abstract var skillProfCounter: Int
     abstract var armorProf : String
     abstract var weaponProf : String
     abstract var weaponProfList : ArrayList<String>

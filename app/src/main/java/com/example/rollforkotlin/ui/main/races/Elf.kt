@@ -5,7 +5,7 @@ class Elf: RaceGeneral() {
     override val speed = mutableMapOf("walk" to 30, "fly" to 0, "swim" to 0, "climb" to 0)
     override val languageList = arrayListOf("Common", "Elvish")
     override val extraLanguage = 0
-    override val proficienciesList = arrayListOf("wisPerception")
+    override val skillProfList = arrayListOf("wisPerception")
     override val weaponProficiencyList = arrayListOf<String>()
     override val toolProficiencyNumber = 0
     override val racialFeaturesList = arrayListOf("Darkvision\n " +

@@ -3,6 +3,7 @@ package com.example.rollforkotlin.ui.main.classes
 class Wizard() : ClassGeneral() {
     override var className = "Wizard"
     override var hitDice = 6
+    override var skillProfCounter = 2
     override var armorProf = "None"
     override var weaponProf = "Daggers, darts, slings, quarterstaffs, light crossbows"
     override var weaponProfList = arrayListOf<String>("Dagger", "Quarterstaff","CrossbowL")

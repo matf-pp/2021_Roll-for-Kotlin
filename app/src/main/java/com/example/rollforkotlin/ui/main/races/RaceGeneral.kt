@@ -5,7 +5,7 @@ abstract class RaceGeneral {
     abstract val speed : MutableMap<String,Int>
     abstract val languageList : ArrayList<String>
     abstract val extraLanguage : Int
-    abstract val proficienciesList : ArrayList<String>
+    abstract val skillProfList : ArrayList<String>
     abstract val weaponProficiencyList: ArrayList<String>
     abstract val toolProficiencyNumber : Int
     abstract val racialFeaturesList : ArrayList<String>

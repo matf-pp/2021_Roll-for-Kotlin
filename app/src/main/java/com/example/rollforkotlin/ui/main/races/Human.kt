@@ -6,7 +6,7 @@ class Human: RaceGeneral() {
     override val speed = mutableMapOf("walk" to 30, "fly" to 0, "swim" to 0, "climb" to 0)
     override val languageList = arrayListOf("Common")
     override val extraLanguage = 1
-    override val proficienciesList = arrayListOf<String>()
+    override val skillProfList = arrayListOf<String>()
     override val weaponProficiencyList = arrayListOf<String>()
     override val toolProficiencyNumber = 0
     override val racialFeaturesList = arrayListOf<String>()

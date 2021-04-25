@@ -1,5 +1,6 @@
 package com.example.rollforkotlin.ui.main.fragments
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.pdf.PdfDocument
 import android.os.Bundle
@@ -49,6 +50,10 @@ class DetailsFragment : Fragment() {
             ActivityScreen1.newCharacter.setWeaponBonus()
             ActivityScreen1.newCharacter.getBackgroundTraits()
             ActivityScreen1.newCharacter.getSpellInfo()
+            val builder = AlertDialog.Builder(requireActivity())
+            builder.setTitle("Androidly Alert")
+            builder.setMessage(ActivityScreen1.newCharacter.chLanguageList.toString())
+            builder.show()
             activity?.let{
                 val i = Intent (it, FinishActivity::class.java)
                 it.startActivity(i)

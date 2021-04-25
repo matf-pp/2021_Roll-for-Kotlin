@@ -82,15 +82,16 @@ class RaceFragment : Fragment(){
         ActivityScreen1.newCharacter.setRace()
         ActivityScreen1.newCharacter.chClass = klasa
         ActivityScreen1.newCharacter.setClass()
-        ActivityScreen1.newCharacter.chBackgroud = background
+        ActivityScreen1.newCharacter.chBackground = background
         ActivityScreen1.newCharacter.setBackground()
         //Uzimanja broja spell-ova
         ActivityScreen1.newCharacter.getSpellNumbers()
 
-        /*val builder = AlertDialog.Builder(requireActivity())
-        builder.setTitle("Androidly Alert")
-        builder.setMessage(ActivityScreen1.newCharacter.chRace)
-        builder.show()*/
+//        val builder = AlertDialog.Builder(requireActivity())
+//        builder.setTitle("Androidly Alert")
+//        builder.setMessage(ActivityScreen1.newCharacter.chBackground
+//                            +"\n"+ActivityScreen1.newCharacter.chRaceObject!!.extraLanguage.toString())
+//        builder.show()
     }
 }
 

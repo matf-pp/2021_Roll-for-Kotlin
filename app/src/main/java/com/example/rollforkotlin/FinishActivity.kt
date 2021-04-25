@@ -139,7 +139,7 @@ class FinishActivity : AppCompatActivity() {
             val race = ActivityScreen1.newCharacter.chRace
             addNewItemWithLeftAndRight(document, "Race : $race ", "Class : $klasa ", valueStyle, valueStyle)
             //backgroung gender
-            val background = ActivityScreen1.newCharacter.chBackgroud
+            val background = ActivityScreen1.newCharacter.chBackground
             val gender = ActivityScreen1.newCharacter.chGender
             addNewItemWithLeftAndRight(document, "Background : $background ", "Gender : $gender ", valueStyle, valueStyle)
 

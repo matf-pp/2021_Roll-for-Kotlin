@@ -1,7 +1,5 @@
 package com.example.rollforkotlin
 
-import android.os.Build
-import androidx.annotation.RequiresApi
 import com.example.rollforkotlin.ui.main.classes.*
 import com.example.rollforkotlin.ui.main.backgrounds.*
 import com.example.rollforkotlin.ui.main.races.*
@@ -17,8 +15,8 @@ class Character {
     lateinit var chClassObject: ClassGeneral
     var chRace: String = ""
     var chRaceObject: RaceGeneral? = null
-    var chBackgroud: String = ""
-    lateinit var chBackgroundObject: BackgroundGeneral
+    var chBackground: String = ""
+    var chBackgroundObject: BackgroundGeneral? = null
     var chDeity: String = ""
     var chAlignment: String = ""
     var chProficiencyBonus: Int = 2
@@ -29,12 +27,13 @@ class Character {
     var chBackstory: String = ""
     var chAdditionalInfo: String = ""
     var chNotes: String = ""
+    var chRaceLanguageList: ArrayList<String> = arrayListOf()
     var chLanguageList: ArrayList<String> = arrayListOf()
 
     //Counters
-    var chLanguageCounter: Int = 1
-    var chProfCounter: Int = 1
-    var chToolsCounter: Int = 1
+    var chLanguageCounter: Int = 0
+    var chProfCounter: Int = 0
+    var chToolsCounter: Int = 0
 
     //HP
     var chCurrentHP: Int = 0
@@ -163,8 +162,14 @@ class Character {
         chHitDice = chLevel.toString() + "d" + chClassObject.hitDice.toString()
     }
 
-    fun setLanguages() {
-        chLanguageCounter = chClassObject.language + chBackgroundObject.language + chRaceObject!!.extraLanguage
+    fun setLanguageCount() {
+        chLanguageCounter = chClassObject.language + chBackgroundObject!!.language + chRaceObject!!.extraLanguage
+    }
+    fun setProficiencyCount() {
+        chProfCounter = chClassObject.skillProfCounter
+    }
+    fun setToolsCount(){
+        chToolsCounter = if (chRaceObject != null) chRaceObject!!.toolProficiencyNumber!! else 0
     }
 
     fun setArmorAndWeaponProf() {
@@ -258,10 +263,10 @@ class Character {
     }
 
     fun getBackgroundTraits() {
-        for (trait in chBackgroundObject.backgroundTraits) {
+        for (trait in chBackgroundObject!!.backgroundTraits) {
             chBackgroundTraits.add(trait)
         }
-        chEquipment = chBackgroundObject.equipment
+        chEquipment = chBackgroundObject!!.equipment
     }
 
     fun getSpellNumbers() {
@@ -310,23 +315,44 @@ class Character {
         }
     }
 
-    fun setupRace(race: RaceGeneral) {
-        if (chRaceObject != null) {
+    private fun setupRace(race: RaceGeneral) {
+        if (chRaceObject != null && chRaceObject!!::class != race::class) {
             for (i in chRaceObject!!.abilityScoreList) {
                 chAbilities[i.key] = chAbilities[i.key]!! - chRaceObject!!.abilityScoreList[i.key]!!
             }
             for (i in chSpeed) {
                 chSpeed[i.key] = 0
             }
-            chLanguageList = arrayListOf()
-            for (i in chRaceObject!!.proficienciesList) {
+            chRaceLanguageList = arrayListOf()
+            for (i in chRaceObject!!.skillProfList) {
                 chSkillProfs[i] = 0
             }
             chWeaponProfList = arrayListOf()
             chToolsCounter = 0
             chRacialTraits = arrayListOf()
         }
-        // TODO: 23-Apr-21 ====================================================================================================== 
+        if(chRaceObject == null || chRaceObject!!::class != race::class) {
+            chRaceObject = race
+            for (i in chRaceObject!!.abilityScoreList) {
+                chAbilities[i.key] = chAbilities[i.key]!! + chRaceObject!!.abilityScoreList[i.key]!!
+            }
+            for (i in chSpeed) {
+                chSpeed[i.key] = chRaceObject!!.speed[i.key]!!
+            }
+            for (i in chRaceObject!!.languageList) {
+                chRaceLanguageList.add(i)
+            }
+            for (i in chRaceObject!!.skillProfList) {
+                chSkillProfs[i] = 1
+            }
+            for (i in chRaceObject!!.weaponProficiencyList) {
+                chWeaponProfList.add(i)
+            }
+            chToolsCounter = chRaceObject!!.toolProficiencyNumber
+            for (i in chRaceObject!!.racialFeaturesList) {
+                chRacialTraits.add(i)
+            }
+        }
     }
 
     fun setClass() {
@@ -356,33 +382,52 @@ class Character {
     }
 
     fun setBackground() {
-        when (chBackgroud) {
+        when (chBackground) {
             "Acolyte" -> {
-                chBackgroundObject = Acolyte()
+                setupBackground(Acolyte())
             }
             "Charlatan" -> {
-                chBackgroundObject = Charlatan()
+                setupBackground(Charlatan())
             }
             "Criminal" -> {
-                chBackgroundObject = Criminal()
+                setupBackground(Criminal())
             }
             "Entertainer" -> {
-                chBackgroundObject = Entertainer()
+                setupBackground(Entertainer())
             }
-            "FolkHero" -> {
-                chBackgroundObject = FolkHero()
+            "Folk Hero" -> {
+                setupBackground(FolkHero())
             }
             "Knight" -> {
-                chBackgroundObject = Knight()
+                setupBackground(Knight())
             }
             "Noble" -> {
-                chBackgroundObject = Noble()
+                setupBackground(Noble())
             }
             "Sailor" -> {
-                chBackgroundObject = Sailor()
+                setupBackground(Sailor())
             }
             "Soldier" -> {
-                chBackgroundObject = Soldier()
+                setupBackground(Soldier())
+            }
+        }
+    }
+    private fun setupBackground(background: BackgroundGeneral) {
+        if(chBackgroundObject != null && chBackgroundObject!!::class != background::class){
+            chEquipment = ""
+            for(i in chBackgroundObject!!.skillProfList){
+                chSkillProfs[i] = 0 + if(chRaceObject!!.skillProfList.contains(i)) 1 else 0
+            }
+            chBackgroundTraits = arrayListOf()
+        }
+        if(chBackgroundObject == null || chBackgroundObject!!::class != background::class){
+            chBackgroundObject = background
+            chEquipment = chBackgroundObject!!.equipment
+            for(i in chBackgroundObject!!.skillProfList){
+                chSkillProfs[i] = 1
+            }
+            for(i in chBackgroundObject!!.backgroundTraits){
+                chBackgroundTraits.add(i)
             }
         }
     }

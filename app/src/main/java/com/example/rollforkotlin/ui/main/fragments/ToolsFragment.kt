@@ -1,6 +1,5 @@
 package com.example.rollforkotlin.ui.main.fragments
 
-import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +9,6 @@ import androidx.fragment.app.Fragment
 import com.example.rollforkotlin.ActivityScreen1
 import com.example.rollforkotlin.R
 import kotlinx.android.synthetic.main.fragment_tools.*
-import kotlinx.android.synthetic.main.fragment_tools.view.*
 
 
 class ToolsFragment : Fragment(), View.OnClickListener {
@@ -42,7 +40,7 @@ class ToolsFragment : Fragment(), View.OnClickListener {
                 cbTlAlchemistS, cbTlCartographerT, cbTlCookU, cbTlJewelerT, cbTlThievesT, cbTlTinkerT, cbTlWoodcarverT,
                 //Expertise
                 cbPrAcrobaticsExp, cbPrAnimalHExp, cbPrArcanaExp, cbPrAthleticsExp, cbPrDeceptionExp, cbPrHistoryExp, cbPrInsightExp, cbPrIntimidationExp, cbPrInvestigationExp,
-                cbPrMedicineExp, cbPrNatureExp, cbPrPerceptionExp, cbPrPerformanceExp, cbPrPersuasionExp, cbPrReligionExp, cbPrSleightOfHandExp, cbPrStealth, cbPrSurvivalExp)
+                cbPrMedicineExp, cbPrNatureExp, cbPrPerceptionExp, cbPrPerformanceExp, cbPrPersuasionExp, cbPrReligionExp, cbPrSleightOfHandExp, cbPrStealthExp, cbPrSurvivalExp)
 
         profCBList = arrayListOf( cbPrAcrobatics, cbPrAnimalH, cbPrArcana, cbPrAthletics, cbPrDeception, cbPrHistory, cbPrInsight, cbPrIntimidation, cbPrInvestigation,
                 cbPrMedicine, cbPrNature, cbPrPerception, cbPrPerformance, cbPrPersuasion, cbPrReligion, cbPrSleightOfHand, cbPrStealth, cbPrSurvival)
@@ -55,20 +53,20 @@ class ToolsFragment : Fragment(), View.OnClickListener {
 
     override fun onStart() {
         super.onStart()
-        hasExpertise = checkHasExpertise()
         reset()
         lbLgCount.text = languageCounter.toString()
         lbPrCount.text = profCounter.toString()
         lbTlCount.text = toolsCounter.toString()
         lbExpCount.text = expertiseCounter.toString()
+        hasExpertise = checkHasExpertise()
         setExpertiseVisibility()
     }
 
     //Promenljive
-    private var languageCounter = 3
-    private var profCounter = 4
-    private var toolsCounter = 2
-    private var expertiseCounter = 2
+    private var languageCounter = 0
+    private var profCounter = 0
+    private var toolsCounter = 0
+    private var expertiseCounter = 0
     private var allCBList: ArrayList<CheckBox>? = null
     private var profCBList: ArrayList<CheckBox>? = null
     private var hasExpertise = false
@@ -80,13 +78,9 @@ class ToolsFragment : Fragment(), View.OnClickListener {
     override fun onClick(v: View?) {
         v as CheckBox
         val name = v.resources.getResourceEntryName(v.id)
-        val builder = AlertDialog.Builder(activity)
-        builder.setTitle("Androidly Alert")
-        builder.setMessage(v.resources.getResourceEntryName(v.id))
         when(checkCBGroup(name)){
             'l' -> {
                 if (languageCounter == 0 && v.isChecked) {
-                    //builder.show()
                     v.isChecked = false
                 } else if (v.isChecked) {
                     --languageCounter
@@ -98,7 +92,6 @@ class ToolsFragment : Fragment(), View.OnClickListener {
 
             'p' -> {
                 if (profCounter == 0 && v.isChecked) {
-                    //builder.show()
                     v.isChecked = false
                 } else if (v.isChecked) {
                     --profCounter
@@ -122,7 +115,6 @@ class ToolsFragment : Fragment(), View.OnClickListener {
 
             't' -> {
                 if (toolsCounter == 0 && v.isChecked) {
-                    //builder.show()
                     v.isChecked = false
                 } else if (v.isChecked) {
                     --toolsCounter
@@ -134,7 +126,6 @@ class ToolsFragment : Fragment(), View.OnClickListener {
 
             'e' -> {
                 if (expertiseCounter == 0 && v.isChecked) {
-                    //builder.show()
                     v.isChecked = false
                 } else if (v.isChecked) {
                     --expertiseCounter
@@ -189,16 +180,9 @@ class ToolsFragment : Fragment(), View.OnClickListener {
         if(cbLgSylvan.isChecked){
             list.add(cbLgSylvan.text.toString())
         }
-        if(cbTlThievesT.isChecked){
-            list.add(cbTlThievesT.text.toString())
-        }
-        if(cbTlTinkerT.isChecked){
-            list.add(cbTlTinkerT.text.toString())
-        }
-        if(cbTlWoodcarverT.isChecked){
-            list.add(cbTlWoodcarverT.text.toString())
-        }
-
+        ActivityScreen1.newCharacter.chLanguageList = arrayListOf()
+        ActivityScreen1.newCharacter.chLanguageList.addAll(ActivityScreen1.newCharacter.chRaceLanguageList)
+        ActivityScreen1.newCharacter.chLanguageList.addAll(list)
         //Proficiencies
         if(cbPrAcrobatics.isChecked){
             list.add(cbPrAcrobatics.text.toString())
@@ -376,38 +360,71 @@ class ToolsFragment : Fragment(), View.OnClickListener {
     }
 
     private fun setExpertiseVisibility() {
-        if(hasExpertise) {
+        if (hasExpertise) {
             lbExpertise.visibility = View.VISIBLE
             lbSelectExp.visibility = View.VISIBLE
             lbExpCount.visibility = View.VISIBLE
-            for(cb in profCBList!!){
-                if(cb.isChecked){
-                    val name = cb.resources.getResourceEntryName(cb.id)
-                    val expTmp = name + "Exp"
-                    val idTmp = resources.getIdentifier(expTmp, "id", cb.resources.getResourcePackageName(cb.id))
+            for (sk in ActivityScreen1.newCharacter.chSkillProfs) {
+                if (sk.value == 1) {
+                    val name = "cbPr${sk.key.substring(3)}Exp"
+                    val idTmp = resources.getIdentifier(name, "id", this.resources.getResourcePackageName(this.id))
                     val vTmp = view?.findViewById<CheckBox>(idTmp)
-                    vTmp?.visibility = View.VISIBLE
+                    if (vTmp?.isChecked == false) {
+                        vTmp?.visibility = View.VISIBLE
+                    }
                 }
             }
         }
     }
 
     private fun reset(){
-        if(ActivityScreen1.newCharacter.chClass != oldClass || ActivityScreen1.newCharacter.chRace != oldRace || ActivityScreen1.newCharacter.chBackgroud != oldBackground) {
+        if(ActivityScreen1.newCharacter.chClass != oldClass || ActivityScreen1.newCharacter.chRace != oldRace || ActivityScreen1.newCharacter.chBackground != oldBackground) {
             oldClass = ActivityScreen1.newCharacter.chClass
             oldRace = ActivityScreen1.newCharacter.chRace
-            oldBackground = ActivityScreen1.newCharacter.chBackgroud
+            oldBackground = ActivityScreen1.newCharacter.chBackground
             for (cb in allCBList!!) {
                 cb.isChecked = false
             }
-            setRestrictions()
+            setCounters()
         }
+        setRestrictions()
+    }
+
+    private fun setCounters(){
+        ActivityScreen1.newCharacter.setLanguageCount()
+        languageCounter = ActivityScreen1.newCharacter.chLanguageCounter
+        ActivityScreen1.newCharacter.setProficiencyCount()
+        profCounter = ActivityScreen1.newCharacter.chProfCounter
+        ActivityScreen1.newCharacter.setToolsCount()
+        toolsCounter = ActivityScreen1.newCharacter.chToolsCounter
+        expertiseCounter = 2
     }
 
     private fun setRestrictions(){
-        languageCounter = 3
-        profCounter = 4
-        toolsCounter = 2
-        expertiseCounter = 2
+        for (lg in ActivityScreen1.newCharacter.chRaceLanguageList){
+            if(lg != "Common"){
+                val name = "cbLg$lg"
+                val idTmp = resources.getIdentifier(name, "id", this.resources.getResourcePackageName(this.id))
+                val vTmp = view?.findViewById<CheckBox>(idTmp)
+                vTmp?.visibility = View.GONE
+            }
+        }
+        for (sk in ActivityScreen1.newCharacter.chBackgroundObject!!.skillProfList){
+            if(ActivityScreen1.newCharacter.chSkillProfs[sk] == 1){
+                val name = "cbPr${sk.substring(3)}"
+                val idTmp = resources.getIdentifier(name, "id", this.resources.getResourcePackageName(this.id))
+                val vTmp = view?.findViewById<CheckBox>(idTmp)
+                vTmp?.isChecked = true
+                vTmp?.visibility = View.GONE
+            }
+        }
+        if(ActivityScreen1.newCharacter.chRace == "Elf"){
+            cbPrPerception.isChecked = true
+            cbPrPerception.visibility = View.GONE
+        }
+        if (ActivityScreen1.newCharacter.chClass == "Rogue" || ActivityScreen1.newCharacter.chBackground == "Criminal"){
+            cbTlThievesT.isChecked = true
+            cbTlThievesT.visibility = View.GONE
+        }
     }
 }
