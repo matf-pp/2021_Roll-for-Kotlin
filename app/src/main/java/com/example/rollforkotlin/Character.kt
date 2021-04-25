@@ -26,7 +26,6 @@ class Character {
     var chAppearance: String = ""
     var chBackstory: String = ""
     var chAdditionalInfo: String = ""
-    var chNotes: String = ""
     var chRaceLanguageList: ArrayList<String> = arrayListOf()
     var chLanguageList: ArrayList<String> = arrayListOf()
 
@@ -135,12 +134,14 @@ class Character {
 
     var chWeaponProfTypes: String = ""
     var chWeaponProfList: ArrayList<String> = arrayListOf()
-    var chToolProf: String = ""
+    var chToolProfList: ArrayList<String> = arrayListOf()
 
     fun setSkills() {
         for (pair in chSkills) {
             chSkills[pair.key] = (chAbilities[pair.key.substring(0, 3)]!! - 10) / 2 + chProficiencyBonus * (chSkillProfs[pair.key]!! + chSkillExp[pair.key]!!)
         }
+        chInitiative = (chAbilities["dex"]!! - 10) / 2
+        chPassivePerception = 10 + chSkills["wisPerception"]!!
     }
 
     fun setSavingThrows() {
@@ -175,7 +176,13 @@ class Character {
     fun setArmorAndWeaponProf() {
         chArmorProf = chClassObject.armorProf
         chWeaponProfTypes = chClassObject.weaponProf
-        chToolProf = chClassObject.toolProf
+        chToolProfList.addAll(chBackgroundObject!!.toolProfList)
+        if(chClassObject.toolProf == "None" && chToolProfList.isEmpty()){
+            chToolProfList.add(chClassObject.toolProf)
+        } else if (chClassObject.toolProf != "None"){
+            chToolProfList.add(chClassObject.toolProf)
+        }
+        chToolProfList = ArrayList(chToolProfList.distinct())
         for (type in chClassObject.weaponProfList) {
             when (type) {
                 "Simp" -> {

@@ -130,7 +130,7 @@
     <string name="cartographerT">   Cartographer’s tools</string>
     <string name="cookU">           Cook’s utensils</string>
     <string name="jewelerT">        Jeweler’s tools</string>
-    <string name="thievesT">        Thieves’ tools</string>
+    <string name="thievesT">Thieves’ tools</string>
     <string name="tinkerT">         Tinker’s tools</string>
     <string name="woodcarverT">     Woodcarver’s tools</string>
     <string name="tools">           Tools</string>

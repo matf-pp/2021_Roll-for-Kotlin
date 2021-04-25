@@ -1,10 +1,8 @@
 package com.example.rollforkotlin
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.os.SystemClock
 import android.util.Log
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -24,8 +22,6 @@ import com.karumi.dexter.listener.single.PermissionListener
 import kotlinx.android.synthetic.main.activity_finish.*
 import java.io.File
 import java.io.FileOutputStream
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 import java.util.*
 
 
@@ -237,7 +233,7 @@ class FinishActivity : AppCompatActivity() {
             addNewItem(document, "Armor proficency : $armorProf", Element.ALIGN_LEFT, valueStyle)
             val weapProf = ActivityScreen1.newCharacter.chWeaponProfTypes
             addNewItem(document, "Weapon proficency : $weapProf", Element.ALIGN_LEFT, valueStyle)
-            val toolProf = ActivityScreen1.newCharacter.chToolProf
+            val toolProf = ActivityScreen1.newCharacter.chToolProfList
             addNewItem(document, "Tool proficency : $toolProf", Element.ALIGN_LEFT, valueStyle)
 
             addLineSeparation(document)

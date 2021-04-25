@@ -155,7 +155,7 @@ class ToolsFragment : Fragment(), View.OnClickListener {
     }
 
     private fun getValues() {
-        val list = arrayListOf<String>()
+        var list = arrayListOf<String>()
         if(cbLgUndercommon.isChecked){
             list.add(cbLgUndercommon.text.toString())
         }
@@ -258,6 +258,7 @@ class ToolsFragment : Fragment(), View.OnClickListener {
         } else ActivityScreen1.newCharacter.chSkillProfs["wisSurvival"] = 0
 
         //Tools
+        list = arrayListOf()
         if(cbTlAlchemistS.isChecked){
             list.add(cbTlAlchemistS.text.toString())
         }
@@ -279,6 +280,7 @@ class ToolsFragment : Fragment(), View.OnClickListener {
         if(cbTlWoodcarverT.isChecked){
             list.add(cbTlWoodcarverT.text.toString())
         }
+        ActivityScreen1.newCharacter.chToolProfList.addAll(list)
 
         //Expertise
         if(cbPrAcrobaticsExp.isChecked){
