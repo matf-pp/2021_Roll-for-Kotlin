@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.os.SystemClock
 import android.util.Log
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -117,11 +118,12 @@ class FinishActivity : AppCompatActivity() {
             //header
             val headingStyle = Font(fontName2, headingFontSize, Font.NORMAL, colorAccent)
             //date
-            val datum = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy"))
+            /*val datum = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy"))*/
             val valueStyle = Font(fontName2, valueFontSize, Font.NORMAL, BaseColor.BLACK)
             val redValueStyle = Font(fontName2, valueFontSize, Font.NORMAL, colorAccent)
 
-            addNewItemWithLeftAndRight(document, "Character No: #1", "Date : $datum", redValueStyle, valueStyle)
+            addNewItem(document, "Character No: #1", Element.ALIGN_LEFT, redValueStyle)
+           // addNewItemWithLeftAndRight(document, "Character No: #1", "Date : $datum", redValueStyle, valueStyle)
             addLineSeparation(document)
 
 

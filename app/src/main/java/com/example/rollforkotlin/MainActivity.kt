@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity(){
         //setting icons for tabs
         tabs.getTabAt(0)!!.setIcon(R.drawable.sword3)
         tabs.getTabAt(1)!!.setIcon(R.drawable.stats2)
-        tabs.getTabAt(2)!!.setIcon(R.drawable.tools)
+        tabs.getTabAt(2)!!.setIcon(R.drawable.tools3)
         tabs.getTabAt(3)!!.setIcon(R.drawable.book1)
         tabs.getTabAt(4)!!.setIcon(R.drawable.bag2)
         tabs.getTabAt(5)!!.setIcon(R.drawable.more)
