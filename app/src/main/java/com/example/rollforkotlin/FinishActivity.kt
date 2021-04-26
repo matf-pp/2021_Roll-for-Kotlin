@@ -123,7 +123,6 @@ class FinishActivity : AppCompatActivity() {
             addLineSeparation(document)
 
 
-            //TODO dodavati elemente klase provera uslova postoje li ili ne
 
             //name and level
             addNewItem(document, "Character level, race, & class", Element.ALIGN_LEFT, headingStyle)
@@ -197,15 +196,15 @@ class FinishActivity : AppCompatActivity() {
 
             //other not important but important stuff
             val init = ActivityScreen1.newCharacter.chInitiative
-            addNewItem(document, "Initiative : +$init", Element.ALIGN_LEFT, valueStyle)
+            addNewItem(document, "Initiative : " + if(init!! >=0) "+$init" else "$init", Element.ALIGN_LEFT, valueStyle)
             val pasPerc = ActivityScreen1.newCharacter.chPassivePerception
             addNewItem(document, "Passive percepcion : $pasPerc", Element.ALIGN_LEFT, valueStyle)
             val speed = ActivityScreen1.newCharacter.chSpeed["walk"]
-            addNewItem(document, "Movement speed : $speed", Element.ALIGN_LEFT, valueStyle)
+            addNewItem(document, "Movement speed : $speed ft.", Element.ALIGN_LEFT, valueStyle)
 
             addLineSeparation(document)
 
-            //num of attacks TODO
+            //num of attacks
             addNewItem(document, "Attacks", Element.ALIGN_LEFT, headingStyle)
             var w = ""
             for(weapon1 in ActivityScreen1.newCharacter.chWeapons){
@@ -227,60 +226,67 @@ class FinishActivity : AppCompatActivity() {
 
             addLineSeparation(document)
 
-            //armor, language, tools, weapon prof TODO
+            //armor, language, tools, weapon prof
             addNewItem(document, "Proficiencies", Element.ALIGN_LEFT, headingStyle)
             val armorProf = ActivityScreen1.newCharacter.chArmorProf
             addNewItem(document, "Armor proficency : $armorProf", Element.ALIGN_LEFT, valueStyle)
             val weapProf = ActivityScreen1.newCharacter.chWeaponProfTypes
             addNewItem(document, "Weapon proficency : $weapProf", Element.ALIGN_LEFT, valueStyle)
-            val toolProf = ActivityScreen1.newCharacter.chToolProfList
+            val toolProf = ActivityScreen1.newCharacter.chToolProfList.joinToString(", ")
             addNewItem(document, "Tool proficency : $toolProf", Element.ALIGN_LEFT, valueStyle)
+            val langProf = ActivityScreen1.newCharacter.chLanguageList.joinToString(", ")
+            addNewItem(document, "Language proficiency : $langProf", Element.ALIGN_LEFT, valueStyle)
 
             addLineSeparation(document)
 
             //spell attacks
             addNewItem(document, "Spells", Element.ALIGN_LEFT, headingStyle)
             val spellCast = ActivityScreen1.newCharacter.chSpellCastingAbility
-            addNewItem(document, "Spellcasting ability : $spellCast", Element.ALIGN_LEFT, valueStyle)
-            val spellBonus = ActivityScreen1.newCharacter.chSpellAttackBonus
-            addNewItem(document, "Spell attack bonus : "+ if(spellBonus!! >=0) "+$spellBonus" else "$spellBonus" , Element.ALIGN_LEFT, valueStyle)
-            val spellDC = ActivityScreen1.newCharacter.chSpellSaveDC
-            addNewItem(document, "Saving throw DC : $spellDC", Element.ALIGN_LEFT, valueStyle)
-            if(klasa == "Cleric") {
-                val prepare = ActivityScreen1.newCharacter.chSpellLvl1Counter + ActivityScreen1.newCharacter.chSpellLvl2Counter + ActivityScreen1.newCharacter.chSpellLvl3Counter
-                addNewItem(document, "Prepare : $prepare", Element.ALIGN_LEFT, valueStyle)
+            if(spellCast != "") {
+                addNewItem(document, "Spellcasting ability : $spellCast", Element.ALIGN_LEFT, valueStyle)
+                val spellBonus = ActivityScreen1.newCharacter.chSpellAttackBonus
+                addNewItem(document, "Spell attack bonus : " + if (spellBonus!! >= 0) "+$spellBonus" else "$spellBonus", Element.ALIGN_LEFT, valueStyle)
+                val spellDC = ActivityScreen1.newCharacter.chSpellSaveDC
+                addNewItem(document, "Saving throw DC : $spellDC", Element.ALIGN_LEFT, valueStyle)
+                if (klasa == "Cleric") {
+                    val prepare = ActivityScreen1.newCharacter.chSpellLvl1Counter + ActivityScreen1.newCharacter.chSpellLvl2Counter + ActivityScreen1.newCharacter.chSpellLvl3Counter
+                    addNewItem(document, "Prepare : $prepare", Element.ALIGN_LEFT, valueStyle)
+                }
+                addNewItem(document, "Cantrips :", Element.ALIGN_LEFT, redValueStyle)
+                val cantrip = ActivityScreen1.newCharacter.chSpellCantripList.joinToString(", ")
+                addNewItem(document, cantrip, Element.ALIGN_LEFT, valueStyle)
+                addNewItem(document, "1st lvl spells :", Element.ALIGN_LEFT, redValueStyle)
+                val first = ActivityScreen1.newCharacter.chSpellLvl1List.joinToString(", ")
+                addNewItem(document, first, Element.ALIGN_LEFT, valueStyle)
+                addNewItem(document, "2nd lvl spells :", Element.ALIGN_LEFT, redValueStyle)
+                val second = ActivityScreen1.newCharacter.chSpellLvl2List.joinToString(", ")
+                addNewItem(document, second, Element.ALIGN_LEFT, valueStyle)
+                addNewItem(document, "3rd lvl spells :", Element.ALIGN_LEFT, redValueStyle)
+                val third = ActivityScreen1.newCharacter.chSpellLvl3List.joinToString(", ")
+                addNewItem(document, third, Element.ALIGN_LEFT, valueStyle)
             }
-            addNewItem(document, "Cantrips :", Element.ALIGN_LEFT, redValueStyle)
-            val cantrip = ActivityScreen1.newCharacter.chSpellCantripList.joinToString(", ")
-            addNewItem(document,  cantrip, Element.ALIGN_LEFT, valueStyle)
-            addNewItem(document, "1st lvl spells :", Element.ALIGN_LEFT, redValueStyle)
-            val first = ActivityScreen1.newCharacter.chSpellLvl1List.joinToString(", ")
-            addNewItem(document,  first, Element.ALIGN_LEFT, valueStyle)
-            addNewItem(document, "2nd lvl spells :", Element.ALIGN_LEFT, redValueStyle)
-            val second = ActivityScreen1.newCharacter.chSpellLvl2List.joinToString(", ")
-            addNewItem(document,  second, Element.ALIGN_LEFT, valueStyle)
-            addNewItem(document, "3rd lvl spells :", Element.ALIGN_LEFT, redValueStyle)
-            val third = ActivityScreen1.newCharacter.chSpellLvl3List.joinToString(", ")
-            addNewItem(document,  third, Element.ALIGN_LEFT, valueStyle)
+            else {
+                addNewItem(document, "Your class has no spells!", Element.ALIGN_LEFT, valueStyle)
+            }
 
 
             addLineSeparation(document)
 
-            //class and race traits TODO
+            //class and race traits
             addNewItem(document, "Class, race & background traits", Element.ALIGN_LEFT, headingStyle)
             val classTraits = ActivityScreen1.newCharacter.chClassTraits.joinToString("\n")
             addNewItem(document, "Class traits ", Element.ALIGN_LEFT, redValueStyle)
             addNewItem(document, classTraits, Element.ALIGN_LEFT, valueStyle)
-          /*  val raceTraits = ActivityScreen1.newCharacter.chRacialTraits.joinToString("\n")
+            val raceTraits = ActivityScreen1.newCharacter.chRacialTraits.joinToString("\n")
             addNewItem(document, "Racial traits ", Element.ALIGN_LEFT, redValueStyle)
-            addNewItem(document, raceTraits, Element.ALIGN_LEFT, valueStyle)*/
+            addNewItem(document, raceTraits, Element.ALIGN_LEFT, valueStyle)
             val bckgTraits = ActivityScreen1.newCharacter.chBackgroundTraits.joinToString("\n")
             addNewItem(document, "Background traits", Element.ALIGN_LEFT, redValueStyle)
             addNewItem(document, bckgTraits, Element.ALIGN_LEFT, valueStyle)
 
             addLineSeparation(document)
 
-            //inventory , money, potions, kits TODO
+            //inventory , money, potions, kits
             addNewItem(document, "Equipment", Element.ALIGN_LEFT, headingStyle)
             val gp = ActivityScreen1.newCharacter.chGold
             val pp = ActivityScreen1.newCharacter.chPlatinum
@@ -296,12 +302,14 @@ class FinishActivity : AppCompatActivity() {
             addNewItem(document, "Instruments : $instru", Element.ALIGN_LEFT, valueStyle)
 
 
-            //spells and cantrips details TODO
+            //spells and cantrips details none
 
-            //background, traits, description, deity, organisaton.. TODO
+            //background, traits, description, deity, organisaton..
             addLineSeparation(document)
 
             addNewItem(document, "Character details & other", Element.ALIGN_LEFT, headingStyle)
+            val alignment = ActivityScreen1.newCharacter.chAlignment
+            addNewItem(document, "Aligment : $alignment", Element.ALIGN_LEFT, valueStyle)
             val deity = ActivityScreen1.newCharacter.chDeity
             addNewItem(document, "Deity : $deity", Element.ALIGN_LEFT, valueStyle)
             val appearance = ActivityScreen1.newCharacter.chAppearance

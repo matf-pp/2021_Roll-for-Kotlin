@@ -9,5 +9,5 @@ class Human: RaceGeneral() {
     override val skillProfList = arrayListOf<String>()
     override val weaponProficiencyList = arrayListOf<String>()
     override val toolProficiencyNumber = 0
-    override val racialFeaturesList = arrayListOf<String>()
+    override val racialFeaturesList = arrayListOf("None")
 }

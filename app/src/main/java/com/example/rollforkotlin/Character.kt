@@ -77,7 +77,7 @@ class Character {
 
     //Race traits
     var chSpeed = mutableMapOf("walk" to 0, "fly" to 0, "swim" to 0, "climb" to 0)
-    lateinit var chRacialTraits: ArrayList<String>
+    var chRacialTraits: ArrayList<String> = ArrayList()
 
     //Class traits
     var chClassTraits: ArrayList<String> = ArrayList()

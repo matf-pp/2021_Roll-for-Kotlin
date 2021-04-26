@@ -50,10 +50,7 @@ class DetailsFragment : Fragment() {
             ActivityScreen1.newCharacter.setWeaponBonus()
             ActivityScreen1.newCharacter.getBackgroundTraits()
             ActivityScreen1.newCharacter.getSpellInfo()
-            val builder = AlertDialog.Builder(requireActivity())
-            builder.setTitle("Androidly Alert")
-            builder.setMessage(ActivityScreen1.newCharacter.chToolProfList.toString())
-            builder.show()
+
             activity?.let{
                 val i = Intent (it, FinishActivity::class.java)
                 it.startActivity(i)
