@@ -25,6 +25,7 @@ class EquipmentFragment : Fragment(), View.OnClickListener {
         }
     }
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -108,6 +109,25 @@ class EquipmentFragment : Fragment(), View.OnClickListener {
             return 'i'
         }
         return null
+    }
+
+    var oldClass:String = ""
+    override fun onStart() {
+        if (ActivityScreen1.newCharacter.chClass != oldClass){
+            oldClass = ActivityScreen1.newCharacter.chClass
+            clearCB()
+
+            ActivityScreen1.newCharacter.chInstruments = arrayListOf()
+            ActivityScreen1.newCharacter.chWeapons = arrayListOf()
+            ActivityScreen1.newCharacter.chHasPotion = false
+        }
+        super.onStart()
+    }
+
+    private fun clearCB() {
+        for(item in allCBList!!){
+            item.isChecked = false
+        }
     }
 
     override fun onStop() {

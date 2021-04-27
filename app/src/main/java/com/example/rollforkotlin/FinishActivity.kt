@@ -27,7 +27,7 @@ import java.util.*
 
 class FinishActivity : AppCompatActivity() {
 
-    val file_name : String = "character.pdf"
+    val file_name : String = if(ActivityScreen1.newCharacter.chName == "") "character.pdf" else {ActivityScreen1.newCharacter.chName + ".pdf"}
 
 
     @RequiresApi(Build.VERSION_CODES.O)

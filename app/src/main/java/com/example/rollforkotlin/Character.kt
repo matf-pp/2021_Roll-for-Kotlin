@@ -433,9 +433,10 @@ class Character {
             for(i in chBackgroundObject!!.skillProfList){
                 chSkillProfs[i] = 1
             }
-            for(i in chBackgroundObject!!.backgroundTraits){
+            /*for(i in chBackgroundObject!!.backgroundTraits){
                 chBackgroundTraits.add(i)
-            }
+                ############################ DUPLIRA SE UNOS TRAITS KADA SE IZABERE A NE OSTAVI DEFAULT ########################
+            }*/
         }
     }
 

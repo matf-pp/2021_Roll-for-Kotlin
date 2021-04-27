@@ -78,11 +78,18 @@ class RaceFragment : Fragment(){
         val race = spRace.selectedItem.toString()
         val klasa = spClass.selectedItem.toString()
         val background = spBackground.selectedItem.toString()
+
+        //##################### DODATO CISCENJE LISTA DA KADA SE OSTANE U APLIKACIJI NE DUPLIRAJU SE TRAITS ###########################
+
+        ActivityScreen1.newCharacter.chWeaponProfList = arrayListOf()
+        ActivityScreen1.newCharacter.chToolProfList = arrayListOf()
         ActivityScreen1.newCharacter.chRace = race
         ActivityScreen1.newCharacter.setRace()
         ActivityScreen1.newCharacter.chClass = klasa
+        ActivityScreen1.newCharacter.chClassTraits = arrayListOf()
         ActivityScreen1.newCharacter.setClass()
         ActivityScreen1.newCharacter.chBackground = background
+        ActivityScreen1.newCharacter.chBackgroundTraits = arrayListOf()
         ActivityScreen1.newCharacter.setBackground()
         //Uzimanja broja spell-ova
         ActivityScreen1.newCharacter.getSpellNumbers()

@@ -12,11 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.RollForKotlin">
-        <activity android:name=".FinishActivity"
-                    android:theme="@style/LoadingScreenTheme"/>
+        <activity
+            android:name=".FinishActivity"
+            android:theme="@style/LoadingScreenTheme"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".LoadingScreenActivity"
-            android:theme="@style/LoadingScreenTheme">
+            android:theme="@style/LoadingScreenTheme"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,11 +28,13 @@
         </activity>
         <activity
             android:name=".ActivityScreen1"
-            android:theme="@style/LoadingScreenTheme" />
+            android:theme="@style/LoadingScreenTheme"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.RollForKotlin.NoActionBar" />
+            android:theme="@style/Theme.RollForKotlin.NoActionBar"
+            android:screenOrientation="portrait"/>
 
         <provider
             android:authorities="com.example.rollforkotlin.fileprovider"
