@@ -34,15 +34,15 @@ class ToolsFragment : Fragment(), View.OnClickListener {
                 //Languages
                 cbLgDwarvish, cbLgElvish, cbLgGnomish, cbLgGoblin, cbLgHalfling, cbLgInfernal, cbLgSylvan, cbLgUndercommon,
                 //Proficiencies
-                cbPrAcrobatics, cbPrAnimalH, cbPrArcana, cbPrAthletics, cbPrDeception, cbPrHistory, cbPrInsight, cbPrIntimidation, cbPrInvestigation,
+                cbPrAcrobatics, cbPrAnimalHandling, cbPrArcana, cbPrAthletics, cbPrDeception, cbPrHistory, cbPrInsight, cbPrIntimidation, cbPrInvestigation,
                 cbPrMedicine, cbPrNature, cbPrPerception, cbPrPerformance, cbPrPersuasion, cbPrReligion, cbPrSleightOfHand, cbPrStealth, cbPrSurvival,
                 //Tools
                 cbTlAlchemistS, cbTlCartographerT, cbTlCookU, cbTlJewelerT, cbTlThievesT, cbTlTinkerT, cbTlWoodcarverT,
                 //Expertise
-                cbPrAcrobaticsExp, cbPrAnimalHExp, cbPrArcanaExp, cbPrAthleticsExp, cbPrDeceptionExp, cbPrHistoryExp, cbPrInsightExp, cbPrIntimidationExp, cbPrInvestigationExp,
+                cbPrAcrobaticsExp, cbPrAnimalHandlingExp, cbPrArcanaExp, cbPrAthleticsExp, cbPrDeceptionExp, cbPrHistoryExp, cbPrInsightExp, cbPrIntimidationExp, cbPrInvestigationExp,
                 cbPrMedicineExp, cbPrNatureExp, cbPrPerceptionExp, cbPrPerformanceExp, cbPrPersuasionExp, cbPrReligionExp, cbPrSleightOfHandExp, cbPrStealthExp, cbPrSurvivalExp)
 
-        profCBList = arrayListOf( cbPrAcrobatics, cbPrAnimalH, cbPrArcana, cbPrAthletics, cbPrDeception, cbPrHistory, cbPrInsight, cbPrIntimidation, cbPrInvestigation,
+        profCBList = arrayListOf( cbPrAcrobatics, cbPrAnimalHandling, cbPrArcana, cbPrAthletics, cbPrDeception, cbPrHistory, cbPrInsight, cbPrIntimidation, cbPrInvestigation,
                 cbPrMedicine, cbPrNature, cbPrPerception, cbPrPerformance, cbPrPersuasion, cbPrReligion, cbPrSleightOfHand, cbPrStealth, cbPrSurvival)
         lbLgCount.text = languageCounter.toString()
         lbPrCount.text = profCounter.toString()
@@ -188,8 +188,8 @@ class ToolsFragment : Fragment(), View.OnClickListener {
             list.add(cbPrAcrobatics.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["dexAcrobatics"] = 1
         } else ActivityScreen1.newCharacter.chSkillProfs["dexAcrobatics"] = 0
-        if(cbPrAnimalH.isChecked){
-            list.add(cbPrAnimalH.text.toString())
+        if(cbPrAnimalHandling.isChecked){
+            list.add(cbPrAnimalHandling.text.toString())
             ActivityScreen1.newCharacter.chSkillProfs["wisAnimalHandling"] = 1
         } else ActivityScreen1.newCharacter.chSkillProfs["wisAnimalHandling"] = 0
         if(cbPrArcana.isChecked){
@@ -287,8 +287,8 @@ class ToolsFragment : Fragment(), View.OnClickListener {
             list.add(cbPrAcrobaticsExp.text.toString())
             ActivityScreen1.newCharacter.chSkillExp["dexAcrobatics"] = 1
         } else ActivityScreen1.newCharacter.chSkillExp["dexAcrobatics"] = 0
-        if(cbPrAnimalHExp.isChecked){
-            list.add(cbPrAnimalHExp.text.toString())
+        if(cbPrAnimalHandlingExp.isChecked){
+            list.add(cbPrAnimalHandlingExp.text.toString())
             ActivityScreen1.newCharacter.chSkillExp["wisAnimalHandling"] = 1
         } else ActivityScreen1.newCharacter.chSkillExp["wisAnimalHandling"] = 0
         if(cbPrArcanaExp.isChecked){
@@ -371,9 +371,7 @@ class ToolsFragment : Fragment(), View.OnClickListener {
                     val name = "cbPr${sk.key.substring(3)}Exp"
                     val idTmp = resources.getIdentifier(name, "id", this.resources.getResourcePackageName(this.id))
                     val vTmp = view?.findViewById<CheckBox>(idTmp)
-                    if (vTmp?.isChecked == false) {
-                        vTmp?.visibility = View.VISIBLE
-                    }
+                    vTmp?.visibility = View.VISIBLE
                 }
             }
         }
