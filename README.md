@@ -1,4 +1,7 @@
 # Andorid aplikacija - Roll for Kotlin  <img src= "https://github.com/matf-pp/2021_Roll-for-Kotlin/blob/main/app/src/main/res/drawable/roll_for_kotlin.png" width = "50" height = "50" align = "top" >
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f4db65160286478fa3c3e738f97947b9)](https://app.codacy.com/gh/matf-pp/2021_Roll-for-Kotlin?utm_source=github.com&utm_medium=referral&utm_content=matf-pp/2021_Roll-for-Kotlin&utm_campaign=Badge_Grade_Settings)
+
  
 ## Opis
 
