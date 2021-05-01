@@ -16,14 +16,14 @@ Za kompilaciju je korišćeno razvojno okruženje AndroidStudio. Projekat korist
 
 ## Neophodne biblioteke za rad sa `PDF` dokumentom
 
-  - [ITextPDF](https://github.com/itext/itextpdf)      implementation 'com.itextpdf:itextg:5.5.10'
-  - [Karumi/Dexter](https://github.com/Karumi/Dexter)  implementation 'com.karumi:dexter:5.0.0'
+-  [ITextPDF](https://github.com/itext/itextpdf)      implementation 'com.itextpdf:itextg:5.5.10'
+-  [Karumi/Dexter](https://github.com/Karumi/Dexter)  implementation 'com.karumi:dexter:5.0.0'
 
 ## Autori
 
- 1. Tatjana Knežević    mi18218@alas.matf.bg.ac.rs
- 2. Divna Mićić 	       mi18128@alas.matf.bg.ac.rs
- 3. Aleksandar Šarbajić mi18145@alas.matf.bg.ac.rs
+1.  Tatjana Knežević    mi18218@alas.matf.bg.ac.rs
+2.  Divna Mićić 	       mi18128@alas.matf.bg.ac.rs
+3.  Aleksandar Šarbajić mi18145@alas.matf.bg.ac.rs
 
 ## Prikaz
 
