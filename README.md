@@ -2,7 +2,6 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f4db65160286478fa3c3e738f97947b9)](https://app.codacy.com/gh/matf-pp/2021_Roll-for-Kotlin?utm_source=github.com&utm_medium=referral&utm_content=matf-pp/2021_Roll-for-Kotlin&utm_campaign=Badge_Grade_Settings)
 
- 
 ## Opis
 
 Namena aplikacije : android mobilni uređaji.  
@@ -15,16 +14,16 @@ Tema je inspirisana nedostatkom aplikacija slične namene na tržištu.
 Jezik u kome je izređena aplikacija : `Kotlin`.  
 Za kompilaciju je korišćeno razvojno okruženje AndroidStudio. Projekat koristi Gradle sistem za kompilaciju. Sve potrebne biblioteke se automatski preuzimaju. Projekat se kompilira i pokreće kao standardni AndroidStudio projekat.
 
-## Neophodne biblioteke za rad sa `PDF` dokumentom :
+## Neophodne biblioteke za rad sa `PDF` dokumentom
 
-- [ITextPDF](https://github.com/itext/itextpdf)      implementation 'com.itextpdf:itextg:5.5.10'
-- [Karumi/Dexter](https://github.com/Karumi/Dexter)  implementation 'com.karumi:dexter:5.0.0'
+  - [ITextPDF](https://github.com/itext/itextpdf)      implementation 'com.itextpdf:itextg:5.5.10'
+  - [Karumi/Dexter](https://github.com/Karumi/Dexter)  implementation 'com.karumi:dexter:5.0.0'
 
 ## Autori
 
-1. Tatjana Knežević    mi18218@alas.matf.bg.ac.rs
-2. Divna Mićić 	       mi18128@alas.matf.bg.ac.rs
-3. Aleksandar Šarbajić mi18145@alas.matf.bg.ac.rs
+ 1. Tatjana Knežević    mi18218@alas.matf.bg.ac.rs
+ 2. Divna Mićić 	       mi18128@alas.matf.bg.ac.rs
+ 3. Aleksandar Šarbajić mi18145@alas.matf.bg.ac.rs
 
 ## Prikaz
 
